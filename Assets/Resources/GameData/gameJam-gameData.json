@@ -5,10 +5,10 @@
         {
             "id": "clock",
             "name" : "rusty clock",
-            "item_type": " Equipable",
+            "item_type": " Consumable",
             "asset": "clock",
             "icon": "clock_icon",
-            "atlas_icon": "AtlasEquipableItemIcons"
+            "atlas_icon": "AtlasConsumableItemIcons"
         }
     }
 }

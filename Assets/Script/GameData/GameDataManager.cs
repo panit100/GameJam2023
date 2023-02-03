@@ -76,7 +76,7 @@ namespace GameJam.GameData
 
             isInitialized = true;
 
-            Debug.Log(itemConfig["clock"].IconName);
+            Debug.Log(itemConfig["clock"].Type);
         }
     }
   
