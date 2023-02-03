@@ -8,9 +8,7 @@ namespace GameJam.Utilities
     {
         private readonly Dictionary<Type, object> objects = new Dictionary<Type, object>();
 
-        public SharedObject()
-        {
-        }
+        public SharedObject(){}
 
         public void Add<T>(T obj) where T : class
         {
