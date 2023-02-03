@@ -2,6 +2,7 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameJam.Utilities;
 
 public class PlayerMovementController : MonoBehaviour
 {
@@ -41,6 +42,11 @@ public class PlayerMovementController : MonoBehaviour
 
     private Rigidbody rb;
 
+    Vector3 direction;
+    bool isRun;
+
+    InputSystemManager inputSystemManager;
+
     public enum movementState
     {
         idle, walk, run
@@ -59,22 +65,26 @@ public class PlayerMovementController : MonoBehaviour
 
         Vcam.Follow = this.gameObject.transform;
         Vcam.LookAt = this.gameObject.transform;
+
+        inputSystemManager = SharedObject.Instance.Get<InputSystemManager>();
+        inputSystemManager.onMove += OnMove;
+        inputSystemManager.onPressMove += OnPressMove;
+        inputSystemManager.onPressRun += OnPressRun;
     }
 
     void Update()
     {
-        if (!canMove) return;
+        if (!canMove)
+        {
+            rb.velocity = Vector3.zero;
+            return;
+        } 
 
         Movement();
     }
 
     private void Movement()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
-
         currentMovementState = CheckMovementState(direction);
 
         MoveDependOnState(direction);
@@ -84,7 +94,7 @@ public class PlayerMovementController : MonoBehaviour
     {
         if (direction.magnitude < 0.1f) { return movementState.idle; }
 
-        if (Input.GetKey(KeyCode.LeftShift)) { return movementState.run; }
+        if (isRun) { return movementState.run; }
 
         return movementState.walk;
     }
@@ -153,5 +163,26 @@ public class PlayerMovementController : MonoBehaviour
 
             //TODO : Walk animation
         }
+    }
+
+    public void OnMove(Vector2 value)
+    {
+        direction = new Vector3(value.x,0,value.y).normalized;
+    }
+
+    public void OnPressMove(bool value)
+    {
+        canMove = value;
+    }
+
+    public void OnPressRun(bool value)
+    {
+        isRun = value;
+    }
+
+    void OnDestroy() 
+    {
+        inputSystemManager.onMove -= OnMove;
+        inputSystemManager.onPressMove += OnPressMove;
     }
 }
