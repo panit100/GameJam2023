@@ -1,0 +1,14 @@
+{
+    "item_config":
+    {
+        "clock": 
+        {
+            "id": "clock",
+            "name" : "rusty clock",
+            "item_type": " Equipable",
+            "asset": "clock",
+            "icon": "clock_icon",
+            "atlas_icon": "AtlasEquipableItemIcons"
+        }
+    }
+}
