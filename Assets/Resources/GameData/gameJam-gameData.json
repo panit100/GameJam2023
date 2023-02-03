@@ -9,6 +9,16 @@
             "asset": "clock",
             "icon": "clock_icon",
             "atlas_icon": "AtlasConsumableItemIcons"
+        },
+        
+        "arse":
+        {
+            "id": "deez_arse",
+            "name" : "succy arse",
+            "item_type": " Consumable",
+            "asset": "arse",
+            "icon": "arse_icon",
+            "atlas_icon": "AtlastArse"
         }
     }
 }

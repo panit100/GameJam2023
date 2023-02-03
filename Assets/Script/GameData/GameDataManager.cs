@@ -75,8 +75,10 @@ namespace GameJam.GameData
             Debug.Log("================  Load GameData From Json Complete  =================");
 
             isInitialized = true;
-
+            
+            //Test log
             Debug.Log(itemConfig["clock"].Type);
+            Debug.Log(itemConfig["arse"].Name);
         }
     }
   
