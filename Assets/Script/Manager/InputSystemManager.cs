@@ -17,7 +17,8 @@ public class InputSystemManager : MonoBehaviour
 
     //UnityAction
     public UnityAction<Vector2> onMove;
-    public UnityAction<Vector2> onLook;
+    public UnityAction<bool> onPressMove;
+    public UnityAction<bool> onPressRun;
     public UnityAction onFire;
     public UnityAction onClose;
     
@@ -104,14 +105,6 @@ public class InputSystemManager : MonoBehaviour
         }
     }
 
-    void OnLook(InputValue value)
-    {
-        if(value.Get<Vector2>() != Vector2.zero)
-        {
-            onLook?.Invoke(value.Get<Vector2>());
-        }
-    }
-
     void OnFire(InputValue value)
     {
         if(value.isPressed)
@@ -119,8 +112,22 @@ public class InputSystemManager : MonoBehaviour
             onFire?.Invoke();
         }
     }
-    
-    
+
+    void OnPressMove(InputValue value)
+    {
+        if(value.isPressed)
+            onPressMove?.Invoke(true);
+        else
+            onPressMove?.Invoke(false);
+    }
+
+    void OnPressRun(InputValue value)
+    {
+        if(value.isPressed)
+            onPressRun?.Invoke(true);
+        else
+            onPressRun?.Invoke(false);
+    }
     
     #endregion
 }
