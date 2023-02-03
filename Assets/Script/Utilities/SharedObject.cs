@@ -4,21 +4,14 @@ using UnityEngine;
 
 namespace GameJam.Utilities
 {
-    /// <summary>
-    /// holding references to shared objects
-    /// </summary>
-    public class SharedContext : Singleton<SharedContext>
+    public class SharedObject : Singleton<SharedObject>
     {
         private readonly Dictionary<Type, object> objects = new Dictionary<Type, object>();
 
-        public SharedContext()
+        public SharedObject()
         {
         }
 
-        /// <summary>
-        /// add object to shared context
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
         public void Add<T>(T obj) where T : class
         {
             Type key = typeof(T);
@@ -32,28 +25,16 @@ namespace GameJam.Utilities
             }
         }
 
-        /// <summary>
-        /// remove object from shared context
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
         public void Remove<T>(T obj) where T : class
         {
             this.Remove<T>();
         }
 
-        /// <summary>
-        /// remove object of specific type from shared context
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
         public void Remove<T>() where T : class
         {
             objects.Remove(typeof(T));
         }
 
-        /// <summary>
-        /// get object of specific type
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
         public T Get<T>() where T : class
         {
             Type key = typeof(T);
@@ -61,9 +42,6 @@ namespace GameJam.Utilities
             return result as T;
         }
 
-        /// <summary>
-        /// try getting object of specific type
-        /// </summary>
         public bool TryGet<T>(out T resultT) where T : class
         {
             bool result = objects.TryGetValue(typeof(T), out object resultObj);

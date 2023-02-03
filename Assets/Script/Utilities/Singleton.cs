@@ -8,9 +8,6 @@ namespace GameJam.Utilities
     {
         protected static readonly List<Singleton> singletonList = new List<Singleton>();
 
-        /// <summary>
-        /// clear all of the singleton
-        /// </summary>
         public static void ClearAllSingleton()
         {
             for (int i = 0; i < singletonList.Count; i++)
@@ -22,9 +19,6 @@ namespace GameJam.Utilities
             singletonList.Clear();
         }
 
-        /// <summary>
-        /// clear this singleton
-        /// </summary>
         protected abstract void Clear();
     }
 
