@@ -13,6 +13,9 @@ namespace GameJam.GameData
         [Tooltip("Set multiply value of scale DOWN")]
         public float scaleDownMultiply;
         
+        [Tooltip("Set Normal Scale")]
+        public float normalScale;
+        
         private void Awake()
         {
             SharedObject.Instance.Add(this);
