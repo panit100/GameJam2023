@@ -20,7 +20,7 @@ public class SceneController : MonoBehaviour
 
     void Start()
     {
-        OnLoadSceneMainmenu();
+
     }
 
     void Initilize()

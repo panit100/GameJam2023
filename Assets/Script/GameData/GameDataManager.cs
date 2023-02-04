@@ -74,11 +74,11 @@ namespace GameJam.GameData
                 }
             }
 
-            Debug.Log("================  Load GameData From Json Complete  =================");
+            // Debug.Log("================  Load GameData From Json Complete  =================");
 
             isInitialized = true;
 
-            Debug.Log(itemConfig["clock"].IconName);
+            // Debug.Log(itemConfig["clock"].IconName);
         }
 
         public bool TryGetAchievementInfo(string achievementId, out AchievementModel achievementInfo)
