@@ -524,7 +524,7 @@ GameObject:
   - component: {fileID: 387112735}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1527,10 +1527,14 @@ MonoBehaviour:
   turnSmoothTime: 0.109
   Vcam: {fileID: 915596133}
   mainCam: {fileID: 965724292}
-  canMove: 0
-  canWalk: 1
-  canRun: 1
+  canMove: 1
+  canWalk: 0
+  canRun: 0
+  canJump: 0
   CanRotate: 1
+  jumpForce: 0
+  offSet: {x: 0, y: -1, z: 0}
+  radius: 0.1
   currentMovementState: 0
 --- !u!23 &1542243384
 MeshRenderer:
