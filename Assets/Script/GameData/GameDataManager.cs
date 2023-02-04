@@ -24,14 +24,16 @@ namespace GameJam.GameData
         #region General Data
 
         [GameData("item_config")]
-        private Dictionary<string, ItemInfoModel> itemConfig; 
+        private Dictionary<string, ItemInfoModel> itemConfig;
+
+        [GameData("achievement_config")]
+        private Dictionary<string, AchievementModel> achievementConfig;
 
         #endregion
 
         private void Awake()
         {
             SharedObject.Instance.Add(this);
-            DontDestroyOnLoad(this);
         }
 
         public void StartInitialize()
@@ -77,6 +79,21 @@ namespace GameJam.GameData
             isInitialized = true;
 
             Debug.Log(itemConfig["clock"].IconName);
+        }
+
+        public bool TryGetAchievementInfo(string achievementId, out AchievementModel achievementInfo)
+        {
+            bool exist = achievementConfig.TryGetValue(achievementId, out AchievementModel achievementModel);
+
+            if (!exist)
+            {
+                Debug.LogError($"achievement ID : {achievementId} doesn't exist in current context!!");
+                achievementInfo = new AchievementModel();
+                return false;
+            }
+
+            achievementInfo = achievementModel;
+            return true;
         }
     }
   

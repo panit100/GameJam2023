@@ -10,5 +10,24 @@
             "icon": "clock_icon",
             "atlas_icon": "AtlasEquipableItemIcons"
         }
+    },
+    "achievement_config":
+    {
+        "first_ending" :
+        {
+            "id": "first_ending",
+            "header" : "True Ending ?",
+            "info": " Finish a game with ending I",
+            "icon": "clock_icon",
+            "atlas_icon": "AtlasEquipableItemIcons"
+        },
+        "second_ending" :
+        {
+            "id": "second_ending",
+            "header" : "Real Ending ?",
+            "info": " Finish a game with ending II",
+            "icon": "clock_icon",
+            "atlas_icon": "AtlasEquipableItemIcons"
+        }
     }
 }
