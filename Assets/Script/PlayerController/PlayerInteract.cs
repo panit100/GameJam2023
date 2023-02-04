@@ -5,30 +5,15 @@ using GameJam.Utilities;
 
 public class PlayerInteract : MonoBehaviour
 {
-    InputSystemManager inputSystemManager;
     bool isTalk;
-    void Start()
+    
+    private void OnTriggerEnter(Collider other)
     {
-        inputSystemManager = SharedObject.Instance.Get<InputSystemManager>();
-        inputSystemManager.onInteract += OnInteract;
-    }
-    public void OnInteract(bool value)
-    {
-        Interacting();
-    }
-
-    void Interacting()
-    {
-        isTalk = true;
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.GetComponent<TalkWithNPC>()!=null && isTalk == true)
+        if (other.GetComponent<TalkWithNPC>()!=null && isTalk == false)
         {
-            other.GetComponent<TalkWithNPC>().SetDialogueID();
             StartDialogue(other.GetComponent<TalkWithNPC>());
-            isTalk = false;
         }
+        Destroy(other.gameObject);
     }
 
     void StartDialogue(TalkWithNPC NPC)

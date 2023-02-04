@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using GameJam.Utilities;
-using UnityEngine.UI;
 using System.IO;
 
 public class DialogueManager : MonoBehaviour
@@ -18,6 +17,8 @@ public class DialogueManager : MonoBehaviour
     Canvas dialogueCanvas;
     UIDialoguePanel dialoguePanel;
 
+    string allSentence;
+    [SerializeField] float delayForNextSentences = 5f;
 
     void Awake()
     {
@@ -27,17 +28,7 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         LoadDialogueData();
-        //LoadCharacterSprites();
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown("space"))
-        {
-            StartDialogue();
-        }
-    }
-
     void LoadDialogueData()
     {
         for (int i = 0; i < dialoguePaths.Length; i++)
@@ -96,10 +87,9 @@ public class DialogueManager : MonoBehaviour
         }
         dialogueCanvas.enabled = true;
 
-        dialoguePanel.NameText.text = openWith[currentDialogue].character;
-        dialoguePanel.DialogueText.text = openWith[currentDialogue].dialogueText;
+        allSentence = openWith[currentDialogue].character + " : " + openWith[currentDialogue].dialogueText;
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(openWith[currentDialogue].dialogueText));
+        StartCoroutine(TypeSentence(allSentence));
 
         currentId = openWith[currentDialogue].continueId;
     }
@@ -112,9 +102,9 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        dialoguePanel.NameText.text = openWith[currentId].character;
+        allSentence = openWith[currentId].character + " : " + openWith[currentId].dialogueText;
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(openWith[currentId].dialogueText));
+        StartCoroutine(TypeSentence(allSentence));
         currentId = openWith[currentId].continueId;
     }
 
@@ -126,8 +116,14 @@ public class DialogueManager : MonoBehaviour
             dialoguePanel.DialogueText.text += letter;
             yield return null;
         }
+        StartCoroutine(DelayForNextDialogue());
     }
 
+    IEnumerator DelayForNextDialogue()
+    {
+        yield return new WaitForSeconds(delayForNextSentences);
+        DisplayNextSentence();
+    }
     void EndDialogue()
     {
         dialogueCanvas.enabled = false;

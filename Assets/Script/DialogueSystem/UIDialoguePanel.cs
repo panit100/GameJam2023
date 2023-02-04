@@ -32,16 +32,4 @@ public class UIDialoguePanel : MonoBehaviour
         ContinueButton.onClick.AddListener(displayNextSentence);
     }
 
-    //public void ResetCharacterSprite()
-    //{
-    //    character1Sprite = null;
-    //    character2Sprite = null;
-    //    imageCharacter1.GetComponent<Image>().sprite = null;
-    //    imageCharacter2.GetComponent<Image>().sprite = null;
-    //    imageCharacter1.GetComponent<Image>().color = new Color(1, 1, 1, 1);
-    //    imageCharacter2.GetComponent<Image>().color = new Color(1, 1, 1, 1);
-    //    imageCutScene.GetComponent<Image>().sprite = null;
-    //    imageCutScene.GetComponent<Image>().color = new Color(1, 1, 1, 0);
-    //}
-
 }
