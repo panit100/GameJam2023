@@ -10,6 +10,8 @@ public class SoundManager : MonoBehaviour
     List<EventInstance> eventInstances;
     List<StudioEventEmitter> eventEmitters;
 
+    EventInstance musicEventInstances;
+
     bool isInitlize;
 
     void Awake()

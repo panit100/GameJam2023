@@ -89,8 +89,8 @@ public class PlayerMovementController : MonoBehaviour
         
         AddInputListiner();
 
-        playerWalkSFX = soundManager.CreateInstance(fModEvent.playerWalkSFX);
-        playerRunSFX = soundManager.CreateInstance(fModEvent.playerRunSFX);
+        playerWalkSFX = soundManager.CreateInstance(fModEvent.PlayerWalkSFX);
+        playerRunSFX = soundManager.CreateInstance(fModEvent.PlayerRunSFX);
     }
 
     void AddInputListiner()
@@ -237,6 +237,12 @@ public class PlayerMovementController : MonoBehaviour
 
     void Jump()
     {
+        if(isJumping)
+        {
+            playerWalkSFX.stop(STOP_MODE.ALLOWFADEOUT);
+            playerRunSFX.stop(STOP_MODE.ALLOWFADEOUT);
+        }
+
         if (Input.GetKeyDown(KeyCode.Space) && canJump)
         {
             if (isJumping) { return; }
@@ -244,8 +250,7 @@ public class PlayerMovementController : MonoBehaviour
             rb.velocity += Vector3.up * jumpForce * Time.deltaTime;
 
             //Play Jump sound
-            playerWalkSFX.stop(STOP_MODE.ALLOWFADEOUT);
-            playerRunSFX.stop(STOP_MODE.ALLOWFADEOUT);
+            
 
             isJumping = true;
         }
