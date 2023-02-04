@@ -153,7 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SCENE_MAINMENU: Mainmenu
-  SCENE_GAMEPLAY: Scene2
+  SCENE_MAP1: Map1
+  SCENE_MAP2: Map2
+  SCENE_MAP3: Map3
 --- !u!4 &371012736
 Transform:
   m_ObjectHideFlags: 0
