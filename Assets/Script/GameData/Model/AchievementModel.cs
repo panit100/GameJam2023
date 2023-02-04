@@ -17,5 +17,11 @@ namespace GameJam.GameData
 
         [JsonProperty("info")]
         public string Info;
+
+        [JsonProperty("icon_name")]
+        public string IconName;
+
+        [JsonProperty("atlas_icon")]
+        public string AtlasIcon;
     }
 }
