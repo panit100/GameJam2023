@@ -26,6 +26,9 @@ public class BGMSoundSetting : MonoBehaviour
 
     void InitializeAmbience()
     {
+        if(Ambience.IsNull)
+            return;
+
         AmbienceEvent = soundManager.CreateInstance(Ambience);
         
         AmbienceEvent.getPlaybackState(out var playBackState);
@@ -35,6 +38,9 @@ public class BGMSoundSetting : MonoBehaviour
 
     void InitializeBGM()
     {
+        if(BGMEvent.IsNull)
+            return;
+
         BGMEvent = soundManager.CreateInstance(BGM);
         
         BGMEvent.getPlaybackState(out var playBackState);
