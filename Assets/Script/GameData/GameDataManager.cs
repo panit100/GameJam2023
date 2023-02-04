@@ -24,7 +24,10 @@ namespace GameJam.GameData
         #region General Data
 
         [GameData("item_config")]
-        private Dictionary<string, ItemInfoModel> itemConfig; 
+        private Dictionary<string, ItemInfoModel> itemConfig;
+
+        [GameData("achievement_config")]
+        private Dictionary<string, AchievementModel> achievementConfig;
 
         #endregion
 
