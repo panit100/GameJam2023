@@ -5,6 +5,7 @@ using UnityEngine;
 public class TalkWithNPC : MonoBehaviour
 {
     public string startWithDialogueId;
+    public bool isCutScene;
 
     public void ChangeDialogueId(string changeDialogueId)
     {

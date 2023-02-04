@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using GameJam.Utilities;
 using System.IO;
+using System.Linq;
+using System;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -10,6 +13,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] string[] dialoguePaths;
     public Dictionary<string, DialogueInfo> openWith = new Dictionary<string, DialogueInfo>();
 
+    [SerializeField] List<Sprite> characterSprites = new List<Sprite>();
     [SerializeField] string currentId;
     public TalkWithNPC currentNPC;
     public string currentDialogue;
@@ -25,6 +29,18 @@ public class DialogueManager : MonoBehaviour
     {
         Thai,English
     }
+    public enum Type
+    {
+        Dialogue,
+        CutScene
+    }
+    [Header("DialogueType")]
+    public Type type;
+    void LoadCutSceneSprites()
+    {
+        characterSprites = Resources.LoadAll<Sprite>("DialogueSprite").ToList();
+    }
+
     void Awake()
     {
         SharedObject.Instance.Add(this);
@@ -33,6 +49,7 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         LoadDialogueData();
+        LoadCutSceneSprites();
     }
     void LoadDialogueData()
     {
@@ -53,14 +70,13 @@ public class DialogueManager : MonoBehaviour
 
                 var data_values = data_string.Split(';');
 
-
                 if (data_values[0] == "Id" || data_values[0] == "")
                 {
 
                 }
                 else
                 {
-                    DialogueInfo newDialogue = new DialogueInfo(data_values[0], data_values[1], data_values[2], data_values[3], data_values[4], data_values[5]);
+                    DialogueInfo newDialogue = new DialogueInfo(data_values[0], data_values[1], data_values[2], data_values[3], data_values[4], data_values[5], data_values[6], data_values[7]);
                     openWith.Add(data_values[0], newDialogue);
                 }
             }
@@ -69,9 +85,7 @@ public class DialogueManager : MonoBehaviour
     void Initialize()
     {
         CrateNewDialoguePanel();
-
         dialogueCanvas.enabled = false;
-
         //dialoguePanel.AddListenerToButton(DisplayNextSentence);
     }
     void CrateNewDialoguePanel()
@@ -89,7 +103,10 @@ public class DialogueManager : MonoBehaviour
         {
             return;
         }
+        dialoguePanel.ResetCharacterSprite();
+        type = (Type)Enum.Parse(typeof(Type), openWith[currentDialogue].type);
         dialogueCanvas.enabled = true;
+        CheckDialogueType(currentDialogue);
 
         if (language == Language.Thai)
         {
@@ -104,7 +121,15 @@ public class DialogueManager : MonoBehaviour
         currentId = openWith[currentDialogue].continueId;
         StartCoroutine(TypeSentence(allSentence));
 
-        //DisplayNextSentence();
+    }
+    void CheckDialogueType(string checkChoiceId)
+    {
+        if (type == Type.CutScene)
+        {
+            var cutSceneImage = characterSprites.Find(n => n.name == openWith[checkChoiceId].imageCutScene);
+            dialoguePanel.SetCutSceneSprite(cutSceneImage);
+            dialoguePanel.ImageCutScene.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+        }
     }
 
     public void DisplayNextSentence()
@@ -114,6 +139,7 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
+        CheckDialogueType(currentId);
 
         if (language == Language.Thai)
         {
@@ -154,6 +180,8 @@ public class DialogueManager : MonoBehaviour
             currentNPC = null;
         }
         currentDialogue = null;
+
+        SharedObject.Instance.Get<GameplayController>().isTriggerDialogue = false;
         //PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
     }
 

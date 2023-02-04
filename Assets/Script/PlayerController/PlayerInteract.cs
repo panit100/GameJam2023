@@ -31,6 +31,7 @@ public class PlayerInteract : MonoBehaviour
             print(isInteract);
         }
         isInteract = false;
+        print(isInteract);
     }
 
     void StartDialogue(TalkWithNPC NPC)

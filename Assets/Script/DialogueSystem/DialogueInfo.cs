@@ -10,8 +10,10 @@ public class DialogueInfo
     public string characterEngLishName;
     public string dialogueEnglish;
     public string continueId;
+    public string imageCutScene;
+    public string type;
 
-    public DialogueInfo(string Id, string CharacterThaiName, string DialogueThai, string CharacterEngLishName, string DialogueEnglish, string ContinueId)
+    public DialogueInfo(string Id, string CharacterThaiName, string DialogueThai, string CharacterEngLishName, string DialogueEnglish, string ContinueId, string ImageCutScene, string Type)
     {
         ID = Id;
         characterThaiName = CharacterThaiName;
@@ -19,5 +21,7 @@ public class DialogueInfo
         characterEngLishName = CharacterEngLishName;
         dialogueEnglish = DialogueEnglish;
         continueId = ContinueId;
+        imageCutScene = ImageCutScene;
+        type = Type;
     }
 }

@@ -820,20 +820,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d3862916fddba49aad0e4b8fd0ee52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <playerWalkSFX>k__BackingField:
+  <PlayerWalkSFX>k__BackingField:
     Guid:
-      Data1: -1855868084
-      Data2: 1228113724
-      Data3: -1086442050
-      Data4: -795162211
-    Path: event:/PlayerWalkSFX
-  <playerRunSFX>k__BackingField:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <PlayerRunSFX>k__BackingField:
     Guid:
-      Data1: 1915928469
-      Data2: 1080462970
-      Data3: 1183676566
-      Data4: -1992371966
-    Path: event:/PlayerRunSFX
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <PlayerJumpSFX>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <PlayerHitGroundSFX>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <ShrinkSFX>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <ExtendSFX>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <ClockSFX>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <ButtonSFX>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &965724289
 GameObject:
   m_ObjectHideFlags: 0
@@ -1875,7 +1917,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963544838}
-  m_LocalRotation: {x: 0.111869864, y: -0.0000000010820057, z: 1.218087e-10, w: 0.99372286}
+  m_LocalRotation: {x: 0.11186986, y: 0.0000000064004526, z: -7.205406e-10, w: 0.99372286}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
