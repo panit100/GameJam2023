@@ -89,7 +89,7 @@ public class PlayerMovementController : MonoBehaviour
         AddInputListiner();
 
         playerWalkSFX = soundManager.CreateInstance(fModEvent.playerWalkSFX);
-        // playerRunSFX = soundManager.CreateInstance(fModEvent.playerRunSFX);
+        playerRunSFX = soundManager.CreateInstance(fModEvent.playerRunSFX);
     }
 
     void AddInputListiner()
@@ -124,8 +124,6 @@ public class PlayerMovementController : MonoBehaviour
 
     void FixedUpdate() 
     {
-        UpdateSound();
-
         CheckJump();
 
         if (!canMove)
@@ -164,13 +162,24 @@ public class PlayerMovementController : MonoBehaviour
         {
             case movementState.walk:
                 walkToDirection(direction);
+
+                WalkSFX();
+
+                playerRunSFX.stop(STOP_MODE.ALLOWFADEOUT);
                 break;
 
             case movementState.run:
                 runToDirection(direction);
+
+                RanSFX();
+
+                playerWalkSFX.stop(STOP_MODE.ALLOWFADEOUT);
                 break;
 
             case movementState.idle:
+                playerWalkSFX.stop(STOP_MODE.ALLOWFADEOUT);
+                playerRunSFX.stop(STOP_MODE.ALLOWFADEOUT);
+
                 //TODO : idle animation
 
                 break;
@@ -233,6 +242,10 @@ public class PlayerMovementController : MonoBehaviour
 
             rb.velocity += Vector3.up * jumpForce * Time.deltaTime;
 
+            //Play Jump sound
+            playerWalkSFX.stop(STOP_MODE.ALLOWFADEOUT);
+            playerRunSFX.stop(STOP_MODE.ALLOWFADEOUT);
+
             isJumping = true;
         }
     }
@@ -293,23 +306,22 @@ public class PlayerMovementController : MonoBehaviour
         //Jump();
     }
 
-    void UpdateSound()
-    {
-        WalkSFX();
-    }
-
     void WalkSFX()
     {
         soundManager.AttachInstanceToGameObject(playerWalkSFX,transform,rb);
 
-        if (canWalk)
-        {
-            playerWalkSFX.getPlaybackState(out var playBackState);
-            if(playBackState.Equals(PLAYBACK_STATE.STOPPED))
-                playerWalkSFX.start();
-        }
-        else
-            playerWalkSFX.stop(STOP_MODE.ALLOWFADEOUT);
+        playerWalkSFX.getPlaybackState(out var playBackState);
+        if(playBackState.Equals(PLAYBACK_STATE.STOPPED))
+            playerWalkSFX.start();
+    }
+
+    void RanSFX()
+    {
+        soundManager.AttachInstanceToGameObject(playerRunSFX,transform,rb);
+
+        playerRunSFX.getPlaybackState(out var playBackState);
+        if(playBackState.Equals(PLAYBACK_STATE.STOPPED))
+            playerRunSFX.start();
     }
 
     void OnDestroy() 

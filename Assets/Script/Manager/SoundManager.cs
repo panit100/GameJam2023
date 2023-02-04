@@ -7,6 +7,9 @@ using FMOD.Studio;
 
 public class SoundManager : MonoBehaviour
 {
+    List<EventInstance> eventInstances;
+    List<StudioEventEmitter> eventEmitters;
+
     bool isInitlize;
 
     void Awake()
@@ -17,6 +20,9 @@ public class SoundManager : MonoBehaviour
     void Initilize()
     {
         SharedObject.Instance.Add(this);
+
+        eventInstances = new List<EventInstance>();
+        eventEmitters = new List<StudioEventEmitter>();
 
         isInitlize = true;
     }
@@ -29,6 +35,7 @@ public class SoundManager : MonoBehaviour
     public EventInstance CreateInstance(EventReference reference)
     {
         EventInstance eventInstance = RuntimeManager.CreateInstance(reference);
+        eventInstances.Add(eventInstance);
         
         return eventInstance;
     }
@@ -36,5 +43,32 @@ public class SoundManager : MonoBehaviour
     public void AttachInstanceToGameObject(EventInstance eventInstance,Transform transform,Rigidbody rigidbody)
     {
         RuntimeManager.AttachInstanceToGameObject(eventInstance,transform,rigidbody);
+    }
+
+    public StudioEventEmitter InitailizerEventEmitter(EventReference eventReference,GameObject gameObject)
+    {
+        StudioEventEmitter emitter = gameObject.GetComponent<StudioEventEmitter>();
+        emitter.EventReference = eventReference;
+        eventEmitters.Add(emitter);
+        return emitter;
+    }
+
+    void CleanUp()
+    {
+        foreach(EventInstance eventInstance in eventInstances)
+        {
+            eventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            eventInstance.release();
+        }
+
+        foreach(StudioEventEmitter emitter in eventEmitters)
+        {
+            emitter.Stop();
+        }
+    }
+
+    void OnDestroy()
+    {
+        CleanUp();
     }
 }
