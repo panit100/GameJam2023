@@ -38,7 +38,7 @@ public class BGMSoundSetting : MonoBehaviour
 
     void InitializeBGM()
     {
-        if(BGMEvent.IsNull)
+        if(BGM.IsNull)
             return;
 
         BGMEvent = soundManager.CreateInstance(BGM);
