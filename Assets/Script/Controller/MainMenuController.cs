@@ -44,7 +44,7 @@ public class MainMenuController : MonoBehaviour
 
     public void OnLoadSceneGameplay()
     {
-        sceneController.OnLoadSceneGameplay();
+        sceneController.OnLoadSceneMap1();
     }
 
     public void OnClickAchievementButton()
