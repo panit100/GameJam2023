@@ -16,7 +16,8 @@ public class RaycastToCheck : MonoBehaviour
 
     private void ShootRay()
     {
-        if(Physics.Raycast(this.gameObject.transform.position, this.gameObject.transform.position ,out RaycastHit hit))
+        if (Physics.Raycast(this.gameObject.transform.position,
+                this.gameObject.transform.TransformDirection(Vector3.forward), out RaycastHit hit, 20f))
         {
             if (!hit.collider.CompareTag("ScaleButton")) return;
             
