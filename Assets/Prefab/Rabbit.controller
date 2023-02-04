@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: rabbit_walk_extra
+  m_Name: walk_extra
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -20,7 +20,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -7976067052415391743, guid: 0e3771cb0cc25794886862a9d370a15b,
+  m_Motion: {fileID: 1827226128182048838, guid: 0e3771cb0cc25794886862a9d370a15b,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -34,7 +34,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: rabbit_viewclock_ed
+  m_Name: viewclock_ed
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -47,7 +47,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 4292278075771792395, guid: 1aac05eb49afd804ba12cec2681754da,
+  m_Motion: {fileID: 1827226128182048838, guid: 1aac05eb49afd804ba12cec2681754da,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -71,13 +71,13 @@ AnimatorStateMachine:
     m_Position: {x: 124.143555, y: 521.5374, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5151955493202464672}
-    m_Position: {x: 90.012695, y: 440.27338, z: 0}
+    m_Position: {x: 90, y: 440, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3866922765251415185}
     m_Position: {x: 770, y: 300, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5300796726929104682}
-    m_Position: {x: 59.132385, y: 643.43335, z: 0}
+    m_Position: {x: 240, y: 660, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 9049495396984736070}
     m_Position: {x: -20.506348, y: 619.0542, z: 0}
@@ -107,7 +107,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: rabbit_jump_ed
+  m_Name: jump_ed
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -120,7 +120,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -5451778300731143984, guid: 2af05f43a7948644e95470bca3637622,
+  m_Motion: {fileID: 1827226128182048838, guid: 2af05f43a7948644e95470bca3637622,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -134,7 +134,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: rabbit_idle
+  m_Name: idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -147,7 +147,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 3988729601621900756, guid: 506690debbce93f48887f64aaf1e787f,
+  m_Motion: {fileID: 1827226128182048838, guid: 506690debbce93f48887f64aaf1e787f,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -183,7 +183,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: rabbit_viewclock_st
+  m_Name: viewclock_st
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -196,7 +196,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 1764566170127666474, guid: cf49b0b07bc62ad499201f89f6a03432,
+  m_Motion: {fileID: 1827226128182048838, guid: cf49b0b07bc62ad499201f89f6a03432,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -210,7 +210,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: rabbit_run
+  m_Name: run
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -223,7 +223,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -2369173078439734957, guid: af2237d327a7d15448d170bead09c0d1,
+  m_Motion: {fileID: 1827226128182048838, guid: af2237d327a7d15448d170bead09c0d1,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -237,7 +237,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: rabbit_jump_st
+  m_Name: jump_st
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -250,7 +250,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 4298570481646894023, guid: e7bd268f06d0f1849a3a1a9054d2e7d3,
+  m_Motion: {fileID: 1827226128182048838, guid: e7bd268f06d0f1849a3a1a9054d2e7d3,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -264,7 +264,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: rabbit_walk
+  m_Name: walk
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -277,7 +277,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 4399876878454700021, guid: 410748c57a9d8a141b69af2e5f2db20e,
+  m_Motion: {fileID: 1827226128182048838, guid: 410748c57a9d8a141b69af2e5f2db20e,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -291,7 +291,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: rabbit_viewclock_loop
+  m_Name: viewclock_lp
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -304,7 +304,8 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -95082415983885234, guid: 2e745f56d59982d45bc7374e03ba0921, type: 3}
+  m_Motion: {fileID: 1827226128182048838, guid: 7c315c618e7498c498d4b71439883c79,
+    type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
