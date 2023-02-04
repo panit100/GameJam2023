@@ -169,6 +169,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &489132728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 489132730}
+  - component: {fileID: 489132729}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &489132729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489132728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 583c3116f9c880345bcbe1e5bffc958b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &489132730
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489132728}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1955249415}
+  - {fileID: 1819784269}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &771021226
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,6 +261,243 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1611259125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1611259128}
+  - component: {fileID: 1611259127}
+  - component: {fileID: 1611259126}
+  m_Layer: 0
+  m_Name: InputSystemManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1611259126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611259125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb6b487c4c66234191ed92afa3b46a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInputAction: {fileID: -944628639613478452, guid: 67380ee41e5cd1e43aaa953905b9977d,
+    type: 3}
+  inputSystemUIInputModule: {fileID: 0}
+--- !u!114 &1611259127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611259125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 67380ee41e5cd1e43aaa953905b9977d,
+    type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultActionMap: PlayerControl
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!4 &1611259128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611259125}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.557811, y: -24.01506, z: 11.581231}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1819784268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1819784269}
+  - component: {fileID: 1819784270}
+  m_Layer: 0
+  m_Name: BGMSoundSetting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1819784269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819784268}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 489132730}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1819784270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819784268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a6435a7f72077440b206689857c76fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <BGM>k__BackingField:
+    Guid:
+      Data1: 313006616
+      Data2: 1139086044
+      Data3: -856025681
+      Data4: -1976298810
+    Path: event:/BGM_GameplayForest
+  <Ambience>k__BackingField:
+    Guid:
+      Data1: 862928419
+      Data2: 1168394411
+      Data3: 2053333935
+      Data4: -782916752
+    Path: event:/Ambience_Forest
+--- !u!1 &1955249414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1955249415}
+  - component: {fileID: 1955249416}
+  m_Layer: 0
+  m_Name: FModEvent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1955249415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955249414}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 489132730}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1955249416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955249414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25d3862916fddba49aad0e4b8fd0ee52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <PlayerWalkSFX>k__BackingField:
+    Guid:
+      Data1: -1855868084
+      Data2: 1228113724
+      Data3: -1086442050
+      Data4: -795162211
+    Path: event:/SFX_PlayerWalk
+  <PlayerRunSFX>k__BackingField:
+    Guid:
+      Data1: 1915928469
+      Data2: 1080462970
+      Data3: 1183676566
+      Data4: -1992371966
+    Path: event:/SFX_PlayerRun
+  <PlayerJumpSFX>k__BackingField:
+    Guid:
+      Data1: -29412136
+      Data2: 1280349965
+      Data3: 9491615
+      Data4: 879718139
+    Path: event:/SFX_PlayerJump
+  <PlayerHitGroundSFX>k__BackingField:
+    Guid:
+      Data1: -847917548
+      Data2: 1216729412
+      Data3: -608152925
+      Data4: -460255825
+    Path: event:/SFX_PlayerHitGround
+  <ShrinkSFX>k__BackingField:
+    Guid:
+      Data1: 1030213539
+      Data2: 1220704703
+      Data3: 609142704
+      Data4: 2084600436
+    Path: event:/SFX_Shrink
+  <ExtendSFX>k__BackingField:
+    Guid:
+      Data1: 840364318
+      Data2: 1187193439
+      Data3: -1917303138
+      Data4: -1756658081
+    Path: event:/SFX_Extend
+  <ClockSFX>k__BackingField:
+    Guid:
+      Data1: 265882497
+      Data2: 1154164735
+      Data3: -271682669
+      Data4: -548210752
+    Path: event:/SFX_Clock
+  <ButtonSFX>k__BackingField:
+    Guid:
+      Data1: -1156802421
+      Data2: 1082446842
+      Data3: -204052558
+      Data4: -736369562
+    Path: event:/SFX_Button
 --- !u!1 &2008813750
 GameObject:
   m_ObjectHideFlags: 0
