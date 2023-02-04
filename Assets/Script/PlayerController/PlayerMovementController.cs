@@ -89,7 +89,7 @@ public class PlayerMovementController : MonoBehaviour
         
         AddInputListiner();
 
-        playerWalkSFX = soundManager.CreateInstance(fModEvent.playerWalkSFX);
+        // playerWalkSFX = soundManager.CreateInstance(fModEvent.playerWalkSFX);
         // playerRunSFX = soundManager.CreateInstance(fModEvent.playerRunSFX);
     }
 
@@ -125,7 +125,7 @@ public class PlayerMovementController : MonoBehaviour
 
     void FixedUpdate() 
     {
-        UpdateSound();
+        // UpdateSound();
 
         CheckJump();
 

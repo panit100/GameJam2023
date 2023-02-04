@@ -7,11 +7,7 @@ using UnityEngine;
 public class RaycastToCheck : MonoBehaviour
 {
     private ButtonReciever reciever;
-
-    private void Start()
-    {
-        
-    }
+    private UIPrompt textPrompt;
 
     private void Update()
     {
@@ -22,9 +18,15 @@ public class RaycastToCheck : MonoBehaviour
     {
         if(Physics.Raycast(this.gameObject.transform.position, this.gameObject.transform.position ,out RaycastHit hit))
         {
-            // Debug.Log($"Obj : {hit.collider.gameObject.name}");
+            if (!hit.collider.CompareTag("ScaleButton")) return;
+            
             reciever = hit.collider.gameObject.GetComponent<ButtonReciever>();
             CheckSize();
+        }
+        else
+        {
+            textPrompt = FindObjectOfType<UIPrompt>();
+            textPrompt.CloseTextPrompt();
         }
     }
 

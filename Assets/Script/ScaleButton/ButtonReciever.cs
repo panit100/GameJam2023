@@ -12,28 +12,34 @@ public class ButtonReciever : MonoBehaviour
     
     public Size buttonForPlayerSize;
 
-    [SerializeField] private GameObject playerRef; 
+    [SerializeField] private GameObject playerRef;
+    private UIPrompt prompt;
+
+    private void Start()
+    {
+        prompt = FindObjectOfType<UIPrompt>();
+    }
 
     public void CheckPlayerSize()
     {
         switch (buttonForPlayerSize)
         {
             case Size.big:
-                if(playerRef.transform.localScale == Vector3.one * 2f) 
-                    Debug.Log($"big");
+                if(playerRef.transform.localScale == Vector3.one * 2f)
+                    prompt.TextPrompt("Big");
                 
                 break;
 
             case Size.normal:
                 if (playerRef.transform.localScale == Vector3.one)
-                    Debug.Log($"med");
+                    prompt.TextPrompt("Medium");
 
                 break;
 
             case Size.small:
-                if(playerRef.transform.localScale == Vector3.one * 0.5f) 
-                    Debug.Log($"smol");
-                
+                if(playerRef.transform.localScale == Vector3.one * 0.5f)
+                    prompt.TextPrompt("Small");
+
                 break;
         }
     }

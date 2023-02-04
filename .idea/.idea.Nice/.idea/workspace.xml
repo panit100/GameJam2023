@@ -14,6 +14,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Script/ClockSystem/ClockSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/ScaleButton/ButtonReciever.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/ScaleButton/RaycastToCheck.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/ScaleButton/UIPrompt.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/880832f2c4e2458090401bbb74a86b24a8a00/e3/7c1f493c/JsonPropertyAttribute.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -74,6 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675484222247</updated>
       <workItem from="1675484254525" duration="7950000" />
+      <workItem from="1675516579102" duration="7128000" />
     </task>
     <servers />
   </component>
