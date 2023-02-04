@@ -19,6 +19,7 @@ public class InputSystemManager : MonoBehaviour
     public UnityAction<Vector2> onMove;
     public UnityAction<bool> onPressMove;
     public UnityAction<bool> onPressRun;
+    public UnityAction<bool> onPressJump;
     public UnityAction onFire;
     public UnityAction onClose;
     public UnityAction<bool> onInteract;
@@ -132,6 +133,13 @@ public class InputSystemManager : MonoBehaviour
             onPressRun?.Invoke(false);
     }
 
+    void OnPressJump(InputValue value)
+    {
+        if(value.isPressed)
+            onPressJump?.Invoke(true);
+        else
+            onPressJump?.Invoke(false);
+    }
     void OnInteract(InputValue value)
     {
         if (value.isPressed)
