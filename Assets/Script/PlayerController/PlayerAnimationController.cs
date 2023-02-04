@@ -41,6 +41,7 @@ public class PlayerAnimationController : MonoBehaviour
 
     public void UseClockAnimation()
     {
+        anim.SetTrigger("useClock");
         anim.SetBool("clock", true);
     }
 
