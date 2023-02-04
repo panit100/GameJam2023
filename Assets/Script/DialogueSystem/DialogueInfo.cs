@@ -7,13 +7,13 @@ public class DialogueInfo
     public string ID;
     public string character;
     public string dialogueText;
-    public string choice1;
+    public string continueId;
 
-    public DialogueInfo(string Id, string Character, string DialogueText, string Choice1)
+    public DialogueInfo(string Id, string Character, string DialogueText, string ContinueId)
     {
         ID = Id;
         character = Character;
         dialogueText = DialogueText;
-        choice1 = Choice1;
+        continueId = ContinueId;
     }
 }

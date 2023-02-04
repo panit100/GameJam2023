@@ -101,7 +101,7 @@ public class DialogueManager : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(TypeSentence(openWith[currentDialogue].dialogueText));
 
-        currentId = openWith[currentDialogue].choice1;
+        currentId = openWith[currentDialogue].continueId;
     }
 
     public void DisplayNextSentence()
@@ -115,7 +115,7 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.NameText.text = openWith[currentId].character;
         StopAllCoroutines();
         StartCoroutine(TypeSentence(openWith[currentId].dialogueText));
-        currentId = openWith[currentId].choice1;
+        currentId = openWith[currentId].continueId;
     }
 
     IEnumerator TypeSentence(string sentence)
