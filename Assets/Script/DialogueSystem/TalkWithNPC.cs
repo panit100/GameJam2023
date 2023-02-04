@@ -3,48 +3,49 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[System.Serializable]
-public class NPCDialogueCondition{
-    //public bool isTalk = false;
-    //public ItemScriptableObject conditionItem;
-    public string correctDialogueID;
-    //public UnityEvent triggerEvents;
-}
+//[System.Serializable]
+//public class NPCDialogueCondition{
+//    //public bool isTalk = false;
+//    //public ItemScriptableObject conditionItem;
+//    public string correctDialogueID;
+//    public UnityEvent triggerEvents;
+//}
 public class TalkWithNPC : MonoBehaviour
 {
     //public bool isCutScene;
     public string startWithDialogueId;
-    //public UnityEvent triggerEvents;
-    public List<NPCDialogueCondition> NPCList = new List<NPCDialogueCondition>();
+    public UnityEvent triggerEvents;
+    //public List<NPCDialogueCondition> NPCList = new List<NPCDialogueCondition>();
     public void SetDialogueID()
     {
-        foreach (var n in NPCList)
-        {
-            //if (n.conditionItem == null)
-            //{
-            //    print("null item");
-            //    return;
-            //}
+        //foreach (var n in NPCList)
+        //{
+        //    //if (n.conditionItem == null)
+        //    //{
+        //    //    print("null item");
+        //    //    return;
+        //    //}
 
-            //if (CheckCondition(n))
-            //{
-            //    if (n.isTalk == false)
-            //    {
-            //        ChangeDialogueId(n.correctDialogueID);
-            //    }
-            //    triggerEvents = n.triggerEvents;
-            //    n.isTalk = true;
-            //    return;
-            //}
-            //else
-            //{
-            //    print("incorrect item");
-            //}
-        }
+        //    triggerEvents = n.triggerEvents;
+        //    //if (CheckCondition(n))
+        //    //{
+        //    //    if (n.isTalk == false)
+        //    //    {
+        //    //        ChangeDialogueId(n.correctDialogueID);
+        //    //    }
+        //    //    triggerEvents = n.triggerEvents;
+        //    //    n.isTalk = true;
+        //    //    return;
+        //    //}
+        //    //else
+        //    //{
+        //    //    print("incorrect item");
+        //    //}
+        //}
     }
     //bool CheckCondition(NPCDialogueCondition NPCData)
     //{
-    //    if(PlayerManager.inst.PlayerInventory.PlayerItemDictionary.ContainsValue(NPCData.conditionItem.itemData))
+    //    if (PlayerManager.inst.PlayerInventory.PlayerItemDictionary.ContainsValue(NPCData.conditionItem.itemData))
     //    {
     //        return true;
     //    }

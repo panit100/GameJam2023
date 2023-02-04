@@ -21,7 +21,8 @@ public class InputSystemManager : MonoBehaviour
     public UnityAction<bool> onPressRun;
     public UnityAction onFire;
     public UnityAction onClose;
-    
+    public UnityAction<bool> onInteract;
+
 
     //InputActionMap
     InputActionMap playerControlMap;
@@ -127,6 +128,14 @@ public class InputSystemManager : MonoBehaviour
             onPressRun?.Invoke(true);
         else
             onPressRun?.Invoke(false);
+    }
+
+    void OnInteract(InputValue value)
+    {
+        if (value.isPressed)
+            onInteract?.Invoke(true);
+        else
+            onInteract?.Invoke(false);
     }
     
     #endregion

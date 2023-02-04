@@ -11,7 +11,6 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] string[] dialoguePaths;
     public Dictionary<string, DialogueInfo> openWith = new Dictionary<string, DialogueInfo>();
 
-    //[SerializeField] Sprite[] loadSprite;
     [SerializeField] string currentId;
     public TalkWithNPC currentNPC;
     public string currentDialogue;
@@ -19,10 +18,6 @@ public class DialogueManager : MonoBehaviour
     Canvas dialogueCanvas;
     UIDialoguePanel dialoguePanel;
 
-    //void LoadCharacterSprites()
-    //{
-    //    characterSprites = Resources.LoadAll<Sprite>("DialogueSprite").ToList();
-    //}
 
     void Awake()
     {
@@ -81,7 +76,6 @@ public class DialogueManager : MonoBehaviour
 
         dialogueCanvas.enabled = false;
 
-        //dialoguePanel.ResetCharacterSprite();
         dialoguePanel.AddListenerToButton(DisplayNextSentence);
     }
     void CrateNewDialoguePanel()
@@ -106,8 +100,8 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.DialogueText.text = openWith[currentDialogue].dialogueText;
         StopAllCoroutines();
         StartCoroutine(TypeSentence(openWith[currentDialogue].dialogueText));
-        
-        currentId = currentDialogue;
+
+        currentId = openWith[currentDialogue].choice1;
     }
 
     public void DisplayNextSentence()
