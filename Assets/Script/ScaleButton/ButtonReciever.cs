@@ -12,12 +12,13 @@ public class ButtonReciever : MonoBehaviour
     
     public Size buttonForPlayerSize;
 
-    [SerializeField] private GameObject playerRef;
+    private GameObject playerRef;
     private UIPrompt prompt;
 
     private void Start()
     {
         prompt = FindObjectOfType<UIPrompt>();
+        playerRef = GameObject.FindGameObjectWithTag("Player");
     }
 
     public void CheckPlayerSize()
