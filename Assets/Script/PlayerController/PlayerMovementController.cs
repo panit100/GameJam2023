@@ -89,8 +89,8 @@ public class PlayerMovementController : MonoBehaviour
         
         AddInputListiner();
 
-        // playerWalkSFX = soundManager.CreateInstance(fModEvent.playerWalkSFX);
-        // playerRunSFX = soundManager.CreateInstance(fModEvent.playerRunSFX);
+        playerWalkSFX = soundManager.CreateInstance(fModEvent.PlayerWalkSFX);
+        playerRunSFX = soundManager.CreateInstance(fModEvent.PlayerRunSFX);
     }
 
     void AddInputListiner()
@@ -125,8 +125,6 @@ public class PlayerMovementController : MonoBehaviour
 
     void FixedUpdate() 
     {
-        // UpdateSound();
-
         CheckJump();
 
         if (!canMove)
@@ -165,13 +163,24 @@ public class PlayerMovementController : MonoBehaviour
         {
             case movementState.walk:
                 walkToDirection(direction);
+
+                WalkSFX();
+
+                playerRunSFX.stop(STOP_MODE.ALLOWFADEOUT);
                 break;
 
             case movementState.run:
                 runToDirection(direction);
+
+                RanSFX();
+
+                playerWalkSFX.stop(STOP_MODE.ALLOWFADEOUT);
                 break;
 
             case movementState.idle:
+                playerWalkSFX.stop(STOP_MODE.ALLOWFADEOUT);
+                playerRunSFX.stop(STOP_MODE.ALLOWFADEOUT);
+
                 //TODO : idle animation
 
                 break;
@@ -228,11 +237,20 @@ public class PlayerMovementController : MonoBehaviour
 
     void Jump()
     {
+        if(isJumping)
+        {
+            playerWalkSFX.stop(STOP_MODE.ALLOWFADEOUT);
+            playerRunSFX.stop(STOP_MODE.ALLOWFADEOUT);
+        }
+
         if (Input.GetKeyDown(KeyCode.Space) && canJump)
         {
             if (isJumping) { return; }
 
             rb.velocity += Vector3.up * jumpForce * Time.deltaTime;
+
+            JumpSFX();
+            
 
             isJumping = true;
         }
@@ -261,6 +279,7 @@ public class PlayerMovementController : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("Ground")) { return; }
 
+        HitGroundSFX();
         canJump = true;
         isJumping = false;
     }
@@ -294,23 +313,32 @@ public class PlayerMovementController : MonoBehaviour
         //Jump();
     }
 
-    void UpdateSound()
-    {
-        WalkSFX();
-    }
-
     void WalkSFX()
     {
         soundManager.AttachInstanceToGameObject(playerWalkSFX,transform,rb);
 
-        if (canWalk)
-        {
-            playerWalkSFX.getPlaybackState(out var playBackState);
-            if(playBackState.Equals(PLAYBACK_STATE.STOPPED))
-                playerWalkSFX.start();
-        }
-        else
-            playerWalkSFX.stop(STOP_MODE.ALLOWFADEOUT);
+        playerWalkSFX.getPlaybackState(out var playBackState);
+        if(playBackState.Equals(PLAYBACK_STATE.STOPPED))
+            playerWalkSFX.start();
+    }
+
+    void RanSFX()
+    {
+        soundManager.AttachInstanceToGameObject(playerRunSFX,transform,rb);
+
+        playerRunSFX.getPlaybackState(out var playBackState);
+        if(playBackState.Equals(PLAYBACK_STATE.STOPPED))
+            playerRunSFX.start();
+    }
+
+    void JumpSFX()
+    {
+        soundManager.PlayOneShot(fModEvent.PlayerJumpSFX,this.gameObject);
+    }
+
+    void HitGroundSFX()
+    {
+        soundManager.PlayOneShot(fModEvent.PlayerHitGroundSFX,this.gameObject);
     }
 
     void OnDestroy() 
