@@ -17,6 +17,8 @@ public class MainMenuController : MonoBehaviour
     [SerializeField]
     private UICreditPanel creditPanel;
 
+    [SerializeField] private GameObject Handpaper;
+
     bool isInitlize;
 
     void Awake() 
@@ -42,14 +44,14 @@ public class MainMenuController : MonoBehaviour
 
     public void OnLoadSceneGameplay()
     {
-        sceneController.OnLoadSceneGameplay();
+        sceneController.OnLoadSceneMap1();
     }
 
     public void OnClickAchievementButton()
     {
         Debug.Log("==========  Populate Achievement ==========");
 
-        achievementPanel.Show();
+        StartCoroutine(HandTransition());
     }
 
     public void OnClickCreditButton()
@@ -63,5 +65,13 @@ public class MainMenuController : MonoBehaviour
     {
         Debug.Log("==========  Exit Game  ==========");
     }
+
+    IEnumerator HandTransition()
+    {
+        yield return new WaitForSeconds(1f);
+        Handpaper.GetComponent<Animator>().enabled = true;
+        achievementPanel.Show();
+
+    } 
 }
 

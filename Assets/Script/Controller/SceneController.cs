@@ -8,7 +8,9 @@ using GameJam.Utilities;
 public class SceneController : MonoBehaviour
 {
     public string SCENE_MAINMENU;
-    public string SCENE_GAMEPLAY;
+    public string SCENE_MAP1;
+    public string SCENE_MAP2;
+    public string SCENE_MAP3;
     
     Scene loadedSceneBefore;
     bool isInitlize;
@@ -35,9 +37,19 @@ public class SceneController : MonoBehaviour
         OnLoadSceneAsync(SCENE_MAINMENU);
     }
 
-    public void OnLoadSceneGameplay()
+    public void OnLoadSceneMap1()
     {
-        OnLoadSceneAsync(SCENE_GAMEPLAY);
+        OnLoadSceneAsync(SCENE_MAP1);
+    }
+    
+    public void OnLoadSceneMap2()
+    {
+        OnLoadSceneAsync(SCENE_MAP2);
+    }
+    
+    public void OnLoadSceneMap3()
+    {
+        OnLoadSceneAsync(SCENE_MAP3);
     }
 
     public void OnLoadSceneAsync(string sceneName)
