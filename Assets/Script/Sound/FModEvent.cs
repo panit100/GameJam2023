@@ -10,6 +10,8 @@ public class FModEvent : MonoBehaviour
     [field : Header("Player")]
     [field : SerializeField] public EventReference PlayerWalkSFX {get; private set;}
     [field : SerializeField] public EventReference PlayerRunSFX {get; private set;}
+    [field : SerializeField] public EventReference PlayerJumpSFX {get; private set;}
+    [field : SerializeField] public EventReference PlayerHitGroundSFX {get; private set;}
     [field : SerializeField] public EventReference ShrinkSFX {get; private set;}
     [field : SerializeField] public EventReference ExtendSFX {get; private set;}
     

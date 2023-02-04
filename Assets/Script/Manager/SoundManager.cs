@@ -34,6 +34,11 @@ public class SoundManager : MonoBehaviour
         RuntimeManager.PlayOneShot(sound,position);
     }
 
+    public void PlayOneShot(EventReference sound,GameObject gameObject)
+    {
+        RuntimeManager.PlayOneShotAttached(sound,gameObject);
+    }
+
     public EventInstance CreateInstance(EventReference reference)
     {
         EventInstance eventInstance = RuntimeManager.CreateInstance(reference);

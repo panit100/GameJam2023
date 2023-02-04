@@ -249,7 +249,7 @@ public class PlayerMovementController : MonoBehaviour
 
             rb.velocity += Vector3.up * jumpForce * Time.deltaTime;
 
-            //Play Jump sound
+            JumpSFX();
             
 
             isJumping = true;
@@ -279,6 +279,7 @@ public class PlayerMovementController : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("Ground")) { return; }
 
+        HitGroundSFX();
         canJump = true;
         isJumping = false;
     }
@@ -328,6 +329,16 @@ public class PlayerMovementController : MonoBehaviour
         playerRunSFX.getPlaybackState(out var playBackState);
         if(playBackState.Equals(PLAYBACK_STATE.STOPPED))
             playerRunSFX.start();
+    }
+
+    void JumpSFX()
+    {
+        soundManager.PlayOneShot(fModEvent.PlayerJumpSFX,this.gameObject);
+    }
+
+    void HitGroundSFX()
+    {
+        soundManager.PlayOneShot(fModEvent.PlayerHitGroundSFX,this.gameObject);
     }
 
     void OnDestroy() 
