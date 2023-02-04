@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using GameJam.Utilities;
+using FMOD.Studio;
 
 public class PlayerMovementController : MonoBehaviour
 {
@@ -38,18 +39,32 @@ public class PlayerMovementController : MonoBehaviour
     public bool canMove;
     public bool canWalk;
     public bool canRun;
+    public bool canJump;
     public bool CanRotate;
 
     private Rigidbody rb;
+
+    [Header("JumpSetting")]
+    [Range(1f, 1000f)]
+    public float jumpForce;
+    [SerializeField] Vector3 offSet;
+    [SerializeField] float radius;
+
+
 
     Vector3 direction;
     bool isRun;
 
     InputSystemManager inputSystemManager;
+    SoundManager soundManager;
+    FModEvent fModEvent;
+
+    EventInstance playerWalkSFX;
+    EventInstance playerRunSFX;
 
     public enum movementState
     {
-        idle, walk, run
+        idle, walk, run, jump
     }
 
     public movementState currentMovementState;
@@ -67,20 +82,47 @@ public class PlayerMovementController : MonoBehaviour
         Vcam.LookAt = this.gameObject.transform;
 
         inputSystemManager = SharedObject.Instance.Get<InputSystemManager>();
+        soundManager = SharedObject.Instance.Get<SoundManager>();
+        fModEvent = SharedObject.Instance.Get<FModEvent>();
+        
+        AddInputListiner();
+
+        playerWalkSFX = soundManager.CreateInstance(fModEvent.playerWalkSFX);
+        // playerRunSFX = soundManager.CreateInstance(fModEvent.playerRunSFX);
+    }
+
+    void AddInputListiner()
+    {
         inputSystemManager.onMove += OnMove;
         inputSystemManager.onPressMove += OnPressMove;
         inputSystemManager.onPressRun += OnPressRun;
+        inputSystemManager.onPressJump  += OnPressJump;
+    }
+
+    void RemoveInputListiner()
+    {
+        inputSystemManager.onMove -= OnMove;
+        inputSystemManager.onPressMove -= OnPressMove;
+        inputSystemManager.onPressRun -= OnPressRun;
+        inputSystemManager.onPressJump -= OnPressJump;
     }
 
     void Update()
     {
-        if (!canMove)
+        CheckJump();
+
+        if (!canMove && canJump)
         {
             rb.velocity = Vector3.zero;
             return;
         } 
 
         Movement();
+    }
+
+    void FixedUpdate() 
+    {
+        UpdateSound();
     }
 
     private void Movement()
@@ -92,9 +134,11 @@ public class PlayerMovementController : MonoBehaviour
 
     private movementState CheckMovementState(Vector3 direction)
     {
-        if (direction.magnitude < 0.1f) { return movementState.idle; }
+        if (!canWalk && !canRun && canJump) { return movementState.idle; }
 
-        if (isRun) { return movementState.run; }
+        if (canRun) { return movementState.run; }
+
+        if (!canJump) { return movementState.jump; }
 
         return movementState.walk;
     }
@@ -111,8 +155,11 @@ public class PlayerMovementController : MonoBehaviour
                 runToDirection(direction);
                 break;
 
-            case movementState.idle:
+            case movementState.jump:
+                //TODO : jump animation
+                break;
 
+            case movementState.idle:
                 //TODO : idle animation
 
                 break;
@@ -165,6 +212,29 @@ public class PlayerMovementController : MonoBehaviour
         }
     }
 
+    void Jump()
+    {
+        if(canJump)
+        {
+            rb.AddForce(Vector3.up * jumpForce * SpeedMultiplier * Time.deltaTime);
+        }
+    }
+
+    void CheckJump()
+    {
+        Collider[]  hitColliders = Physics.OverlapSphere(transform.position + offSet,radius);
+        foreach(var hit in hitColliders)
+        {
+            if(hit.gameObject.CompareTag("Ground"))
+            {
+                canJump = true;
+                break;
+            }
+            else
+                canJump = false;
+        }
+    }
+
     public void OnMove(Vector2 value)
     {
         direction = new Vector3(value.x,0,value.y).normalized;
@@ -172,17 +242,47 @@ public class PlayerMovementController : MonoBehaviour
 
     public void OnPressMove(bool value)
     {
-        canMove = value;
+        canWalk = value;
     }
 
     public void OnPressRun(bool value)
     {
-        isRun = value;
+        canRun = value;
+    }
+
+    public void OnPressJump(bool value)
+    {
+        // rb.velocity = Vector3.zero;
+        Jump();
+    }
+
+    void UpdateSound()
+    {
+        WalkSFX();
+    }
+
+    void WalkSFX()
+    {
+        // soundManager.AttachInstanceToGameObject(playerWalkSFX,transform,rb);
+
+        // if(canWalk)
+        // {
+        //     playerWalkSFX.getPlaybackState(out var playBackState);
+        //     if(playBackState.Equals(PLAYBACK_STATE.STOPPED))
+        //         playerWalkSFX.start();
+        // }
+        // else
+        //     playerWalkSFX.stop(STOP_MODE.ALLOWFADEOUT);
     }
 
     void OnDestroy() 
     {
-        inputSystemManager.onMove -= OnMove;
-        inputSystemManager.onPressMove += OnPressMove;
+        RemoveInputListiner();
+    }
+
+    void OnDrawGizmos() 
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position + offSet,radius);    
     }
 }
