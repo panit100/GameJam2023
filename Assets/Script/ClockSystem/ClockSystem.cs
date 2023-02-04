@@ -19,24 +19,29 @@ public class ClockSystem : MonoBehaviour
     [SerializeField] private float timerSpeedMultiplier = 0;
     
     private InputSystemManager inputSystemManager;
+    private GameplayController gameplayController;
     private bool isToggle;
 
     private void Start()
     {
         inputSystemManager = SharedObject.Instance.Get<InputSystemManager>();
         inputSystemManager.onCheckClock += CheckClock;
+
+        gameplayController = FindObjectOfType<GameplayController>();
     }
 
     private void StartTimer()
     {
-        if (!isInMinute)
-        {
-            minTimer = timer / 60;
-        }
-        else
-        {
-            minTimer = timer;
-        }
+        // if (!isInMinute)
+        // {
+        //     minTimer = timer / 60;
+        // }
+        // else
+        // {
+        //     minTimer = timer;
+        // }
+
+        minTimer = gameplayController.TimeRemaining / 60;
         
         //6" per min
         clockHand.transform.rotation = Quaternion.Euler(0f, minTimer * 6f, 0f);
@@ -71,6 +76,5 @@ public class ClockSystem : MonoBehaviour
     private void OnDestroy()
     {
         inputSystemManager.onCheckClock -= CheckClock;
-
     }
 }
