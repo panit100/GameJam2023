@@ -1,7 +1,9 @@
 {
     "name": "FMODUnityResonanceEditor",
     "references": [
-        "FMODUnityResonance"
+        "FMODUnityResonance",
+        "UnityEditor.TestRunner",
+        "UnityEngine.TestRunner"
     ],
     "includePlatforms": [
         "Editor"

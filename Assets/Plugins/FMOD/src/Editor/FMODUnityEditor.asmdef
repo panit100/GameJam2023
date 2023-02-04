@@ -7,7 +7,9 @@
         "Unity.VisualScripting.Core",
         "Unity.VisualScripting.Core.Editor",
         "Unity.VisualScripting.Flow.Editor",
-        "Unity.ScriptableBuildPipeline.Editor"
+        "Unity.ScriptableBuildPipeline.Editor",
+        "UnityEditor.TestRunner",
+        "UnityEngine.TestRunner"
     ],
     "includePlatforms": [
         "Editor"

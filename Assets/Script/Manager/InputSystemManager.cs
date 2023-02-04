@@ -23,6 +23,8 @@ public class InputSystemManager : MonoBehaviour
     public UnityAction onFire;
     public UnityAction onClose;
     public UnityAction<bool> onInteract;
+    public UnityAction onCheckClock;
+
 
 
     //InputActionMap
@@ -144,6 +146,12 @@ public class InputSystemManager : MonoBehaviour
             onInteract?.Invoke(true);
         else
             onInteract?.Invoke(false);
+    }
+    
+    void OnOpenClock(InputValue value)
+    {
+        if (value.isPressed)
+            onCheckClock?.Invoke();
     }
     
     #endregion
