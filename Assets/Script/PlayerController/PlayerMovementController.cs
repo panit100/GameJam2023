@@ -75,6 +75,8 @@ public class PlayerMovementController : MonoBehaviour
     {
         defaultSpeedMultiplier = SpeedMultiplier;
 
+        animController.Init(this);
+
         rb = this.GetComponent<Rigidbody>();
 
         currentMovementState = movementState.idle;
@@ -109,24 +111,8 @@ public class PlayerMovementController : MonoBehaviour
         inputSystemManager.onPressJump -= OnPressJump;
     }
 
-    void Update()
+    void Update() 
     {
-        //CheckJump();
-
-        //if (!canMove)
-        //{
-        //    return;
-        //}
-
-        //Jump();
-
-        //Movement();
-    }
-
-    void FixedUpdate() 
-    {
-        CheckJump();
-
         if (!canMove)
         {
             return;
@@ -181,7 +167,7 @@ public class PlayerMovementController : MonoBehaviour
                 playerWalkSFX.stop(STOP_MODE.ALLOWFADEOUT);
                 playerRunSFX.stop(STOP_MODE.ALLOWFADEOUT);
 
-                //TODO : idle animation
+                animController.AnimationState("idle");
 
                 break;
         }
@@ -200,9 +186,9 @@ public class PlayerMovementController : MonoBehaviour
         if (canWalk)
         {
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            rb.AddForce(moveDir.normalized * WalkSpeed * SpeedMultiplier * Time.deltaTime);
+            rb.AddForce(moveDir.normalized * WalkSpeed * SpeedMultiplier * Time.fixedDeltaTime);
 
-            //TODO : Walk animation
+            animController.AnimationState("walk");
         }
     }
 
@@ -222,22 +208,22 @@ public class PlayerMovementController : MonoBehaviour
         {
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 
-            rb.AddForce(moveDir.normalized * RunSpeed * SpeedMultiplier * Time.deltaTime);
+            rb.AddForce(moveDir.normalized * RunSpeed * SpeedMultiplier * Time.fixedDeltaTime);
 
-            //TODO : Run animation
+            animController.AnimationState("run");
         }
         else
         {
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            rb.AddForce(moveDir.normalized * WalkSpeed * SpeedMultiplier * Time.deltaTime);
+            rb.AddForce(moveDir.normalized * WalkSpeed * SpeedMultiplier * Time.fixedDeltaTime);
 
-            //TODO : Walk animation
+            animController.AnimationState("walk");
         }
     }
 
     void Jump()
     {
-        if(isJumping)
+        if (isJumping)
         {
             playerWalkSFX.stop(STOP_MODE.ALLOWFADEOUT);
             playerRunSFX.stop(STOP_MODE.ALLOWFADEOUT);
@@ -247,37 +233,24 @@ public class PlayerMovementController : MonoBehaviour
         {
             if (isJumping) { return; }
 
-            rb.velocity += Vector3.up * jumpForce * Time.deltaTime;
+            rb.velocity += Vector3.up * jumpForce * Time.fixedDeltaTime;
 
             JumpSFX();
-            
+
+            animController.PlayJumpAnimation();
 
             isJumping = true;
         }
     }
 
-    void CheckJump()
-    {
-        //Collider[]  hitColliders = Physics.OverlapSphere(transform.position + offSet,radius);
-        //foreach(var hit in hitColliders)
-        //{
-        //    if (hit.gameObject.CompareTag("Ground"))
-        //    {
-        //        canJump = true;
-        //        isJumping = false;
-        //        break;
-        //    }
-        //    else
-        //    {
-        //        canJump = false;
-        //        isJumping = true;
-        //    }
-        //}
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         if (!collision.gameObject.CompareTag("Ground")) { return; }
+
+        if (isJumping)
+        {
+            animController.Landing();
+        }
 
         HitGroundSFX();
         canJump = true;
