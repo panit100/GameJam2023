@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &136431299
 Transform:
   m_ObjectHideFlags: 0
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -413,7 +413,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -550,7 +550,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -755,7 +755,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1621,8 +1621,8 @@ MonoBehaviour:
   - {fileID: 8857835776517428640}
   - {fileID: 7822905856536812666}
   m_Bounds:
-    m_Center: {x: -0.33948565, y: -0.82626295, z: -0.0000009536743}
-    m_Extent: {x: 3.6704016, y: 3.3268142, z: 8.526513e-14}
+    m_Center: {x: 0.023329973, y: -0.0000009536743, z: 0}
+    m_Extent: {x: 3.44667, y: 3.2799997, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1641,7 +1641,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &594657892853684013
 GameObject:
   m_ObjectHideFlags: 0
@@ -1938,8 +1938,8 @@ MonoBehaviour:
   - {fileID: 3253394162161520017}
   - {fileID: 1758836867803134774}
   m_Bounds:
-    m_Center: {x: 0.1633203, y: -0.035550117, z: -0.0000009536743}
-    m_Extent: {x: 2.6618183, y: 4.4923787, z: 0}
+    m_Center: {x: 0.0000009536743, y: 0.009999275, z: 0}
+    m_Extent: {x: 2.4300005, y: 4.38, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -2378,7 +2378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &2682158384002665591
 GameObject:
   m_ObjectHideFlags: 0
@@ -2570,7 +2570,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3070245484172905016
 Transform:
   m_ObjectHideFlags: 0
@@ -3470,7 +3470,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4859734572497085252
 Transform:
   m_ObjectHideFlags: 0
@@ -4031,8 +4031,8 @@ MonoBehaviour:
   - {fileID: 8521223369390578810}
   - {fileID: 4747328260791793592}
   m_Bounds:
-    m_Center: {x: 5.5970883, y: -2.2404542, z: -0.0000009536743}
-    m_Extent: {x: 2.6583781, y: 3.411755, z: 0}
+    m_Center: {x: -0.8889351, y: 0.0056505203, z: 0}
+    m_Extent: {x: 2.5356183, y: 3.2656507, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -4110,8 +4110,8 @@ MonoBehaviour:
   - {fileID: 8307180869850281598}
   - {fileID: 5046227222397649113}
   m_Bounds:
-    m_Center: {x: -0.046067238, y: -0.026904583, z: -0.0000009536743}
-    m_Extent: {x: 4.167197, y: 4.9000325, z: 1.1368684e-13}
+    m_Center: {x: -0.0018291473, y: -0.004190922, z: 0}
+    m_Extent: {x: 4.19788, y: 4.905811, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -4210,8 +4210,8 @@ MonoBehaviour:
   - {fileID: 4152068093957137432}
   - {fileID: 7851220958276784369}
   m_Bounds:
-    m_Center: {x: -0.00374794, y: -0.0041458607, z: -0.0000009536743}
-    m_Extent: {x: 1.4234335, y: 2.4558537, z: 1.1368684e-13}
+    m_Center: {x: -0.0009006262, y: -0.0050895214, z: 0}
+    m_Extent: {x: 1.4766788, y: 2.4549098, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -5134,7 +5134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &8159058488758506667
 GameObject:
   m_ObjectHideFlags: 0
@@ -5206,8 +5206,8 @@ MonoBehaviour:
   - {fileID: 7941727399506051799}
   - {fileID: 5295641595795505355}
   m_Bounds:
-    m_Center: {x: -0.019103289, y: 0.014395237, z: -0.0000009536743}
-    m_Extent: {x: 2.165327, y: 2.1319141, z: 1.1368684e-13}
+    m_Center: {x: 0.01672101, y: 0.016240597, z: 0}
+    m_Extent: {x: 2.13672, y: 2.13376, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -5410,7 +5410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &8754949327626376505
 GameObject:
   m_ObjectHideFlags: 0
@@ -5512,7 +5512,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -5737,7 +5737,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &9199331723864153215
 GameObject:
   m_ObjectHideFlags: 0
