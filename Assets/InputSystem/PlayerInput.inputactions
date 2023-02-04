@@ -42,9 +42,15 @@
                     "initialStateCheck": false
                 },
                 {
+<<<<<<< HEAD:Assets/InputSystem/PlayerINput.inputactions
                     "name": "OpenClock",
                     "type": "Button",
                     "id": "9d7d6e7d-f24c-4608-ae42-7eef26d29227",
+=======
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "511473e5-cb8b-43d6-95e8-eb63489e2f99",
+>>>>>>> develop:Assets/InputSystem/PlayerInput.inputactions
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press",
@@ -296,12 +302,21 @@
                 },
                 {
                     "name": "",
+<<<<<<< HEAD:Assets/InputSystem/PlayerINput.inputactions
                     "id": "8982e6da-0c87-4a0b-991f-052c696519ad",
                     "path": "<Keyboard>/t",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "OpenClock",
+=======
+                    "id": "a017174e-88a3-43f6-b47f-8eb48825ed89",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+>>>>>>> develop:Assets/InputSystem/PlayerInput.inputactions
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

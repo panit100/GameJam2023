@@ -21,8 +21,8 @@ public class InputSystemManager : MonoBehaviour
     public UnityAction<bool> onPressRun;
     public UnityAction onFire;
     public UnityAction onClose;
-    public UnityAction onCheckClock;
-    
+    public UnityAction<bool> onInteract;
+
 
     //InputActionMap
     InputActionMap playerControlMap;
@@ -129,14 +129,13 @@ public class InputSystemManager : MonoBehaviour
         else
             onPressRun?.Invoke(false);
     }
-    
-    //Clock
-    void OnOpenClock(InputValue value)
+
+    void OnInteract(InputValue value)
     {
-        if(value.isPressed)
-        {
-            onCheckClock?.Invoke();
-        }
+        if (value.isPressed)
+            onInteract?.Invoke(true);
+        else
+            onInteract?.Invoke(false);
     }
     
     #endregion

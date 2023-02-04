@@ -12,6 +12,9 @@ namespace GameJam.Utilities
         [SerializeField]
         private GameDataManager gameDataManager;
 
+        [SerializeField]
+        private SceneController sceneController;
+
         void Start()
         {
             StartInitialize();
@@ -30,7 +33,9 @@ namespace GameJam.Utilities
 
             isInitialized = true;
 
-            // Debug.Log("==================   GAME INITIALIZE COMPLETE   ====================");
+            Debug.Log("==================   GAME INITIALIZE COMPLETE   ====================");
+
+            sceneController.OnLoadSceneMainmenu();
         }
     }
 }
