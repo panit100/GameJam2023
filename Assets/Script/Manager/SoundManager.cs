@@ -7,6 +7,8 @@ using FMOD.Studio;
 
 public class SoundManager : MonoBehaviour
 {
+    FModEvent fModEvent;
+    
     List<EventInstance> eventInstances;
     List<StudioEventEmitter> eventEmitters;
 
@@ -22,6 +24,8 @@ public class SoundManager : MonoBehaviour
     void Initilize()
     {
         SharedObject.Instance.Add(this);
+
+        fModEvent = SharedObject.Instance.Get<FModEvent>(); 
 
         eventInstances = new List<EventInstance>();
         eventEmitters = new List<StudioEventEmitter>();
@@ -74,7 +78,17 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    void OnDestroy()
+    public void PlayExtendSFX()
+    {
+        PlayOneShot(fModEvent.ExtendSFX,transform.position);
+    }
+
+    public void PlayShrinkSFX()
+    {
+        PlayOneShot(fModEvent.ShrinkSFX,transform.position);
+    }
+
+    public void OnDestroy()
     {
         CleanUp();
     }
