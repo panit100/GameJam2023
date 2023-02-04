@@ -75,6 +75,8 @@ public class PlayerMovementController : MonoBehaviour
     {
         defaultSpeedMultiplier = SpeedMultiplier;
 
+        animController.Init(this);
+
         rb = this.GetComponent<Rigidbody>();
 
         currentMovementState = movementState.idle;
@@ -165,7 +167,7 @@ public class PlayerMovementController : MonoBehaviour
                 playerWalkSFX.stop(STOP_MODE.ALLOWFADEOUT);
                 playerRunSFX.stop(STOP_MODE.ALLOWFADEOUT);
 
-                //TODO : idle animation
+                animController.AnimationState("idle");
 
                 break;
         }
@@ -184,9 +186,9 @@ public class PlayerMovementController : MonoBehaviour
         if (canWalk)
         {
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            rb.AddForce(moveDir.normalized * WalkSpeed * SpeedMultiplier * Time.deltaTime);
+            rb.AddForce(moveDir.normalized * WalkSpeed * SpeedMultiplier * Time.fixedDeltaTime);
 
-            //TODO : Walk animation
+            animController.AnimationState("walk");
         }
     }
 
@@ -206,16 +208,16 @@ public class PlayerMovementController : MonoBehaviour
         {
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 
-            rb.AddForce(moveDir.normalized * RunSpeed * SpeedMultiplier * Time.deltaTime);
+            rb.AddForce(moveDir.normalized * RunSpeed * SpeedMultiplier * Time.fixedDeltaTime);
 
-            //TODO : Run animation
+            animController.AnimationState("run");
         }
         else
         {
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            rb.AddForce(moveDir.normalized * WalkSpeed * SpeedMultiplier * Time.deltaTime);
+            rb.AddForce(moveDir.normalized * WalkSpeed * SpeedMultiplier * Time.fixedDeltaTime);
 
-            //TODO : Walk animation
+            animController.AnimationState("walk");
         }
     }
 
@@ -234,7 +236,8 @@ public class PlayerMovementController : MonoBehaviour
             rb.velocity += Vector3.up * jumpForce * Time.fixedDeltaTime;
 
             JumpSFX();
-            
+
+            animController.PlayJumpAnimation();
 
             isJumping = true;
         }
@@ -243,6 +246,11 @@ public class PlayerMovementController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (!collision.gameObject.CompareTag("Ground")) { return; }
+
+        if (isJumping)
+        {
+            animController.Landing();
+        }
 
         HitGroundSFX();
         canJump = true;
