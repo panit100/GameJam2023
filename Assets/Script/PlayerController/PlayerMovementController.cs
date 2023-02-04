@@ -109,24 +109,8 @@ public class PlayerMovementController : MonoBehaviour
         inputSystemManager.onPressJump -= OnPressJump;
     }
 
-    void Update()
+    void Update() 
     {
-        //CheckJump();
-
-        //if (!canMove)
-        //{
-        //    return;
-        //}
-
-        //Jump();
-
-        //Movement();
-    }
-
-    void FixedUpdate() 
-    {
-        CheckJump();
-
         if (!canMove)
         {
             return;
@@ -237,7 +221,7 @@ public class PlayerMovementController : MonoBehaviour
 
     void Jump()
     {
-        if(isJumping)
+        if (isJumping)
         {
             playerWalkSFX.stop(STOP_MODE.ALLOWFADEOUT);
             playerRunSFX.stop(STOP_MODE.ALLOWFADEOUT);
@@ -247,32 +231,13 @@ public class PlayerMovementController : MonoBehaviour
         {
             if (isJumping) { return; }
 
-            rb.velocity += Vector3.up * jumpForce * Time.deltaTime;
+            rb.velocity += Vector3.up * jumpForce * Time.fixedDeltaTime;
 
             JumpSFX();
             
 
             isJumping = true;
         }
-    }
-
-    void CheckJump()
-    {
-        //Collider[]  hitColliders = Physics.OverlapSphere(transform.position + offSet,radius);
-        //foreach(var hit in hitColliders)
-        //{
-        //    if (hit.gameObject.CompareTag("Ground"))
-        //    {
-        //        canJump = true;
-        //        isJumping = false;
-        //        break;
-        //    }
-        //    else
-        //    {
-        //        canJump = false;
-        //        isJumping = true;
-        //    }
-        //}
     }
 
     private void OnCollisionEnter(Collision collision)
