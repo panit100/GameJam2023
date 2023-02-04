@@ -37,7 +37,7 @@ public class ButtonReciever : MonoBehaviour
                 break;
 
             case Size.small:
-                if(playerRef.transform.localScale == Vector3.one * 0.5f)
+                if(playerRef.transform.localScale == Vector3.one * 0.3f)
                     prompt.TextPrompt("Small");
 
                 break;

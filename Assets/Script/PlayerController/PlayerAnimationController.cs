@@ -39,9 +39,26 @@ public class PlayerAnimationController : MonoBehaviour
         anim.SetBool(paramName, true);
     }
 
+    public void UseClockAnimation()
+    {
+        anim.SetTrigger("useClock");
+        anim.SetBool("clock", true);
+    }
+
+    public void UnUseClockAnimation()
+    {
+        anim.SetBool("clock", false);
+    }
+
     public void PlayJumpAnimation()
     {
+        anim.SetBool("ground", false);
         anim.SetTrigger("jump");
+    }
+
+    public void Landing()
+    {
+        anim.SetBool("ground", true);
     }
 
     public void ResetAnimBoolean()
