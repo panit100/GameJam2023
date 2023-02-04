@@ -50,7 +50,8 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] Vector3 offSet;
     [SerializeField] float radius;
 
-
+    [SerializeField]
+    private PlayerAnimationController animController;
 
     Vector3 direction;
     bool isRun;
