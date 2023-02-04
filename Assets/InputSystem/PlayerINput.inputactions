@@ -1,5 +1,5 @@
 {
-    "name": "PlayerInput",
+    "name": "PlayerINput",
     "maps": [
         {
             "name": "PlayerControl",
@@ -39,6 +39,15 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "OpenClock",
+                    "type": "Button",
+                    "id": "9d7d6e7d-f24c-4608-ae42-7eef26d29227",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 }
             ],
@@ -282,6 +291,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "PressRun",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8982e6da-0c87-4a0b-991f-052c696519ad",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenClock",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

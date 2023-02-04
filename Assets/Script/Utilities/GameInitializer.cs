@@ -30,7 +30,7 @@ namespace GameJam.Utilities
 
             isInitialized = true;
 
-            Debug.Log("==================   GAME INITIALIZE COMPLETE   ====================");
+            // Debug.Log("==================   GAME INITIALIZE COMPLETE   ====================");
         }
     }
 }
