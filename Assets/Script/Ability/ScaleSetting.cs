@@ -15,6 +15,9 @@ namespace GameJam.GameData
         
         [Tooltip("Set Normal Scale")]
         public float normalScale;
+
+        public float[] scaleValue;
+        public int currentScale = 1;
         
         private void Awake()
         {
