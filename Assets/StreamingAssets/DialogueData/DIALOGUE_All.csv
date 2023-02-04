@@ -1,0 +1,53 @@
+﻿Id;CharacterThaiName;Dialogue Thai;CharacterEnglishName;Dialogue English;ContinueId
+OP1_A01_01;เด็ก;ลูกโป่งหนู!!!;Son;My Balloon!;OP1_A01_02
+OP1_A01_02;แม่;ลูกรอแม่ด้วย!!;Mom;Wait, son!;OP1_A01_03
+OP1_A01_03;ลุง;สวัสดีหนุ่มน้อยนี้ใช่ลูกโป่งของหนูหรือเปล่า?;Hacter;Hello, young man. Is this your balloon?;OP1_A01_04
+OP1_A01_04;เด็ก;เย้!!!!;Son;Yey!;OP1_A01_05
+OP1_A01_05;ลุง;เจ้าหนุ่มน้อย..สนใจที่จะฟังนิทานไหม? พอดีลุงมีนิทานที่น่าสนใจมาเล่าให้ฟัง;Hacter;If you don't mind spare some little time with me. I have an interesting, fasinating tale to tell.;OP1_A01_06
+OP1_A01_06;เด็ก;ว้าวว!! นิทานหรอฮะ!!;Son;Wow! A tale!;OP1_A01_07
+OP1_A01_07;ลุง;ถ้าอย่างงั้น.. ;Hacter;Very well then...;OP1_A01_08
+OP1_A01_08;ลุง;กาลครั้งหนึ่งนานมาแล้ว.... ณ สถานที่แห่งไกลแห่งหนึ่งได้มีอาณาจักรที่ปกครองโดย 2 ราชินี  ราชินีขาว และ ราชินีแดง;Hacter;Once upon a time... There was a kingdom in the far far away land. The Kingdom was ruled by the two queens, the White, and the Red Queen.;OP1_A01_09
+OP1_A01_09;ลุง;ราชินีขาวและราชินีแดงทั้งสองต่างได้สู้เพื่อแย่งชิงอำนาจและทรัพยากรมานานนับร้อยปี;Hacter;They had been fought for centuries, to possess the power, the land and its property.;OP1_A01_10
+OP1_A01_10;ลุง;จนกระทั่งเหตุผลบางอย่างทำให้ราชินีแดงทรงพลังมากยิ่งขึ้้นและไม่มีใครสามารถต่อกรได้;Hacter;For some reason, the Red Queen's power was stronger, and no one would be able to lay the tip of the finger on her.;OP1_A01_11
+OP1_A01_11;ลุง;เหลือเพียงแค่ความหวังสุดท้ายที่จะช่วยกอบกู้ดินแดนแห่งนี้...;Hacter;The only hope, the only light that could save the this land.;OP1_A01_12
+OP1_A01_12;ลุง;"และจุดเริ่มต้นของเรื่องราวจะเป็นเช่นไร...ก็ขึ้นอยู่กับ "" เจ้ากระต่าย "" ตัวนี้....";Hacter;And how beginning of the story should be... was all up to this Rabbit...;
+;;;;;
+;;หลังเข้าเกม;;;
+Ch1_A01_01;ลุง;เมื่อเจ้ากระต่ายมาถึงดินแดนแห่งต้นไม้จินตนาการ ก็พบกับอุปสรรคที่เตรียมรอเขาไว้แล้ว;Hacter;When our Rabbit had reached the Tree of Imaginary, he, our hope had to face the well-prepared trouble specially made for him.;Ch1_A01_02
+Ch1_A01_02;ลุง;เจ้ากระต่ายจะสามารถที่จะฝ่าฟันอุปสรรคไปเพื่อไปตามหาเจ้าหญิงอลิสได้หรือไม่...;Hacter;Should the Rabbit overcome the obstacle, and save Princess Alice?;
+;;;;;
+;;เมื่อผู้เล่นไม่ผ่านด่านแรกเกิน 2 นาที;;;
+Ch1_A02_01;ลุง;อืม...หรือว่าบ้างที่เจ้ากระต่ายอาจจะยังสับสนอยู่ก็ได้;Hacter;Huh... Maybe he was confusing where he should be?;Ch1_A02_02
+Ch1_A02_02;ลุง;หรือว่าบางที่การจะแก้ปัญหาตรงหน้าอาจจะต้องใช้น้ำยาที่อยู่ตามพื้นก็เป็นได้...;Hacter;Or to solve the riddle, the potion on floor could be helpful?;
+;;;;;
+;;เมื่อผู้เล่นไม่ผ่านด่านแรกเกิน 4 นาที;;;
+Ch1_A03_01;ลุง;ในขณะที่เจ้ากระต่ายกำลังแก้ปริศนาอยู่นั้น...เวลาก็ยังคงเดินไปอยู่เช่นกัน;Hacter;While the Ribbit finding his way out... The clock continued to tick and tock.;Ch1_A03_02
+Ch1_A03_02;ลุง;เจ้ากระต่ายจะสามารถทำภารกิจที่ได้รับมอบหมายให้สำเร็จได้หรือไม้่;Hacter;Could our savior make his way the very end?;
+;;;;;
+;;เมื่อผู้เล่นผ่านด่านได้;;;
+Ch1_A04_01;ลุง;ในที่สุดเจ้ากระต่ายก็สามารถที่จะฝ่าฟันอุปสรรคแรกไปได้!!;Hacter;Finally, the Rabbit made his way through the first challenge!;Ch1_A04_02
+Ch1_A04_02;ลุง;บางที่ทักษะที่เขาได้รับจากอุปสรรคนี้จะสามารถนำไปใช้เพื่อช่วยเจ้าหญิงขาวก็ได้....;Hacter;Maybe his ability to shrink could be useful for future, who knows?;
+;;;;;
+;;เข้าสู่ด่านที่ 2;;;
+Ch2_A01_01;ลุง;แม้เขาจะสามารถผ่านอุปสรรคแรกไปได้ก็ตาม...ก็ยังคงมีอุปสรรคที่รอเขาอยู่..;Hacter;Even though making through the first obstacle... still, there was another obstacle waiting for him.;Ch2_A01_02
+Ch2_A01_02;ลุง;บางที่การเดินทางของเจ้ากระต่ายคงจะไม่ได้ง่ายอย่างงั้น....;Hacter;Unfortunatedly, his journey was not simply as we think...;
+;;;;;
+;;เมื่อผู้เล่นไม่ผ่านด่านสองเกิน 2 นาที;;;
+Ch2_A02_01;ลุง;;Hacter;;Ch2_A02_02
+Ch2_A02_02;ลุง;;Hacter;;
+;;;;;
+;;เมื่อผู้เล่นผ่านด่านได้;;;
+Ch2_A03_01;ลุง;แม้ราชินีแดงจะวางแผนอย่างแยบยลแล้วก็ตาม....;Hacter;Even the Red Queen had created the ingeniuos, flawless plan...;Ch2_A03_02
+Ch2_A03_02;ลุง;เจ้ากระต่ายก็ยังสามาถผ่านไปได้!! อีกนิดเดียวะใกล้ถึงประตูมิติแล้ว;Hacter;The Rabbit could make his way through! Not so far to portal!;
+;;;;;
+;;เข้าสู่ด่านที่ 3;;;
+Ch3_A01_01;ลุง;แม้เขาจะสามารถผ่านอุปสรรคแรกไปได้ก็ตาม...ก็ยังคงมีอุปสรรคที่รอเขาอยู่..;Hacter;Even he could pass the second trial, there was still another one waiting for him...;Ch3_A01_02
+Ch3_A01_02;ลุง;บางที่การเดินทางของเจ้ากระต่ายคงจะไม่ได้อย่างงั้น....;Hacter;Maybe, just maybe, his journey could never that easy...;
+;;;;;
+;;เมื่อผู้เล่นไม่ผ่านด่านสามเกิน 2 นาที;;;
+Ch3_A02_01;ลุง;;Hacter;;Ch3_A02_02
+Ch3_A02_02;ลุง;;Hacter;;
+;;;;;
+;;เมื่อผู้เล่นผ่านด่านได้;;;
+Ch3_A03_01;ลุง;ในที่สุด!! เจ้ากระต่ายก็สามารถที่จะก้าวข้ามราชินีแดงไปจนได้!!;Hacter;Finally!! The Rabbit had conquer the Red Queen!;Ch3_A03_02
+Ch3_A03_02;ลุง;"ที่เหลิอก็เหลือเพียงแค่เจ้ากระต่ายข้ามมิติไปหา ""เจ้าหญิงอลิส""  เพียงเท่านั้น....";Hacter;What's left was to walk through the portal, the Princess Alice...;

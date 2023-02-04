@@ -20,6 +20,11 @@ public class DialogueManager : MonoBehaviour
     string allSentence;
     [SerializeField] float delayForNextSentences = 5f;
 
+    public Language language;
+    public enum Language
+    {
+        Thai,English
+    }
     void Awake()
     {
         SharedObject.Instance.Add(this);
@@ -46,7 +51,7 @@ public class DialogueManager : MonoBehaviour
                     break;
                 }
 
-                var data_values = data_string.Split(',');
+                var data_values = data_string.Split(';');
 
 
                 if (data_values[0] == "Id" || data_values[0] == "")
@@ -55,7 +60,7 @@ public class DialogueManager : MonoBehaviour
                 }
                 else
                 {
-                    DialogueInfo newDialogue = new DialogueInfo(data_values[0], data_values[1], data_values[2], data_values[3]);
+                    DialogueInfo newDialogue = new DialogueInfo(data_values[0], data_values[1], data_values[2], data_values[3], data_values[4], data_values[5]);
                     openWith.Add(data_values[0], newDialogue);
                 }
             }
@@ -67,7 +72,7 @@ public class DialogueManager : MonoBehaviour
 
         dialogueCanvas.enabled = false;
 
-        dialoguePanel.AddListenerToButton(DisplayNextSentence);
+        //dialoguePanel.AddListenerToButton(DisplayNextSentence);
     }
     void CrateNewDialoguePanel()
     {
@@ -75,7 +80,6 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel = _dialoguePanel.GetComponent<UIDialoguePanel>();
         dialogueCanvas = dialoguePanel.GetComponent<Canvas>();
     }
-
     public void StartDialogue()
     {
         if (dialoguePanel == null)
@@ -87,11 +91,20 @@ public class DialogueManager : MonoBehaviour
         }
         dialogueCanvas.enabled = true;
 
-        allSentence = openWith[currentDialogue].character + " : " + openWith[currentDialogue].dialogueText;
+        if (language == Language.Thai)
+        {
+            allSentence = openWith[currentDialogue].characterThaiName + " : " + openWith[currentDialogue].dialogueThai;
+        }
+        else if (language == Language.English)
+        {
+            allSentence = openWith[currentDialogue].characterEngLishName + " : " + openWith[currentDialogue].dialogueEnglish;
+        }
+
         StopAllCoroutines();
+        currentId = openWith[currentDialogue].continueId;
         StartCoroutine(TypeSentence(allSentence));
 
-        currentId = openWith[currentDialogue].continueId;
+        //DisplayNextSentence();
     }
 
     public void DisplayNextSentence()
@@ -102,10 +115,18 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        allSentence = openWith[currentId].character + " : " + openWith[currentId].dialogueText;
+        if (language == Language.Thai)
+        {
+            allSentence = openWith[currentId].characterThaiName + " : " + openWith[currentId].dialogueThai;
+        }
+        else if (language == Language.English)
+        {
+            allSentence = openWith[currentId].characterEngLishName + " : " + openWith[currentId].dialogueEnglish;
+        }
+
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(allSentence));
         currentId = openWith[currentId].continueId;
+        StartCoroutine(TypeSentence(allSentence));
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -134,5 +155,18 @@ public class DialogueManager : MonoBehaviour
         }
         currentDialogue = null;
         //PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
+    }
+
+    public void triggerDialogue(string id)
+    {
+        currentDialogue = id;
+        StartDialogue();
+    }
+
+
+    public void DestroyDialogueManager()
+    {
+        SharedObject.Instance.Remove(this);
+        Destroy(this.gameObject);
     }
 }
