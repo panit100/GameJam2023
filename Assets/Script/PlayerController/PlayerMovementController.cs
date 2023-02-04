@@ -54,6 +54,7 @@ public class PlayerMovementController : MonoBehaviour
 
     Vector3 direction;
     bool isRun;
+    public bool isJumping;
 
     InputSystemManager inputSystemManager;
     SoundManager soundManager;
@@ -64,7 +65,7 @@ public class PlayerMovementController : MonoBehaviour
 
     public enum movementState
     {
-        idle, walk, run, jump
+        idle, walk, run
     }
 
     public movementState currentMovementState;
@@ -109,24 +110,40 @@ public class PlayerMovementController : MonoBehaviour
 
     void Update()
     {
-        CheckJump();
+        //CheckJump();
 
-        if (!canMove && canJump)
-        {
-            rb.velocity = Vector3.zero;
-            return;
-        } 
+        //if (!canMove)
+        //{
+        //    return;
+        //}
 
-        Movement();
+        //Jump();
+
+        //Movement();
     }
 
     void FixedUpdate() 
     {
         UpdateSound();
+
+        CheckJump();
+
+        if (!canMove)
+        {
+            return;
+        }
+
+        Jump();
+
+        Movement();
     }
 
     private void Movement()
     {
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+
         currentMovementState = CheckMovementState(direction);
 
         MoveDependOnState(direction);
@@ -134,11 +151,9 @@ public class PlayerMovementController : MonoBehaviour
 
     private movementState CheckMovementState(Vector3 direction)
     {
-        if (!canWalk && !canRun && canJump) { return movementState.idle; }
+        if (direction.magnitude < 0.1f) { return movementState.idle; }
 
-        if (canRun) { return movementState.run; }
-
-        if (!canJump) { return movementState.jump; }
+        if (Input.GetKey(KeyCode.LeftShift)) { return movementState.run; }
 
         return movementState.walk;
     }
@@ -153,10 +168,6 @@ public class PlayerMovementController : MonoBehaviour
 
             case movementState.run:
                 runToDirection(direction);
-                break;
-
-            case movementState.jump:
-                //TODO : jump animation
                 break;
 
             case movementState.idle:
@@ -187,6 +198,8 @@ public class PlayerMovementController : MonoBehaviour
 
     private void runToDirection(Vector3 direction)
     {
+        if (isJumping) { return; }
+
         float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + mainCam.eulerAngles.y;
         float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
 
@@ -214,46 +227,70 @@ public class PlayerMovementController : MonoBehaviour
 
     void Jump()
     {
-        if(canJump)
+        if (Input.GetKeyDown(KeyCode.Space) && canJump)
         {
-            rb.AddForce(Vector3.up * jumpForce * SpeedMultiplier * Time.deltaTime);
+            if (isJumping) { return; }
+
+            rb.velocity += Vector3.up * jumpForce * Time.deltaTime;
+
+            isJumping = true;
         }
     }
 
     void CheckJump()
     {
-        Collider[]  hitColliders = Physics.OverlapSphere(transform.position + offSet,radius);
-        foreach(var hit in hitColliders)
-        {
-            if(hit.gameObject.CompareTag("Ground"))
-            {
-                canJump = true;
-                break;
-            }
-            else
-                canJump = false;
-        }
+        //Collider[]  hitColliders = Physics.OverlapSphere(transform.position + offSet,radius);
+        //foreach(var hit in hitColliders)
+        //{
+        //    if (hit.gameObject.CompareTag("Ground"))
+        //    {
+        //        canJump = true;
+        //        isJumping = false;
+        //        break;
+        //    }
+        //    else
+        //    {
+        //        canJump = false;
+        //        isJumping = true;
+        //    }
+        //}
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (!collision.gameObject.CompareTag("Ground")) { return; }
+
+        canJump = true;
+        isJumping = false;
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (!collision.gameObject.CompareTag("Ground")) { return; }
+
+        canJump = false;
+        isJumping = true;
     }
 
     public void OnMove(Vector2 value)
     {
-        direction = new Vector3(value.x,0,value.y).normalized;
+        //direction = new Vector3(value.x,0,value.y).normalized;
     }
 
     public void OnPressMove(bool value)
     {
-        canWalk = value;
+        //canWalk = value;
     }
 
     public void OnPressRun(bool value)
     {
-        canRun = value;
+        //canRun = value;
     }
 
     public void OnPressJump(bool value)
     {
         // rb.velocity = Vector3.zero;
-        Jump();
+        //Jump();
     }
 
     void UpdateSound()
@@ -265,7 +302,7 @@ public class PlayerMovementController : MonoBehaviour
     {
         soundManager.AttachInstanceToGameObject(playerWalkSFX,transform,rb);
 
-        if(canWalk)
+        if (canWalk)
         {
             playerWalkSFX.getPlaybackState(out var playBackState);
             if(playBackState.Equals(PLAYBACK_STATE.STOPPED))
