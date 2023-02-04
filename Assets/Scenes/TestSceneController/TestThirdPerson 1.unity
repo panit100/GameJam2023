@@ -1696,9 +1696,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.29
-  m_Height: 1.61
+  m_Height: 1.5469635
   m_Direction: 1
-  m_Center: {x: 0, y: -0.25, z: 0}
+  m_Center: {x: 0, y: -0.21848166, z: 0}
 --- !u!114 &1542243383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1711,9 +1711,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 142bbb1562571894cac3b6590c3fb34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WalkSpeed: 2.25
-  SpeedMultiplier: 500
-  RunSpeed: 6
+  WalkSpeed: 2.3
+  SpeedMultiplier: 200
+  RunSpeed: 4
   turnSmoothTime: 0.109
   Vcam: {fileID: 915596133}
   mainCam: {fileID: 965724292}
@@ -1725,7 +1725,7 @@ MonoBehaviour:
   jumpForce: 500
   offSet: {x: 0, y: -1, z: 0}
   radius: 0.1
-  animController: {fileID: 0}
+  animController: {fileID: 1542243386}
   isJumping: 0
   currentMovementState: 0
 --- !u!114 &1542243386
@@ -1740,7 +1740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd49e470d5a83f148ab16bfa617c6fca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 1606098305}
 --- !u!1 &1606098304 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4d3de16d44b44344aae2420ac7e79ece,
@@ -1920,7 +1920,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963544838}
-  m_LocalRotation: {x: 0.11186988, y: 0.0000000043038346, z: -4.8451076e-10, w: 0.99372286}
+  m_LocalRotation: {x: 0.11186987, y: -0.0000000042745922, z: 4.812188e-10, w: 0.99372286}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
