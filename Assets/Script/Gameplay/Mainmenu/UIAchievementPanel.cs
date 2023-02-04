@@ -25,7 +25,7 @@ public class UIAchievementPanel : MonoBehaviour
     public void Show()
     {
         context.SetActive(true);
-
+        
         Populate();
 
         Debug.Log("Show Achievement Panel animation");
