@@ -1,5 +1,5 @@
 {
-    "name": "PlayerInput",
+    "name": "PlayerINput",
     "maps": [
         {
             "name": "PlayerControl",
@@ -39,6 +39,15 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "511473e5-cb8b-43d6-95e8-eb63489e2f99",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 }
             ],
@@ -282,6 +291,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "PressRun",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a017174e-88a3-43f6-b47f-8eb48825ed89",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
