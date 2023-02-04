@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: d361d636dd6851140851ea2938dd1cce
+guid: 143291832544d8644b9f9961d92adf6e
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: TreeStub
-    second: {fileID: 2100000, guid: f5d873d89bf0a044dad02417b0041d62, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -52,7 +47,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
