@@ -263,16 +263,16 @@ public class PlayerMovementController : MonoBehaviour
 
     void WalkSFX()
     {
-        // soundManager.AttachInstanceToGameObject(playerWalkSFX,transform,rb);
+        soundManager.AttachInstanceToGameObject(playerWalkSFX,transform,rb);
 
-        // if(canWalk)
-        // {
-        //     playerWalkSFX.getPlaybackState(out var playBackState);
-        //     if(playBackState.Equals(PLAYBACK_STATE.STOPPED))
-        //         playerWalkSFX.start();
-        // }
-        // else
-        //     playerWalkSFX.stop(STOP_MODE.ALLOWFADEOUT);
+        if(canWalk)
+        {
+            playerWalkSFX.getPlaybackState(out var playBackState);
+            if(playBackState.Equals(PLAYBACK_STATE.STOPPED))
+                playerWalkSFX.start();
+        }
+        else
+            playerWalkSFX.stop(STOP_MODE.ALLOWFADEOUT);
     }
 
     void OnDestroy() 
