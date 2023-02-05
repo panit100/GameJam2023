@@ -41,6 +41,7 @@ public class UICreditPanel : MonoBehaviour
     private void OnClickCloseButton()
     {
         Debug.Log("Close Credit  Panel");
+        mainmenuController.MainMenuActiveTomain();
 
         //TODO : Hide panel with animation
 
