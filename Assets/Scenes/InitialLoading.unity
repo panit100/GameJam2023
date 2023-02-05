@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SCENE_MAINMENU: Mainmenu
+  SCENE_INTRO: Intro
   SCENE_MAP1: Map1
   SCENE_MAP2: Map2
   SCENE_MAP3: Map3
