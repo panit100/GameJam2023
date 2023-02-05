@@ -157,6 +157,8 @@ MonoBehaviour:
   SCENE_MAP1: Map1
   SCENE_MAP2: Map2
   SCENE_MAP3: Map3
+  SCENE_GoodEnd: GoodEnding
+  SCENE_BadEnd: BadEnding
 --- !u!4 &371012736
 Transform:
   m_ObjectHideFlags: 0

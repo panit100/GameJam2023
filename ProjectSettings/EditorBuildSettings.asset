@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map3.unity
     guid: 69f3e538fd273e8469ed34639cbe5c1a
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/GoodEnding.unity
+    guid: cb73e720be84f904cac8d4766e262710
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/BadEnding.unity
+    guid: dc09d4fc557c6a345a3740f7214bbc7c
   m_configObjects: {}

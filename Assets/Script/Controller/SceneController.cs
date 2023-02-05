@@ -37,7 +37,7 @@ public class SceneController : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(SceneManager.GetActiveScene().name == SCENE_INTRO && Input.GetKeyDown(KeyCode.Escape))
         {
             OnLoadSceneMap1();
         }
