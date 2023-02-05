@@ -175,6 +175,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6097189863185342369}
+  - component: {fileID: 8821657548232943679}
+  - component: {fileID: 5913857030492919835}
   m_Layer: 0
   m_Name: Cupcake
   m_TagString: Untagged
@@ -199,3 +201,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8821657548232943679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6905778876680897819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a50d2ddd76ec274dbce8a713645465b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &5913857030492919835
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6905778876680897819}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1977362, y: 0.22074175, z: 0.17584355}
+  m_Center: {x: 0, y: 0.05237615, z: 0}

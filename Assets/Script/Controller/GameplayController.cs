@@ -33,8 +33,6 @@ public class GameplayController : MonoBehaviour
 
     int collectCard;
 
-    public List<UnityEvent> unityEvents = new List<UnityEvent>(); 
-    public UnityEvent unityEvent;
 
     void Awake() 
     {
@@ -108,7 +106,6 @@ public class GameplayController : MonoBehaviour
     {
         TimeRemainingDialogue();
         CheckCollectCard();
-        unityEvent.Invoke();
     }
 
     private void TimeRemainingDialogue()
