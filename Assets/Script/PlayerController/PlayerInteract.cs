@@ -6,29 +6,32 @@ using GameJam.Utilities;
 public class PlayerInteract : MonoBehaviour
 {
     InputSystemManager inputSystemManager;
-    bool isTalk;
-    void Start()
+    bool isInteract;
+    private void Start()
     {
         inputSystemManager = SharedObject.Instance.Get<InputSystemManager>();
         inputSystemManager.onInteract += OnInteract;
     }
+
     public void OnInteract(bool value)
     {
-        Interacting();
+        isInteract = value;
     }
 
-    void Interacting()
-    {
-        isTalk = true;
-    }
     private void OnTriggerStay(Collider other)
     {
-        if (other.GetComponent<TalkWithNPC>()!=null && isTalk == true)
+        if (other.GetComponent<TalkWithNPC>() != null)
         {
-            other.GetComponent<TalkWithNPC>().SetDialogueID();
             StartDialogue(other.GetComponent<TalkWithNPC>());
-            isTalk = false;
+            Destroy(other.gameObject);
         }
+
+        if(other.GetComponent<Door>() != null && isInteract == true)
+        {
+            print(isInteract);
+        }
+        isInteract = false;
+        print(isInteract);
     }
 
     void StartDialogue(TalkWithNPC NPC)
@@ -42,7 +45,7 @@ public class PlayerInteract : MonoBehaviour
             SharedObject.Instance.Get<DialogueManager>().currentNPC = NPC;
             SharedObject.Instance.Get<DialogueManager>().currentDialogue = NPC.startWithDialogueId;
         }
-
+        SharedObject.Instance.Get<DialogueManager>().currentDialogue = NPC.startWithDialogueId;
         SharedObject.Instance.Get<DialogueManager>().StartDialogue();
         //PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.CONVERSATION;
         return;

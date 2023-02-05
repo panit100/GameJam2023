@@ -5,15 +5,23 @@ using UnityEngine;
 public class DialogueInfo
 {
     public string ID;
-    public string character;
-    public string dialogueText;
+    public string characterThaiName;
+    public string dialogueThai;
+    public string characterEngLishName;
+    public string dialogueEnglish;
     public string continueId;
+    public string imageCutScene;
+    public string type;
 
-    public DialogueInfo(string Id, string Character, string DialogueText, string ContinueId)
+    public DialogueInfo(string Id, string CharacterThaiName, string DialogueThai, string CharacterEngLishName, string DialogueEnglish, string ContinueId, string ImageCutScene, string Type)
     {
         ID = Id;
-        character = Character;
-        dialogueText = DialogueText;
+        characterThaiName = CharacterThaiName;
+        dialogueThai = DialogueThai;
+        characterEngLishName = CharacterEngLishName;
+        dialogueEnglish = DialogueEnglish;
         continueId = ContinueId;
+        imageCutScene = ImageCutScene;
+        type = Type;
     }
 }

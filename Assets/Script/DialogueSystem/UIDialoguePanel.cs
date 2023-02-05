@@ -9,19 +9,22 @@ using UnityEngine.Events;
 
 public class UIDialoguePanel : MonoBehaviour
 {
-    
     [Header("DialogueText")]
     [SerializeField] TextMeshProUGUI nameText;
     [SerializeField] TextMeshProUGUI dialogueText;
 
-
     [Header("Button")]
     [SerializeField] Button continueButton;
+
+    [Header("CutScene")]
+    [SerializeField] GameObject imageCutScene;
+    Sprite cutSceneSprite;
 
 
     public TextMeshProUGUI NameText {get {return nameText;}}
     public TextMeshProUGUI DialogueText {get {return dialogueText;}}
     public Button ContinueButton {get {return continueButton;}}
+    public GameObject ImageCutScene { get { return imageCutScene; } }
 
 
     public void AddListenerToButton(UnityAction displayNextSentence)
@@ -32,16 +35,15 @@ public class UIDialoguePanel : MonoBehaviour
         ContinueButton.onClick.AddListener(displayNextSentence);
     }
 
-    //public void ResetCharacterSprite()
-    //{
-    //    character1Sprite = null;
-    //    character2Sprite = null;
-    //    imageCharacter1.GetComponent<Image>().sprite = null;
-    //    imageCharacter2.GetComponent<Image>().sprite = null;
-    //    imageCharacter1.GetComponent<Image>().color = new Color(1, 1, 1, 1);
-    //    imageCharacter2.GetComponent<Image>().color = new Color(1, 1, 1, 1);
-    //    imageCutScene.GetComponent<Image>().sprite = null;
-    //    imageCutScene.GetComponent<Image>().color = new Color(1, 1, 1, 0);
-    //}
+    public void ResetCharacterSprite()
+    {
+        imageCutScene.GetComponent<Image>().sprite = null;
+        imageCutScene.GetComponent<Image>().color = new Color(1, 1, 1, 0);
+    }
+    public void SetCutSceneSprite(Sprite image)
+    {
+        cutSceneSprite = image;
+        imageCutScene.GetComponent<Image>().sprite = cutSceneSprite;
+    }
 
 }

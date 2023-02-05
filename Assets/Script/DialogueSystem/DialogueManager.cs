@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using GameJam.Utilities;
-using UnityEngine.UI;
 using System.IO;
+using System.Linq;
+using System;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] string[] dialoguePaths;
     public Dictionary<string, DialogueInfo> openWith = new Dictionary<string, DialogueInfo>();
 
+    [SerializeField] List<Sprite> characterSprites = new List<Sprite>();
     [SerializeField] string currentId;
     public TalkWithNPC currentNPC;
     public string currentDialogue;
@@ -18,6 +21,25 @@ public class DialogueManager : MonoBehaviour
     Canvas dialogueCanvas;
     UIDialoguePanel dialoguePanel;
 
+    string allSentence;
+    [SerializeField] float delayForNextSentences = 5f;
+
+    public Language language;
+    public enum Language
+    {
+        Thai,English
+    }
+    public enum Type
+    {
+        Dialogue,
+        CutScene
+    }
+    [Header("DialogueType")]
+    public Type type;
+    void LoadCutSceneSprites()
+    {
+        characterSprites = Resources.LoadAll<Sprite>("DialogueSprite").ToList();
+    }
 
     void Awake()
     {
@@ -27,17 +49,8 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         LoadDialogueData();
-        //LoadCharacterSprites();
+        LoadCutSceneSprites();
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown("space"))
-        {
-            StartDialogue();
-        }
-    }
-
     void LoadDialogueData()
     {
         for (int i = 0; i < dialoguePaths.Length; i++)
@@ -55,8 +68,7 @@ public class DialogueManager : MonoBehaviour
                     break;
                 }
 
-                var data_values = data_string.Split(',');
-
+                var data_values = data_string.Split(';');
 
                 if (data_values[0] == "Id" || data_values[0] == "")
                 {
@@ -64,7 +76,7 @@ public class DialogueManager : MonoBehaviour
                 }
                 else
                 {
-                    DialogueInfo newDialogue = new DialogueInfo(data_values[0], data_values[1], data_values[2], data_values[3]);
+                    DialogueInfo newDialogue = new DialogueInfo(data_values[0], data_values[1], data_values[2], data_values[3], data_values[4], data_values[5], data_values[6], data_values[7]);
                     openWith.Add(data_values[0], newDialogue);
                 }
             }
@@ -73,10 +85,8 @@ public class DialogueManager : MonoBehaviour
     void Initialize()
     {
         CrateNewDialoguePanel();
-
         dialogueCanvas.enabled = false;
-
-        dialoguePanel.AddListenerToButton(DisplayNextSentence);
+        //dialoguePanel.AddListenerToButton(DisplayNextSentence);
     }
     void CrateNewDialoguePanel()
     {
@@ -84,7 +94,6 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel = _dialoguePanel.GetComponent<UIDialoguePanel>();
         dialogueCanvas = dialoguePanel.GetComponent<Canvas>();
     }
-
     public void StartDialogue()
     {
         if (dialoguePanel == null)
@@ -94,14 +103,33 @@ public class DialogueManager : MonoBehaviour
         {
             return;
         }
+        dialoguePanel.ResetCharacterSprite();
+        type = (Type)Enum.Parse(typeof(Type), openWith[currentDialogue].type);
         dialogueCanvas.enabled = true;
+        CheckDialogueType(currentDialogue);
 
-        dialoguePanel.NameText.text = openWith[currentDialogue].character;
-        dialoguePanel.DialogueText.text = openWith[currentDialogue].dialogueText;
+        if (language == Language.Thai)
+        {
+            allSentence = openWith[currentDialogue].characterThaiName + " : " + openWith[currentDialogue].dialogueThai;
+        }
+        else if (language == Language.English)
+        {
+            allSentence = openWith[currentDialogue].characterEngLishName + " : " + openWith[currentDialogue].dialogueEnglish;
+        }
+
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(openWith[currentDialogue].dialogueText));
-
         currentId = openWith[currentDialogue].continueId;
+        StartCoroutine(TypeSentence(allSentence));
+
+    }
+    void CheckDialogueType(string checkChoiceId)
+    {
+        if (type == Type.CutScene)
+        {
+            var cutSceneImage = characterSprites.Find(n => n.name == openWith[checkChoiceId].imageCutScene);
+            dialoguePanel.SetCutSceneSprite(cutSceneImage);
+            dialoguePanel.ImageCutScene.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+        }
     }
 
     public void DisplayNextSentence()
@@ -111,11 +139,20 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
+        CheckDialogueType(currentId);
 
-        dialoguePanel.NameText.text = openWith[currentId].character;
+        if (language == Language.Thai)
+        {
+            allSentence = openWith[currentId].characterThaiName + " : " + openWith[currentId].dialogueThai;
+        }
+        else if (language == Language.English)
+        {
+            allSentence = openWith[currentId].characterEngLishName + " : " + openWith[currentId].dialogueEnglish;
+        }
+
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(openWith[currentId].dialogueText));
         currentId = openWith[currentId].continueId;
+        StartCoroutine(TypeSentence(allSentence));
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -126,8 +163,14 @@ public class DialogueManager : MonoBehaviour
             dialoguePanel.DialogueText.text += letter;
             yield return null;
         }
+        StartCoroutine(DelayForNextDialogue());
     }
 
+    IEnumerator DelayForNextDialogue()
+    {
+        yield return new WaitForSeconds(delayForNextSentences);
+        DisplayNextSentence();
+    }
     void EndDialogue()
     {
         dialogueCanvas.enabled = false;
@@ -137,6 +180,21 @@ public class DialogueManager : MonoBehaviour
             currentNPC = null;
         }
         currentDialogue = null;
+
+        SharedObject.Instance.Get<GameplayController>().isTriggerDialogue = false;
         //PlayerManager.inst.playerState = PlayerManager.PLAYERSTATE.NONE;
+    }
+
+    public void triggerDialogue(string id)
+    {
+        currentDialogue = id;
+        StartDialogue();
+    }
+
+
+    public void DestroyDialogueManager()
+    {
+        SharedObject.Instance.Remove(this);
+        Destroy(this.gameObject);
     }
 }
