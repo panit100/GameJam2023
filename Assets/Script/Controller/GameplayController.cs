@@ -155,13 +155,16 @@ public class GameplayController : MonoBehaviour
             }
         }
 
-        if (stage == Stage.Stage2)
+        if (stage == Stage.Stage3)
         {
-            if (collectCard_Stage2 == 3)
+            if (collectCard_Stage3 == 3)
             {
                 var vine = GameObject.Find("Vine3_2");
                 vine.GetComponent<Animator>().SetTrigger("VineDown");
                 vine.GetComponent<BoxCollider>().enabled = false;
+
+                var rockGroup = GameObject.Find("RockGroup3_1");
+                vine.GetComponent<Animator>().SetBool("RockUp",true);
             }
         }
     }
