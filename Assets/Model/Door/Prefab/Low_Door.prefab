@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 701304535906399050}
   - component: {fileID: 4473291963954445551}
   - component: {fileID: 1869174297638848549}
+  - component: {fileID: 4334787816882190698}
+  - component: {fileID: 7771116371994294117}
   m_Layer: 0
   m_Name: Low_Door
   m_TagString: Untagged
@@ -83,3 +85,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4334787816882190698
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211766415791909360}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5078558, y: 2.3103075, z: 0.04667378}
+  m_Center: {x: 0, y: 0.0006118417, z: -0.023336807}
+--- !u!114 &7771116371994294117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211766415791909360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1085c4b6d032ca4498a3d51a1e29911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadScene: 0

@@ -114,6 +114,16 @@ public class GameplayController : MonoBehaviour
         Discard();
     }
 
+    public void OnLoadSceneMap2()
+    {
+        sceneController.OnLoadSceneMap2();
+    }
+
+    public void OnLoadSceneMap3()
+    {
+        sceneController.OnLoadSceneMap3();
+    }
+
     private void Discard()
     {
         SharedObject.Instance.Remove(this);
