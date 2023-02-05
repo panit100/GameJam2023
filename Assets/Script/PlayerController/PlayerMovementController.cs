@@ -186,7 +186,7 @@ public class PlayerMovementController : MonoBehaviour
         if (canWalk)
         {
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            rb.AddForce(moveDir.normalized * WalkSpeed * SpeedMultiplier * Time.fixedDeltaTime);
+            rb.velocity += moveDir.normalized * WalkSpeed * SpeedMultiplier * Time.deltaTime;
 
             animController.AnimationState("walk");
         }
@@ -208,14 +208,14 @@ public class PlayerMovementController : MonoBehaviour
         {
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 
-            rb.AddForce(moveDir.normalized * RunSpeed * SpeedMultiplier * Time.fixedDeltaTime);
+            rb.velocity += moveDir.normalized * RunSpeed * SpeedMultiplier * Time.deltaTime;
 
             animController.AnimationState("run");
         }
         else
         {
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            rb.AddForce(moveDir.normalized * WalkSpeed * SpeedMultiplier * Time.fixedDeltaTime);
+            rb.velocity += moveDir.normalized * WalkSpeed * SpeedMultiplier * Time.deltaTime;
 
             animController.AnimationState("walk");
         }

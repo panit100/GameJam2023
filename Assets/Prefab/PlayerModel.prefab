@@ -3527,9 +3527,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 142bbb1562571894cac3b6590c3fb34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WalkSpeed: 2.3
-  SpeedMultiplier: 200
-  RunSpeed: 4
+  WalkSpeed: 1
+  SpeedMultiplier: 10
+  RunSpeed: 1.5
   turnSmoothTime: 0.109
   Vcam: {fileID: 0}
   mainCam: {fileID: 0}
