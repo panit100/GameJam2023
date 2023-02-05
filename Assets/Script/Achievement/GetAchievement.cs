@@ -18,6 +18,11 @@ public class GetAchievement : MonoBehaviour
     {
         if(!_col.CompareTag("Player")) return;
 
+        GetEnding();
+    }
+
+    public void GetEnding()
+    {
         switch (ach)
         {
             case Achievement.FirstEnding : 
@@ -37,6 +42,5 @@ public class GetAchievement : MonoBehaviour
                 Debug.Log("out of bound");
                 break;
         }
-        
     }
 }
