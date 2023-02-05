@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   setActiveAgain: 1
-  waitSetActiveTime: 5
+  waitSetActiveTime: 3
   model:
   - {fileID: 4232995887116138692}
   - {fileID: 3332103960662574544}
