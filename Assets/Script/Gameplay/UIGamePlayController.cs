@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,17 +30,26 @@ public class UIGamePlayController : MonoBehaviour
     bool isPaperShow = false;
 
     private SceneController sceneController;
+    private ClockSystem clockSystem;
 
     void Awake()
     {
         sceneController = SharedObject.Instance.Get<SceneController>();
     }
 
+    private void Start()
+    {
+        clockSystem = FindObjectOfType<ClockSystem>();
+    }
+
     public void OnClickTimeButton()
     {
-        LiftOrPutWatch();
-        isTimeShow = !isTimeShow;
-        timeContent.SetActive(isTimeShow);
+        //Replace this? yes
+        // LiftOrPutWatch();
+        // isTimeShow = !isTimeShow;
+        // timeContent.SetActive(isTimeShow);
+
+        clockSystem.CheckClock();
     }
 
     public void OnClickTutorialButton()

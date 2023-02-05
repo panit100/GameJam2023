@@ -9,11 +9,18 @@ namespace GameJam.GameData
     {
         public float[] scaleValue;
         public int currentScale = 1;
+
+        public enum SizeLabel
+        {
+            S,M,L,Small,Medium,Large
+        }
         
         private void Awake()
         {
             SharedObject.Instance.Add(this);
             DontDestroyOnLoad(this);
         }
+        
+        
     }
 }

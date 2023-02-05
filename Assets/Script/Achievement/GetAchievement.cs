@@ -8,15 +8,11 @@ public class GetAchievement : MonoBehaviour
     public enum Achievement
     {
         FirstEnding,
-        SecondEnding
+        SecondEnding,
+        ClearAll
     }
     
-    private Achievement ach;
-
-    private void Start()
-    {
-        throw new NotImplementedException();
-    }
+    public Achievement ach;
 
     private void OnTriggerEnter(Collider _col)
     {
@@ -25,10 +21,17 @@ public class GetAchievement : MonoBehaviour
         switch (ach)
         {
             case Achievement.FirstEnding : 
+                Debug.Log($"First Ending");
                 PlayerPrefs.SetString("FirstEnding", "True");
                 break;
             case Achievement.SecondEnding : 
+                Debug.Log($"Second Ending");
                 PlayerPrefs.SetString("SecondEnding", "True");
+                break;
+            case Achievement.ClearAll : 
+                Debug.Log($"Clear all Achievement");
+                PlayerPrefs.SetString("FirstEnding", "False");
+                PlayerPrefs.SetString("SecondEnding", "False");
                 break;
             default:
                 Debug.Log("out of bound");
