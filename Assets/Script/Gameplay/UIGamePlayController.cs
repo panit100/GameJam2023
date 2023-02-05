@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,9 @@ public class UIGamePlayController : MonoBehaviour
     private Animator exitPanelAnimator;
 
     [SerializeField]
+    private Animator gamePlayPanelAnimator;
+
+    [SerializeField]
     private TMP_Text size_Text;
 
     [SerializeField]
@@ -32,17 +36,27 @@ public class UIGamePlayController : MonoBehaviour
     bool isPaperShow = false;
 
     private SceneController sceneController;
+    private ClockSystem clockSystem;
 
     void Awake()
     {
         sceneController = SharedObject.Instance.Get<SceneController>();
     }
 
+    private void Start()
+    {
+        clockSystem = FindObjectOfType<ClockSystem>();
+    }
+
     public void OnClickTimeButton()
     {
-        LiftOrPutWatch();
-        isTimeShow = !isTimeShow;
-        timeContent.SetActive(isTimeShow);
+        //Replace this? yes
+        // LiftOrPutWatch();
+        // isTimeShow = !isTimeShow;
+        // timeContent.SetActive(isTimeShow);
+
+        clockSystem.CheckClock();
+        gamePlayPanelAnimator.SetTrigger("trigger");
     }
 
     public void OnClickTutorialButton()
