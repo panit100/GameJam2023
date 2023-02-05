@@ -16,6 +16,9 @@ public class UIGamePlayController : MonoBehaviour
     private Animator tutorialAnimator;
 
     [SerializeField]
+    private Animator exitPanelAnimator;
+
+    [SerializeField]
     private TMP_Text size_Text;
 
     [SerializeField]
@@ -49,6 +52,16 @@ public class UIGamePlayController : MonoBehaviour
     }
 
     public void OnClickExitButton()
+    {
+        exitPanelAnimator.SetTrigger("trigger");
+    }
+
+    public void OnClickResumeButton()
+    {
+        exitPanelAnimator.SetTrigger("trigger");
+    }
+
+    public void OnClickMenuExitButton()
     {
         sceneController.OnLoadSceneMainmenu();
     }
