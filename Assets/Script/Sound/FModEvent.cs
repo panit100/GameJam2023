@@ -19,4 +19,7 @@ public class FModEvent : MonoBehaviour
     [field : Header("UI")]
     [field : SerializeField] public EventReference ButtonSFX {get; private set;}
 
+    [field : SerializeField] public EventReference CutScene1 {get; private set;}
+    [field : SerializeField] public EventReference CutScene2 {get; private set;}
+
 }
