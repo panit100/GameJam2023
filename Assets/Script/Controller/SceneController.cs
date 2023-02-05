@@ -12,6 +12,8 @@ public class SceneController : MonoBehaviour
     public string SCENE_MAP1;
     public string SCENE_MAP2;
     public string SCENE_MAP3;
+    public string SCENE_GoodEnd;
+    public string SCENE_BadEnd;
     
     Scene loadedSceneBefore;
     bool isInitlize;
@@ -31,6 +33,14 @@ public class SceneController : MonoBehaviour
         SharedObject.Instance.Add(this);
 
         isInitlize = true;
+    }
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            OnLoadSceneMap1();
+        }
     }
 
     public void OnLoadSceneMainmenu()
@@ -56,6 +66,16 @@ public class SceneController : MonoBehaviour
     public void OnLoadSceneMap3()
     {
         OnLoadSceneAsync(SCENE_MAP3);
+    }
+
+    public void OnLoadSceneGoodEnd()
+    {
+        OnLoadSceneAsync(SCENE_GoodEnd);
+    }
+
+    public void OnLoadSceneBadEnd()
+    {
+        OnLoadSceneAsync(SCENE_BadEnd);
     }
 
     public void OnLoadSceneAsync(string sceneName)

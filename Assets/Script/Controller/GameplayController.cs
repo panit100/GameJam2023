@@ -245,6 +245,16 @@ public class GameplayController : MonoBehaviour
         stage = Stage.Stage3;
     }
 
+    public void OnLoadSceneGoodEnd()
+    {
+        sceneController.OnLoadSceneGoodEnd();
+    }
+
+    public void OnLoadSceneBadEnd()
+    {
+        sceneController.OnLoadSceneBadEnd();
+    }
+
     IEnumerator waitDialogue( string id)
     {
         yield return new WaitForSeconds(5f);
