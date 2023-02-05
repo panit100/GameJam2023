@@ -28,6 +28,13 @@ namespace GameJam.GameData
 
             UpdateScaleLabelUi();
         }
+        public void Update()
+        {
+            gameplayCtr = FindObjectOfType<UIGamePlayController>();
+            playerMovementCtr = FindObjectOfType<PlayerMovementController>();
+
+            UpdateScaleLabelUi();
+        }
 
         public void UpdateScaleLabelUi()
         {
@@ -35,15 +42,15 @@ namespace GameJam.GameData
             {
                 case 0 : 
                     gameplayCtr.SetSizeText("S","Small");
-                    playerMovementCtr.jumpForce = jumpForceValue[currentScale];
+                    playerMovementCtr.jumpForce = 200f;
                     break;
                 case 1 : 
                     gameplayCtr.SetSizeText("M","Medium");
-                    playerMovementCtr.jumpForce = jumpForceValue[currentScale];
+                    playerMovementCtr.jumpForce = 250f;
                     break;
                 case 2 : 
                     gameplayCtr.SetSizeText("L","Large");
-                    playerMovementCtr.jumpForce = jumpForceValue[currentScale];
+                    playerMovementCtr.jumpForce = 500f;
                     break;
                 default:
                     Debug.Log($"Size for txt out of bound!");
