@@ -9,7 +9,6 @@ using GameJam.Utilities;
 public class ScaleUpPlayer : MonoBehaviour
 {
     SoundManager soundManager;
-    [SerializeField] bool setActiveAgain;
     [SerializeField] float waitSetActiveTime = 5f;
     [SerializeField] GameObject[] model;
 
@@ -40,20 +39,12 @@ public class ScaleUpPlayer : MonoBehaviour
         //if (soundManager != null)
         //    soundManager.PlayShrinkSFX();
 
-        if (setActiveAgain == true)
+        foreach (GameObject obj in model)
         {
-            foreach (GameObject obj in model)
-            {
-                obj.SetActive(false);
-                this.GetComponent<Collider>().enabled = false;
-            }
-            StartCoroutine(waitSetActiveAgain(waitSetActiveTime));
-            setActiveAgain = false;
+            obj.SetActive(false);
+            this.GetComponent<Collider>().enabled = false;
         }
-        else
-        {
-            Destroy(this.gameObject);
-        }
+        StartCoroutine(waitSetActiveAgain(waitSetActiveTime));
     }
     IEnumerator waitSetActiveAgain(float time)
     {

@@ -35,20 +35,12 @@ public class ScaleDownPlayer : MonoBehaviour
         //if (soundManager != null)
         //    soundManager.PlayShrinkSFX();
 
-        if (setActiveAgain == true)
+        foreach (GameObject obj in model)
         {
-            foreach (GameObject obj in model)
-            {
-                obj.SetActive(false);
-                this.GetComponent<Collider>().enabled = false;
-            }
-            StartCoroutine(waitSetActiveAgain(waitSetActiveTime));
-            setActiveAgain = false;
+            obj.SetActive(false);
+            this.GetComponent<Collider>().enabled = false;
         }
-        else
-        {
-            Destroy(this.gameObject);
-        }
+        StartCoroutine(waitSetActiveAgain(waitSetActiveTime));
     }
 
     IEnumerator waitSetActiveAgain(float time)
