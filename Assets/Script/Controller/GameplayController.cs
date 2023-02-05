@@ -31,8 +31,9 @@ public class GameplayController : MonoBehaviour
     private float timeRemaining;
     public float TimeRemaining => timeRemaining;
 
-    int collectCard;
-
+    [SerializeField] int collectCard_Stage1;
+    [SerializeField] int collectCard_Stage2;
+    [SerializeField] int collectCard_Stage3;
 
     void Awake() 
     {
@@ -46,6 +47,9 @@ public class GameplayController : MonoBehaviour
         dialogueManager = SharedObject.Instance.Get<DialogueManager>();
 
         timeRemaining = MaxTimerSec;
+        collectCard_Stage1 = 0;
+        collectCard_Stage2 = 0;
+        collectCard_Stage3 = 0;
     }
 
     void Initilize()
@@ -105,7 +109,6 @@ public class GameplayController : MonoBehaviour
     private void CheckSpecificEvent()
     {
         TimeRemainingDialogue();
-        CheckCollectCard();
     }
 
     private void TimeRemainingDialogue()
@@ -134,16 +137,42 @@ public class GameplayController : MonoBehaviour
     {
         if (stage == Stage.Stage1)
         {
-            if (collectCard == 2)
+            if (collectCard_Stage1 == 3)
             {
-                // trigger vine
+                var vine = GameObject.Find("Vine1_2");
+                vine.GetComponent<Animator>().SetTrigger("VineDown");
+                vine.GetComponent<BoxCollider>().enabled = false;
             }
+        }
+    }
+
+    public void PressButton()
+    {
+        if (stage == Stage.Stage1)
+        {
+            var vine = GameObject.Find("Vine1_1");
+            vine.GetComponent<Animator>().SetTrigger("VineDown");
+            vine.GetComponent<BoxCollider>().enabled = false;
         }
     }
 
     public void CollectCard()
     {
-        collectCard += 1;
+        if (stage == Stage.Stage1)
+        {
+            collectCard_Stage1 += 1;
+        }
+        if (stage == Stage.Stage2)
+        {
+            collectCard_Stage2 += 1;
+        }
+        if (stage == Stage.Stage3)
+        {
+            collectCard_Stage3 += 1;
+        }
+
+        CheckCollectCard();
+
     }
 
     public void OnLoadSceneMainMenu()

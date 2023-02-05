@@ -9,9 +9,9 @@ public class ScaleDownPlayer : MonoBehaviour
     SoundManager soundManager;
     [SerializeField] bool setActiveAgain;
     [SerializeField] float waitSetActiveTime = 5f;
+    [SerializeField] GameObject[] model;
 
-
-    void Start() 
+    void Awake() 
     {
         soundManager = SharedObject.Instance.Get<SoundManager>();
     }
@@ -30,12 +30,16 @@ public class ScaleDownPlayer : MonoBehaviour
         var _multiply = _scaleSet.scaleValue[_scaleSet.currentScale];
         _col.gameObject.transform.localScale = new Vector3(_multiply,_multiply,_multiply);
 
-        if (soundManager != null)
-            soundManager.PlayShrinkSFX();
+        //if (soundManager != null)
+        //    soundManager.PlayShrinkSFX();
 
         if (setActiveAgain == true)
         {
-            this.gameObject.SetActive(false);
+            foreach (GameObject obj in model)
+            {
+                obj.SetActive(false);
+                this.GetComponent<Collider>().enabled = false;
+            }
             StartCoroutine(waitSetActiveAgain(waitSetActiveTime));
             setActiveAgain = false;
         }
@@ -48,5 +52,10 @@ public class ScaleDownPlayer : MonoBehaviour
     IEnumerator waitSetActiveAgain(float time)
     {
         yield return new WaitForSeconds(time);
+        foreach (GameObject obj in model)
+        {
+            obj.SetActive(true);
+            this.GetComponent<Collider>().enabled = true;
+        }
     }
 }
