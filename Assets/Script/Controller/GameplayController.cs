@@ -15,6 +15,7 @@ public class GameplayController : MonoBehaviour
     public Stage stage;
 
     SceneController sceneController;
+    private GetAchievement getAch;
 
     DialogueManager dialogueManager;
     public bool isTriggerDialogue;
@@ -49,7 +50,11 @@ public class GameplayController : MonoBehaviour
 
         dialogueManager = SharedObject.Instance.Get<DialogueManager>();
 
+
+        getAch = FindObjectOfType<GetAchievement>();
+
         scaleSetting = SharedObject.Instance.Get<ScaleSetting>();
+
 
         timeRemaining = MaxTimerSec;
         collectCard_Stage1 = 0;
@@ -99,12 +104,13 @@ public class GameplayController : MonoBehaviour
         if (timeRemaining > 0)
         {
             timeRemaining -= Time.deltaTime;
-
+            getAch.ach = GetAchievement.Achievement.FirstEnding;
             CheckSpecificEvent();
         }
         else
         {
             Debug.Log("Time has run out!");
+            getAch.ach = GetAchievement.Achievement.SecondEnding;
             timeRemaining = 0;
             isTimerRuningOut = true;
         }

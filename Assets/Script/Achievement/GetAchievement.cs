@@ -14,12 +14,12 @@ public class GetAchievement : MonoBehaviour
     
     public Achievement ach;
 
-    private void OnTriggerEnter(Collider _col)
-    {
-        if(!_col.CompareTag("Player")) return;
-
-        GetEnding();
-    }
+    // private void OnTriggerEnter(Collider _col)
+    // {
+    //     if(!_col.CompareTag("Player")) return;
+    //
+    //     GetEnding();
+    // }
 
     public void GetEnding()
     {
@@ -28,10 +28,12 @@ public class GetAchievement : MonoBehaviour
             case Achievement.FirstEnding : 
                 Debug.Log($"First Ending");
                 PlayerPrefs.SetString("FirstEnding", "True");
+                
                 break;
             case Achievement.SecondEnding : 
                 Debug.Log($"Second Ending");
                 PlayerPrefs.SetString("SecondEnding", "True");
+                
                 break;
             case Achievement.ClearAll : 
                 Debug.Log($"Clear all Achievement");
