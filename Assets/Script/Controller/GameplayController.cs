@@ -9,7 +9,8 @@ public class GameplayController : MonoBehaviour
     SceneController sceneController;
 
     DialogueManager dialogueManager;
-    
+    public bool isTriggerDialogue;
+
     bool isInitlize;
 
     private bool isPaused;
@@ -19,6 +20,7 @@ public class GameplayController : MonoBehaviour
     [SerializeField]
     private float MaxTimerSec;
 
+    [SerializeField]
     private float timeRemaining;
     public float TimeRemaining => timeRemaining;
 
@@ -89,9 +91,20 @@ public class GameplayController : MonoBehaviour
         }
     }
 
+    
     private void CheckSpecificEvent()
     {
 
+        if(timeRemaining <= 480 && timeRemaining >= 475 && isTriggerDialogue == false)
+        {
+            dialogueManager.triggerDialogue("Ch1_A02_01");
+            isTriggerDialogue = true;
+        }
+        else if (timeRemaining <= 360 && timeRemaining >= 355 && isTriggerDialogue == false)
+        {
+            dialogueManager.triggerDialogue("Ch1_A03_01");
+            isTriggerDialogue = true;
+        }
     }
 
     public void OnLoadSceneMainMenu()

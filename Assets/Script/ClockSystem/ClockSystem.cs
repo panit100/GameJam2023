@@ -6,25 +6,28 @@ using UnityEngine;
 
 public class ClockSystem : MonoBehaviour
 {
-    [Header("Timer")]
-    [SerializeField] private float timer = 0;
-    [SerializeField] private bool isInMinute;
     private float minTimer = 0f;
 
     [Header("Object Setter")]
     [SerializeField] private GameObject clockHand;
     [SerializeField] private GameObject clockCam;
+    [SerializeField] private GameObject playerModel;
+    [SerializeField] private GameObject playerHand;
 
     [Header("For testing only")] [Range(0.1f, 50f)]
     [SerializeField] private float timerSpeedMultiplier = 0;
     
     private InputSystemManager inputSystemManager;
     private GameplayController gameplayController;
+    private PlayerAnimationController playerAnimationController;
+    private PlayerMovementController playerMovementController;
     private bool isToggle;
 
     private void Start()
     {
         inputSystemManager = SharedObject.Instance.Get<InputSystemManager>();
+        playerAnimationController = GetComponent<PlayerAnimationController>();
+        playerMovementController = GetComponent<PlayerMovementController>();
         inputSystemManager.onCheckClock += CheckClock;
 
         gameplayController = FindObjectOfType<GameplayController>();
@@ -32,47 +35,54 @@ public class ClockSystem : MonoBehaviour
 
     private void StartTimer()
     {
-        // if (!isInMinute)
-        // {
-        //     minTimer = timer / 60;
-        // }
-        // else
-        // {
-        //     minTimer = timer;
-        // }
-
         minTimer = gameplayController.TimeRemaining / 60;
         
         //6" per min
-        clockHand.transform.rotation = Quaternion.Euler(0f, minTimer * 6f, 0f);
+        clockHand.transform.localRotation = Quaternion.Euler(0f, 0f, minTimer * 6f);
     }
 
-    private void FixedUpdate()
+    private void LateUpdate()
     {
-        if (!(timer >= 0))
-        {
-            timer = 0;
-            return;
-        }
-        
         StartTimer();
-
-        if (isInMinute)
-        {
-            timer *= 60f;
-            isInMinute = false;
-        }
-        
-        timer -= Time.deltaTime * timerSpeedMultiplier;
     }
 
     private void CheckClock()
     {
         isToggle = !isToggle;
 
+        if (isToggle)
+        {
+            playerAnimationController.UseClockAnimation();
+            Invoke(nameof(DisablePlayer), 2f);
+        }
+        else
+        {
+            playerAnimationController.UnUseClockAnimation();
+            EnablePlayer();
+        }
+
         clockCam.SetActive(isToggle);
+        
     }
 
+    private void DisablePlayer()
+    {
+        playerHand.SetActive(true);
+        playerModel.SetActive(false);
+        playerMovementController.canMove = false;
+        playerMovementController.canWalk = false;
+        playerMovementController.canJump = false;
+    }
+    
+    private void EnablePlayer()
+    {
+        playerHand.SetActive(false);
+        playerModel.SetActive(true);
+        playerMovementController.canMove = true;
+        playerMovementController.canWalk = true;
+        playerMovementController.canJump = true;
+    }
+    
     private void OnDestroy()
     {
         inputSystemManager.onCheckClock -= CheckClock;
