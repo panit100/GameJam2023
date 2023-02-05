@@ -48,5 +48,11 @@ public class BGMSoundSetting : MonoBehaviour
             BGMEvent.start();
     }
 
+    void OnDestroy()
+    {
+        AmbienceEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        BGMEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+
     
 }

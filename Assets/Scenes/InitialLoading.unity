@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SCENE_MAINMENU: Mainmenu
-  SCENE_INTRO: Intro
+  SCENE_INTRO: S1
   SCENE_MAP1: Map1
   SCENE_MAP2: Map2
   SCENE_MAP3: Map3
@@ -443,6 +443,20 @@ MonoBehaviour:
       Data3: -204052558
       Data4: -736369562
     Path: event:/SFX_Button
+  <CutScene1>k__BackingField:
+    Guid:
+      Data1: 428695490
+      Data2: 1123801265
+      Data3: 1872448424
+      Data4: 2039372549
+    Path: event:/Ambience_CutScene1
+  <CutScene2>k__BackingField:
+    Guid:
+      Data1: 863181061
+      Data2: 1171368726
+      Data3: -395314756
+      Data4: -1111208274
+    Path: event:/Ambience_CutScene2
 --- !u!1 &2008813750
 GameObject:
   m_ObjectHideFlags: 0
