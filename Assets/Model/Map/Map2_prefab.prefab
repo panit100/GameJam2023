@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4474673055807514795}
   - component: {fileID: 4474673055807514794}
   - component: {fileID: 4474673055807514797}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4474673056209014253}
-  m_RootOrder: 117
+  m_RootOrder: 104
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!218 &4474673055807514794
 Terrain:
@@ -87,7 +87,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4474673056209014253}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Map2_prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,14 +144,7 @@ Transform:
   - {fileID: 4009180966352616487}
   - {fileID: 2981279611208316352}
   - {fileID: 7224392430589062624}
-  - {fileID: 1153498645936916509}
-  - {fileID: 1153498646155135313}
   - {fileID: 5069246168233426836}
-  - {fileID: 2703248047876754004}
-  - {fileID: 231601062623223448}
-  - {fileID: 231601060676778241}
-  - {fileID: 5736517963116138815}
-  - {fileID: 4911480870888105519}
   - {fileID: 1988793113982225529}
   - {fileID: 4260543277947842575}
   - {fileID: 6051719061429321988}
@@ -163,7 +156,6 @@ Transform:
   - {fileID: 278905413876846208}
   - {fileID: 2372206205512384033}
   - {fileID: 695525736053532627}
-  - {fileID: 4148802697995316300}
   - {fileID: 426226397411935647}
   - {fileID: 695525735417766492}
   - {fileID: 597759452040302239}
@@ -181,7 +173,7 @@ Transform:
   - {fileID: 4911480869363820610}
   - {fileID: 4911480870037329092}
   - {fileID: 2981279610799078103}
-  - {fileID: 4911480869175126606}
+  - {fileID: 7782181033825053315}
   - {fileID: 7224392431399513826}
   - {fileID: 7224392431781012596}
   - {fileID: 3334262050664920102}
@@ -196,15 +188,10 @@ Transform:
   - {fileID: 6051719061206460530}
   - {fileID: 5552125645910229600}
   - {fileID: 5713631372862339128}
-  - {fileID: 1153498646187425257}
-  - {fileID: 2703248047576240572}
   - {fileID: 4911480869681458230}
-  - {fileID: 4911480870434039956}
-  - {fileID: 4911480869366577913}
   - {fileID: 4338805630241765548}
   - {fileID: 4338805630290661964}
   - {fileID: 1153498646921029983}
-  - {fileID: 231601060840263741}
   - {fileID: 2981279611555477684}
   - {fileID: 2981279610811168167}
   - {fileID: 2981279611376497651}
@@ -227,6 +214,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7110047453757043957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7782181033825053315}
+  m_Layer: 0
+  m_Name: tree
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7782181033825053315
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7110047453757043957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1153498645936916509}
+  - {fileID: 231601062623223448}
+  - {fileID: 231601060676778241}
+  - {fileID: 5736517963116138815}
+  - {fileID: 4911480870888105519}
+  - {fileID: 4911480869175126606}
+  - {fileID: 2703248047876754004}
+  - {fileID: 1153498646155135313}
+  - {fileID: 1153498646187425257}
+  - {fileID: 2703248047576240572}
+  - {fileID: 4911480870434039956}
+  - {fileID: 4911480869366577913}
+  - {fileID: 231601060840263741}
+  m_Father: {fileID: 4474673056209014253}
+  m_RootOrder: 67
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &614820246333049302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -234,6 +265,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 2174398410151077736, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174398410151077738, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174398410151077742, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4551801226149377521, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
         type: 3}
       propertyPath: m_RootOrder
@@ -304,10 +350,90 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6783890616755656682, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783890616755656684, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783890616755656686, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8981485457417077555, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
         type: 3}
       propertyPath: m_Name
       value: TFF_MushroomSet01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981485457417077555, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387904, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387906, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387912, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387914, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387916, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387918, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337712, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337714, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337720, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337722, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337724, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337726, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ccc8550c3ee5b34f994a0428112d5c6, type: 3}
@@ -328,6 +454,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: treee_trunk_LP (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7003689412344865657, guid: f9a3f26f6aec14640a08f9a9342634f8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7672386388889352643, guid: f9a3f26f6aec14640a08f9a9342634f8,
         type: 3}
@@ -422,7 +553,7 @@ PrefabInstance:
     - target: {fileID: 1677196605531397572, guid: 37472b06bc6cd0149a9d60eb1c474fad,
         type: 3}
       propertyPath: m_RootOrder
-      value: 100
+      value: 87
       objectReference: {fileID: 0}
     - target: {fileID: 1677196605531397572, guid: 37472b06bc6cd0149a9d60eb1c474fad,
         type: 3}
@@ -494,6 +625,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Bush_03B (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1677196605531816420, guid: 37472b06bc6cd0149a9d60eb1c474fad,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9208562913257105527, guid: 37472b06bc6cd0149a9d60eb1c474fad,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37472b06bc6cd0149a9d60eb1c474fad, type: 3}
 --- !u!4 &2981279610811168167 stripped
@@ -512,7 +653,7 @@ PrefabInstance:
     - target: {fileID: 1677196605531397572, guid: 37472b06bc6cd0149a9d60eb1c474fad,
         type: 3}
       propertyPath: m_RootOrder
-      value: 74
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 1677196605531397572, guid: 37472b06bc6cd0149a9d60eb1c474fad,
         type: 3}
@@ -584,6 +725,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Bush_03B (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1677196605531816420, guid: 37472b06bc6cd0149a9d60eb1c474fad,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9208562913257105527, guid: 37472b06bc6cd0149a9d60eb1c474fad,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37472b06bc6cd0149a9d60eb1c474fad, type: 3}
 --- !u!4 &2981279610799078103 stripped
@@ -602,7 +753,7 @@ PrefabInstance:
     - target: {fileID: 4016713439071714753, guid: 965174ab1a43d8e4c8e5295d42ec430d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 85
+      value: 77
       objectReference: {fileID: 0}
     - target: {fileID: 4016713439071714753, guid: 965174ab1a43d8e4c8e5295d42ec430d,
         type: 3}
@@ -674,6 +825,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom_2 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4392675654480979835, guid: 965174ab1a43d8e4c8e5295d42ec430d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 965174ab1a43d8e4c8e5295d42ec430d, type: 3}
 --- !u!4 &695525736364009667 stripped
@@ -694,10 +850,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Wooden_Fence_02A
       objectReference: {fileID: 0}
+    - target: {fileID: 376409998566692142, guid: 06c3f544f78664041b45dcbd733a1260,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 376409998567049486, guid: 06c3f544f78664041b45dcbd733a1260,
         type: 3}
       propertyPath: m_RootOrder
-      value: 47
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 376409998567049486, guid: 06c3f544f78664041b45dcbd733a1260,
         type: 3}
@@ -782,7 +943,7 @@ PrefabInstance:
     - target: {fileID: 4016713439071714753, guid: 965174ab1a43d8e4c8e5295d42ec430d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 84
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 4016713439071714753, guid: 965174ab1a43d8e4c8e5295d42ec430d,
         type: 3}
@@ -853,6 +1014,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mushroom_2 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392675654480979835, guid: 965174ab1a43d8e4c8e5295d42ec430d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 965174ab1a43d8e4c8e5295d42ec430d, type: 3}
@@ -944,6 +1110,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: treee_trunk_LP
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 535c9e8e8c6834b4b94563a191a8a774,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 535c9e8e8c6834b4b94563a191a8a774, type: 3}
 --- !u!4 &4148802699742318569 stripped
@@ -964,10 +1135,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom_1_2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3510742162835081158, guid: 3e763cd047b9e2f438f3f75550c3c40e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4319930375589977468, guid: 3e763cd047b9e2f438f3f75550c3c40e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 69
+      value: 61
       objectReference: {fileID: 0}
     - target: {fileID: 4319930375589977468, guid: 3e763cd047b9e2f438f3f75550c3c40e,
         type: 3}
@@ -1059,10 +1235,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Wooden_Fence_02A (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 376409998566692142, guid: 06c3f544f78664041b45dcbd733a1260,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 376409998567049486, guid: 06c3f544f78664041b45dcbd733a1260,
         type: 3}
       propertyPath: m_RootOrder
-      value: 111
+      value: 98
       objectReference: {fileID: 0}
     - target: {fileID: 376409998567049486, guid: 06c3f544f78664041b45dcbd733a1260,
         type: 3}
@@ -1147,7 +1328,7 @@ PrefabInstance:
     - target: {fileID: 4016713439071714753, guid: 965174ab1a43d8e4c8e5295d42ec430d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 108
+      value: 95
       objectReference: {fileID: 0}
     - target: {fileID: 4016713439071714753, guid: 965174ab1a43d8e4c8e5295d42ec430d,
         type: 3}
@@ -1219,6 +1400,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom_2 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 4392675654480979835, guid: 965174ab1a43d8e4c8e5295d42ec430d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 965174ab1a43d8e4c8e5295d42ec430d, type: 3}
 --- !u!4 &695525736520500701 stripped
@@ -1234,6 +1420,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 2174398410151077736, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174398410151077738, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174398410151077742, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4551801226149377521, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
         type: 3}
       propertyPath: m_RootOrder
@@ -1304,10 +1505,90 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -10.348
       objectReference: {fileID: 0}
+    - target: {fileID: 6783890616755656682, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783890616755656684, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783890616755656686, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8981485457417077555, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
         type: 3}
       propertyPath: m_Name
       value: TFF_MushroomSet01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981485457417077555, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387904, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387906, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387912, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387914, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387916, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387918, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337712, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337714, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337720, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337722, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337724, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337726, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ccc8550c3ee5b34f994a0428112d5c6, type: 3}
@@ -1324,10 +1605,115 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 3492390491731078777, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390491731078779, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390491731078781, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390491731078783, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390492484338880, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390492484338882, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390492484338884, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390492484338886, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390492797517064, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390492797517066, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390492797517068, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390492797517070, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390493180106128, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390493180106130, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390493180106132, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390493180106134, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4267754921029825412, guid: 164600533e67e9741951875dc037789a,
         type: 3}
       propertyPath: m_Name
       value: TFF_MushroomSet02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267754921029825412, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401450150429492705, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401450150429492707, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401450150429492709, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401450150429492711, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5963332233134368798, guid: 164600533e67e9741951875dc037789a,
         type: 3}
@@ -1419,10 +1805,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom_1_2
       objectReference: {fileID: 0}
+    - target: {fileID: 3510742162835081158, guid: 3e763cd047b9e2f438f3f75550c3c40e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4319930375589977468, guid: 3e763cd047b9e2f438f3f75550c3c40e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 58
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4319930375589977468, guid: 3e763cd047b9e2f438f3f75550c3c40e,
         type: 3}
@@ -1584,6 +1975,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Rock_Medium_02A
       objectReference: {fileID: 0}
+    - target: {fileID: 7018119237136094062, guid: c50c2430bda2db5498adb34b279a4c01,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c50c2430bda2db5498adb34b279a4c01, type: 3}
 --- !u!4 &6880485573243199106 stripped
@@ -1599,10 +1995,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 1178982975210684145, guid: d7b24248323dfd8449067ce0ef1ffb36,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1178982975210684147, guid: d7b24248323dfd8449067ce0ef1ffb36,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1178982975210684149, guid: d7b24248323dfd8449067ce0ef1ffb36,
         type: 3}
       propertyPath: m_Name
       value: TFF_Mushrooms_02A
+      objectReference: {fileID: 0}
+    - target: {fileID: 1178982975210684149, guid: d7b24248323dfd8449067ce0ef1ffb36,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1178982975210684151, guid: d7b24248323dfd8449067ce0ef1ffb36,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1178982975210906325, guid: d7b24248323dfd8449067ce0ef1ffb36,
         type: 3}
@@ -1764,6 +2180,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Rock_Large_04A
       objectReference: {fileID: 0}
+    - target: {fileID: 6503860231370189630, guid: dfba2029821729e49af979214c5837ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfba2029821729e49af979214c5837ba, type: 3}
 --- !u!4 &7231480298368946018 stripped
@@ -1784,10 +2205,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Wooden_Fence_02A (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 376409998566692142, guid: 06c3f544f78664041b45dcbd733a1260,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 376409998567049486, guid: 06c3f544f78664041b45dcbd733a1260,
         type: 3}
       propertyPath: m_RootOrder
-      value: 71
+      value: 63
       objectReference: {fileID: 0}
     - target: {fileID: 376409998567049486, guid: 06c3f544f78664041b45dcbd733a1260,
         type: 3}
@@ -1869,10 +2295,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 449190089098120043, guid: 49dd985efcdce3c4987ca826611a8c33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833828196652046141, guid: 49dd985efcdce3c4987ca826611a8c33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8804588655320615240, guid: 49dd985efcdce3c4987ca826611a8c33,
         type: 3}
       propertyPath: m_RootOrder
-      value: 92
+      value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 8804588655320615240, guid: 49dd985efcdce3c4987ca826611a8c33,
         type: 3}
@@ -1943,6 +2379,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TFF_Birch_Tree_Dry_02A (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8804588655320913256, guid: 49dd985efcdce3c4987ca826611a8c33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49dd985efcdce3c4987ca826611a8c33, type: 3}
@@ -2034,6 +2475,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Rock_Medium_02A (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7018119237136094062, guid: c50c2430bda2db5498adb34b279a4c01,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c50c2430bda2db5498adb34b279a4c01, type: 3}
 --- !u!4 &6880485573054288697 stripped
@@ -2049,15 +2495,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 2643348169943901317, guid: 718e63829b75f2b4097b88b96b8f40bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3322310207158755874, guid: 718e63829b75f2b4097b88b96b8f40bc,
         type: 3}
       propertyPath: m_Name
       value: TFF_Pine_Tree_05C (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3322310207158755874, guid: 718e63829b75f2b4097b88b96b8f40bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3322310207158992386, guid: 718e63829b75f2b4097b88b96b8f40bc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 97
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 3322310207158992386, guid: 718e63829b75f2b4097b88b96b8f40bc,
         type: 3}
@@ -2137,17 +2593,22 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4474673056209014253}
+    m_TransformParent: {fileID: 7782181033825053315}
     m_Modifications:
     - target: {fileID: 1989155800127970751, guid: d3ef7ddc86cff9240913f14b88772c4e,
         type: 3}
       propertyPath: m_Name
       value: TFF_Oak_Tree_01C (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1989155800127970751, guid: d3ef7ddc86cff9240913f14b88772c4e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1989155800128323999, guid: d3ef7ddc86cff9240913f14b88772c4e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 91
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1989155800128323999, guid: d3ef7ddc86cff9240913f14b88772c4e,
         type: 3}
@@ -2214,6 +2675,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6635399677576992963, guid: d3ef7ddc86cff9240913f14b88772c4e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7801164882047348765, guid: d3ef7ddc86cff9240913f14b88772c4e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3ef7ddc86cff9240913f14b88772c4e, type: 3}
 --- !u!4 &2703248047576240572 stripped
@@ -2229,15 +2700,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 1178982975210684145, guid: d7b24248323dfd8449067ce0ef1ffb36,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1178982975210684147, guid: d7b24248323dfd8449067ce0ef1ffb36,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1178982975210684149, guid: d7b24248323dfd8449067ce0ef1ffb36,
         type: 3}
       propertyPath: m_Name
       value: TFF_Mushrooms_02A (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1178982975210684149, guid: d7b24248323dfd8449067ce0ef1ffb36,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1178982975210684151, guid: d7b24248323dfd8449067ce0ef1ffb36,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1178982975210906325, guid: d7b24248323dfd8449067ce0ef1ffb36,
         type: 3}
       propertyPath: m_RootOrder
-      value: 80
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 1178982975210906325, guid: d7b24248323dfd8449067ce0ef1ffb36,
         type: 3}
@@ -2323,6 +2814,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TFF_Rock_Medium_05A
+      objectReference: {fileID: 0}
+    - target: {fileID: 8292296469400219455, guid: 1c06eb4e970a3ed43872bf78aae3379f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8292296469400318751, guid: 1c06eb4e970a3ed43872bf78aae3379f,
         type: 3}
@@ -2412,7 +2908,7 @@ PrefabInstance:
     - target: {fileID: 6148022186190803482, guid: f099352f34028a84eb8c2382eacde025,
         type: 3}
       propertyPath: m_RootOrder
-      value: 62
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 6148022186190803482, guid: f099352f34028a84eb8c2382eacde025,
         type: 3}
@@ -2489,6 +2985,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stub (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6780724725744126112, guid: f099352f34028a84eb8c2382eacde025,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f099352f34028a84eb8c2382eacde025, type: 3}
 --- !u!4 &7731294030173332349 stripped
@@ -2509,10 +3010,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Rock_Medium_05A (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8292296469400219455, guid: 1c06eb4e970a3ed43872bf78aae3379f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8292296469400318751, guid: 1c06eb4e970a3ed43872bf78aae3379f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 88
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 8292296469400318751, guid: 1c06eb4e970a3ed43872bf78aae3379f,
         type: 3}
@@ -2598,6 +3104,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TFF_Rock_Large_02A
+      objectReference: {fileID: 0}
+    - target: {fileID: 3977365282198030536, guid: 98bd1645b1b8d7a4d93c120852cde4a8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3977365282198197480, guid: 98bd1645b1b8d7a4d93c120852cde4a8,
         type: 3}
@@ -2687,7 +3198,7 @@ PrefabInstance:
     - target: {fileID: 3914349777882463618, guid: 56a6861ac12de9041a5634afafd574a3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 64
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 3914349777882463618, guid: 56a6861ac12de9041a5634afafd574a3,
         type: 3}
@@ -2764,6 +3275,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom_3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4402621367994836792, guid: 56a6861ac12de9041a5634afafd574a3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56a6861ac12de9041a5634afafd574a3, type: 3}
 --- !u!4 &597759451727552613 stripped
@@ -2779,6 +3295,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 2174398410151077736, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174398410151077738, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174398410151077742, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4551801226149377521, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
         type: 3}
       propertyPath: m_RootOrder
@@ -2849,10 +3380,90 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -29.814
       objectReference: {fileID: 0}
+    - target: {fileID: 6783890616755656682, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783890616755656684, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783890616755656686, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8981485457417077555, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
         type: 3}
       propertyPath: m_Name
       value: TFF_MushroomSet01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981485457417077555, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387904, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387906, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387912, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387914, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387916, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387918, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337712, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337714, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337720, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337722, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337724, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337726, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ccc8550c3ee5b34f994a0428112d5c6, type: 3}
@@ -2874,10 +3485,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Debris_01A
       objectReference: {fileID: 0}
+    - target: {fileID: 4451779166146695089, guid: 847f9abe4a18f1a40b4fd0d6424d5612,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4451779166147122065, guid: 847f9abe4a18f1a40b4fd0d6424d5612,
         type: 3}
       propertyPath: m_RootOrder
-      value: 54
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 4451779166147122065, guid: 847f9abe4a18f1a40b4fd0d6424d5612,
         type: 3}
@@ -3029,10 +3645,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5280673450590880549, guid: b6ccecde8f0e4a246afefe6c42ffc0ec,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5280673450590880551, guid: b6ccecde8f0e4a246afefe6c42ffc0ec,
         type: 3}
       propertyPath: m_Name
       value: TFF_Mushrooms_07A (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280673450590880551, guid: b6ccecde8f0e4a246afefe6c42ffc0ec,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280673450590880553, guid: b6ccecde8f0e4a246afefe6c42ffc0ec,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280673450590880555, guid: b6ccecde8f0e4a246afefe6c42ffc0ec,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280673450590880557, guid: b6ccecde8f0e4a246afefe6c42ffc0ec,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280673450590880559, guid: b6ccecde8f0e4a246afefe6c42ffc0ec,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6ccecde8f0e4a246afefe6c42ffc0ec, type: 3}
@@ -3049,6 +3695,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 2823426535918716360, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823426535918716362, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823426535918716364, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823426535918716366, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209548827235030169, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209548827235030171, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209548827235030173, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209548827235030175, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8094503933974428790, guid: a19866eeeba1b124f9fc203628b277ba,
         type: 3}
       propertyPath: m_RootOrder
@@ -3119,10 +3805,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8130679107496413360, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8130679107496413362, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8130679107496413364, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8130679107496413366, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8235773253115911588, guid: a19866eeeba1b124f9fc203628b277ba,
         type: 3}
       propertyPath: m_Name
       value: TFF_MushroomSet04
+      objectReference: {fileID: 0}
+    - target: {fileID: 8235773253115911588, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a19866eeeba1b124f9fc203628b277ba, type: 3}
@@ -3139,10 +3850,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 449190089098120043, guid: 49dd985efcdce3c4987ca826611a8c33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833828196652046141, guid: 49dd985efcdce3c4987ca826611a8c33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8804588655320615240, guid: 49dd985efcdce3c4987ca826611a8c33,
         type: 3}
       propertyPath: m_RootOrder
-      value: 72
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 8804588655320615240, guid: 49dd985efcdce3c4987ca826611a8c33,
         type: 3}
@@ -3214,6 +3935,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Birch_Tree_Dry_02A (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8804588655320913256, guid: 49dd985efcdce3c4987ca826611a8c33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49dd985efcdce3c4987ca826611a8c33, type: 3}
 --- !u!4 &4911480869363820610 stripped
@@ -3227,12 +3953,22 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4474673056209014253}
+    m_TransformParent: {fileID: 7782181033825053315}
     m_Modifications:
+    - target: {fileID: 449190089098120043, guid: 49dd985efcdce3c4987ca826611a8c33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833828196652046141, guid: 49dd985efcdce3c4987ca826611a8c33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8804588655320615240, guid: 49dd985efcdce3c4987ca826611a8c33,
         type: 3}
       propertyPath: m_RootOrder
-      value: 94
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8804588655320615240, guid: 49dd985efcdce3c4987ca826611a8c33,
         type: 3}
@@ -3304,6 +4040,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Birch_Tree_Dry_02A (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8804588655320913256, guid: 49dd985efcdce3c4987ca826611a8c33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49dd985efcdce3c4987ca826611a8c33, type: 3}
 --- !u!4 &4911480869366577913 stripped
@@ -3324,10 +4065,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Wooden_Bridge_02A
       objectReference: {fileID: 0}
+    - target: {fileID: 7918802606847723835, guid: 415c75da8aeeb9946baf2a134820e071,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7918802606848152859, guid: 415c75da8aeeb9946baf2a134820e071,
         type: 3}
       propertyPath: m_RootOrder
-      value: 48
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 7918802606848152859, guid: 415c75da8aeeb9946baf2a134820e071,
         type: 3}
@@ -3407,17 +4153,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4474673056209014253}
+    m_TransformParent: {fileID: 7782181033825053315}
     m_Modifications:
+    - target: {fileID: 4608427084313834872, guid: 4f5b310e89053b34a9dca46b273fb1fd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6271303893504922340, guid: 4f5b310e89053b34a9dca46b273fb1fd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8179961744562643354, guid: 4f5b310e89053b34a9dca46b273fb1fd,
         type: 3}
       propertyPath: m_Name
       value: TFF_Birch_Tree_Dry_01A
       objectReference: {fileID: 0}
+    - target: {fileID: 8179961744562643354, guid: 4f5b310e89053b34a9dca46b273fb1fd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8179961744563076538, guid: 4f5b310e89053b34a9dca46b273fb1fd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 44
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8179961744563076538, guid: 4f5b310e89053b34a9dca46b273fb1fd,
         type: 3}
@@ -3499,6 +4260,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 2823426535918716360, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823426535918716362, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823426535918716364, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823426535918716366, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209548827235030169, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209548827235030171, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209548827235030173, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209548827235030175, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8094503933974428790, guid: a19866eeeba1b124f9fc203628b277ba,
         type: 3}
       propertyPath: m_RootOrder
@@ -3569,10 +4370,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 16.129
       objectReference: {fileID: 0}
+    - target: {fileID: 8130679107496413360, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8130679107496413362, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8130679107496413364, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8130679107496413366, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8235773253115911588, guid: a19866eeeba1b124f9fc203628b277ba,
         type: 3}
       propertyPath: m_Name
       value: TFF_MushroomSet04 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8235773253115911588, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a19866eeeba1b124f9fc203628b277ba, type: 3}
@@ -3589,15 +4415,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 1178982975210684145, guid: d7b24248323dfd8449067ce0ef1ffb36,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1178982975210684147, guid: d7b24248323dfd8449067ce0ef1ffb36,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1178982975210684149, guid: d7b24248323dfd8449067ce0ef1ffb36,
         type: 3}
       propertyPath: m_Name
       value: TFF_Mushrooms_02A (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1178982975210684149, guid: d7b24248323dfd8449067ce0ef1ffb36,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1178982975210684151, guid: d7b24248323dfd8449067ce0ef1ffb36,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1178982975210906325, guid: d7b24248323dfd8449067ce0ef1ffb36,
         type: 3}
       propertyPath: m_RootOrder
-      value: 78
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 1178982975210906325, guid: d7b24248323dfd8449067ce0ef1ffb36,
         type: 3}
@@ -3679,10 +4525,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 7544730304414628857, guid: 68996d72962cf0242a06ab68e4089b71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7544730304414628859, guid: 68996d72962cf0242a06ab68e4089b71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7544730304414628863, guid: 68996d72962cf0242a06ab68e4089b71,
         type: 3}
       propertyPath: m_Name
       value: TFF_Mushrooms_05A (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7544730304414628863, guid: 68996d72962cf0242a06ab68e4089b71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7544730304414853087, guid: 68996d72962cf0242a06ab68e4089b71,
         type: 3}
@@ -3774,10 +4635,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Wood_Plank_02A (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6720491052572833137, guid: b2eb1f15660df4f4bbcb07389f6a2806,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6720491052572928337, guid: b2eb1f15660df4f4bbcb07389f6a2806,
         type: 3}
       propertyPath: m_RootOrder
-      value: 104
+      value: 91
       objectReference: {fileID: 0}
     - target: {fileID: 6720491052572928337, guid: b2eb1f15660df4f4bbcb07389f6a2806,
         type: 3}
@@ -3857,17 +4723,27 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4474673056209014253}
+    m_TransformParent: {fileID: 7782181033825053315}
     m_Modifications:
+    - target: {fileID: 449190089098120043, guid: 49dd985efcdce3c4987ca826611a8c33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833828196652046141, guid: 49dd985efcdce3c4987ca826611a8c33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8804588655320615240, guid: 49dd985efcdce3c4987ca826611a8c33,
         type: 3}
       propertyPath: m_RootOrder
-      value: 75
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8804588655320615240, guid: 49dd985efcdce3c4987ca826611a8c33,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.034017
+      value: 1.0340171
       objectReference: {fileID: 0}
     - target: {fileID: 8804588655320615240, guid: 49dd985efcdce3c4987ca826611a8c33,
         type: 3}
@@ -3877,7 +4753,7 @@ PrefabInstance:
     - target: {fileID: 8804588655320615240, guid: 49dd985efcdce3c4987ca826611a8c33,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.034017
+      value: 1.0340171
       objectReference: {fileID: 0}
     - target: {fileID: 8804588655320615240, guid: 49dd985efcdce3c4987ca826611a8c33,
         type: 3}
@@ -3934,6 +4810,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Birch_Tree_Dry_02A (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8804588655320913256, guid: 49dd985efcdce3c4987ca826611a8c33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49dd985efcdce3c4987ca826611a8c33, type: 3}
 --- !u!4 &4911480869175126606 stripped
@@ -3952,7 +4833,7 @@ PrefabInstance:
     - target: {fileID: 4016713439071714753, guid: 965174ab1a43d8e4c8e5295d42ec430d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 56
+      value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 4016713439071714753, guid: 965174ab1a43d8e4c8e5295d42ec430d,
         type: 3}
@@ -4024,6 +4905,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom_2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4392675654480979835, guid: 965174ab1a43d8e4c8e5295d42ec430d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 965174ab1a43d8e4c8e5295d42ec430d, type: 3}
 --- !u!4 &695525736053532627 stripped
@@ -4039,15 +4925,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 7544730304414628857, guid: 68996d72962cf0242a06ab68e4089b71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7544730304414628859, guid: 68996d72962cf0242a06ab68e4089b71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7544730304414628863, guid: 68996d72962cf0242a06ab68e4089b71,
         type: 3}
       propertyPath: m_Name
       value: TFF_Mushrooms_05A (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7544730304414628863, guid: 68996d72962cf0242a06ab68e4089b71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7544730304414853087, guid: 68996d72962cf0242a06ab68e4089b71,
         type: 3}
       propertyPath: m_RootOrder
-      value: 79
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 7544730304414853087, guid: 68996d72962cf0242a06ab68e4089b71,
         type: 3}
@@ -4204,6 +5105,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Rock_Medium_01A
       objectReference: {fileID: 0}
+    - target: {fileID: 1151587133200583922, guid: 27cf8fcce199b284291e36c407c78ca1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27cf8fcce199b284291e36c407c78ca1, type: 3}
 --- !u!4 &3594568540096711686 stripped
@@ -4224,10 +5130,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Wooden_Table_01B
       objectReference: {fileID: 0}
+    - target: {fileID: 4279349774179332220, guid: 099b31845be60db4cb8ab315ebec9035,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4279349774179429468, guid: 099b31845be60db4cb8ab315ebec9035,
         type: 3}
       propertyPath: m_RootOrder
-      value: 50
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 4279349774179429468, guid: 099b31845be60db4cb8ab315ebec9035,
         type: 3}
@@ -4307,17 +5218,22 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4474673056209014253}
+    m_TransformParent: {fileID: 7782181033825053315}
     m_Modifications:
     - target: {fileID: 4409011527548446025, guid: 8a1c999f426d2ee4e997ff8423f582d5,
         type: 3}
       propertyPath: m_Name
       value: TFF_Aspen_Tree_03B (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4409011527548446025, guid: 8a1c999f426d2ee4e997ff8423f582d5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4409011527548877161, guid: 8a1c999f426d2ee4e997ff8423f582d5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 42
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4409011527548877161, guid: 8a1c999f426d2ee4e997ff8423f582d5,
         type: 3}
@@ -4382,6 +5298,11 @@ PrefabInstance:
     - target: {fileID: 4409011527548877161, guid: 8a1c999f426d2ee4e997ff8423f582d5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183306733782251244, guid: 8a1c999f426d2ee4e997ff8423f582d5,
+        type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4474,6 +5395,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Wood_Plank_01A
       objectReference: {fileID: 0}
+    - target: {fileID: 6002270855294248649, guid: 7c627b7f786e3e04a86cd5a9f63a0c00,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c627b7f786e3e04a86cd5a9f63a0c00, type: 3}
 --- !u!4 &7878311859649846829 stripped
@@ -4492,7 +5418,7 @@ PrefabInstance:
     - target: {fileID: 4016713439071714753, guid: 965174ab1a43d8e4c8e5295d42ec430d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 68
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4016713439071714753, guid: 965174ab1a43d8e4c8e5295d42ec430d,
         type: 3}
@@ -4568,6 +5494,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mushroom_2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392675654480979835, guid: 965174ab1a43d8e4c8e5295d42ec430d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 965174ab1a43d8e4c8e5295d42ec430d, type: 3}
@@ -4654,10 +5585,120 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -19.857
       objectReference: {fileID: 0}
+    - target: {fileID: 3590085707930444784, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085707930444786, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085707930444790, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085707930444792, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085707930444794, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085707930444796, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085707930444798, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708578414402, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708578414404, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708578414406, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708578414408, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708578414410, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708578414412, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708578414414, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708964669217, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708964669221, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708964669223, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708964669225, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708964669227, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708964669229, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708964669231, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5553802942859770257, guid: cc885da5e94645e41aa1bb7dce7d979c,
         type: 3}
       propertyPath: m_Name
       value: TFF_MushroomSet03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553802942859770257, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc885da5e94645e41aa1bb7dce7d979c, type: 3}
@@ -4677,7 +5718,7 @@ PrefabInstance:
     - target: {fileID: 3914349777882463618, guid: 56a6861ac12de9041a5634afafd574a3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 60
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 3914349777882463618, guid: 56a6861ac12de9041a5634afafd574a3,
         type: 3}
@@ -4754,6 +5795,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom_3
       objectReference: {fileID: 0}
+    - target: {fileID: 4402621367994836792, guid: 56a6861ac12de9041a5634afafd574a3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56a6861ac12de9041a5634afafd574a3, type: 3}
 --- !u!4 &597759452040302239 stripped
@@ -4772,7 +5818,7 @@ PrefabInstance:
     - target: {fileID: 4016713439071714753, guid: 965174ab1a43d8e4c8e5295d42ec430d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 106
+      value: 93
       objectReference: {fileID: 0}
     - target: {fileID: 4016713439071714753, guid: 965174ab1a43d8e4c8e5295d42ec430d,
         type: 3}
@@ -4844,6 +5890,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom_2 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4392675654480979835, guid: 965174ab1a43d8e4c8e5295d42ec430d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 965174ab1a43d8e4c8e5295d42ec430d, type: 3}
 --- !u!4 &695525736214838244 stripped
@@ -4857,17 +5908,22 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4474673056209014253}
+    m_TransformParent: {fileID: 7782181033825053315}
     m_Modifications:
     - target: {fileID: 1989155800127970751, guid: d3ef7ddc86cff9240913f14b88772c4e,
         type: 3}
       propertyPath: m_Name
       value: TFF_Oak_Tree_01C
       objectReference: {fileID: 0}
+    - target: {fileID: 1989155800127970751, guid: d3ef7ddc86cff9240913f14b88772c4e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1989155800128323999, guid: d3ef7ddc86cff9240913f14b88772c4e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 41
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1989155800128323999, guid: d3ef7ddc86cff9240913f14b88772c4e,
         type: 3}
@@ -4932,6 +5988,16 @@ PrefabInstance:
     - target: {fileID: 1989155800128323999, guid: d3ef7ddc86cff9240913f14b88772c4e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635399677576992963, guid: d3ef7ddc86cff9240913f14b88772c4e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7801164882047348765, guid: d3ef7ddc86cff9240913f14b88772c4e,
+        type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5024,6 +6090,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Rock_Large_01A
       objectReference: {fileID: 0}
+    - target: {fileID: 8929002069413036059, guid: 3c93b2ebe78e2fa48b763dff787aaeef,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c93b2ebe78e2fa48b763dff787aaeef, type: 3}
 --- !u!4 &5040385038186770204 stripped
@@ -5044,10 +6115,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Rock_Medium_04A (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3537088891441082940, guid: e231d7402b790274eb6c0bfbca2323fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3537088891441180188, guid: e231d7402b790274eb6c0bfbca2323fa,
         type: 3}
       propertyPath: m_RootOrder
-      value: 103
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3537088891441180188, guid: e231d7402b790274eb6c0bfbca2323fa,
         type: 3}
@@ -5134,10 +6210,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Branch_Fallen_02B
       objectReference: {fileID: 0}
+    - target: {fileID: 2702344096640131026, guid: bc8c045fba707864fa2ac6a56c779c30,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2702344096640156658, guid: bc8c045fba707864fa2ac6a56c779c30,
         type: 3}
       propertyPath: m_RootOrder
-      value: 46
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 2702344096640156658, guid: bc8c045fba707864fa2ac6a56c779c30,
         type: 3}
@@ -5224,10 +6305,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Wooden_Fence_02A (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 376409998566692142, guid: 06c3f544f78664041b45dcbd733a1260,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 376409998567049486, guid: 06c3f544f78664041b45dcbd733a1260,
         type: 3}
       propertyPath: m_RootOrder
-      value: 110
+      value: 97
       objectReference: {fileID: 0}
     - target: {fileID: 376409998567049486, guid: 06c3f544f78664041b45dcbd733a1260,
         type: 3}
@@ -5314,6 +6400,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Wooden_Table_01B (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4279349774179332220, guid: 099b31845be60db4cb8ab315ebec9035,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4279349774179429468, guid: 099b31845be60db4cb8ab315ebec9035,
         type: 3}
       propertyPath: m_RootOrder
@@ -5399,6 +6490,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 2174398410151077736, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174398410151077738, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174398410151077742, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4551801226149377521, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
         type: 3}
       propertyPath: m_RootOrder
@@ -5469,10 +6575,90 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 2.601
       objectReference: {fileID: 0}
+    - target: {fileID: 6783890616755656682, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783890616755656684, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783890616755656686, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8981485457417077555, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
         type: 3}
       propertyPath: m_Name
       value: TFF_MushroomSet01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981485457417077555, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387904, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387906, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387912, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387914, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387916, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387918, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337712, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337714, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337720, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337722, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337724, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337726, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ccc8550c3ee5b34f994a0428112d5c6, type: 3}
@@ -5492,7 +6678,7 @@ PrefabInstance:
     - target: {fileID: 3914349777882463618, guid: 56a6861ac12de9041a5634afafd574a3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 65
+      value: 57
       objectReference: {fileID: 0}
     - target: {fileID: 3914349777882463618, guid: 56a6861ac12de9041a5634afafd574a3,
         type: 3}
@@ -5569,6 +6755,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom_3 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4402621367994836792, guid: 56a6861ac12de9041a5634afafd574a3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56a6861ac12de9041a5634afafd574a3, type: 3}
 --- !u!4 &597759452166403220 stripped
@@ -5589,10 +6780,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Rock_Large_06A (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 157542235833461988, guid: 3efef0c3914bf95429aeb0141ca3a994,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 157542235833823428, guid: 3efef0c3914bf95429aeb0141ca3a994,
         type: 3}
       propertyPath: m_RootOrder
-      value: 96
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 157542235833823428, guid: 3efef0c3914bf95429aeb0141ca3a994,
         type: 3}
@@ -5659,6 +6855,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4311713948878027554, guid: 3efef0c3914bf95429aeb0141ca3a994,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8774069555849775219, guid: 3efef0c3914bf95429aeb0141ca3a994,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3efef0c3914bf95429aeb0141ca3a994, type: 3}
 --- !u!4 &4338805630290661964 stripped
@@ -5674,6 +6880,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 4071491832732386763, guid: b7ce2ec5e9528c74d8319e333d4c71c1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6510808458649094228, guid: b7ce2ec5e9528c74d8319e333d4c71c1,
         type: 3}
       propertyPath: m_RootOrder
@@ -5749,6 +6960,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Bush_03D
       objectReference: {fileID: 0}
+    - target: {fileID: 6510808458649195636, guid: b7ce2ec5e9528c74d8319e333d4c71c1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7ce2ec5e9528c74d8319e333d4c71c1, type: 3}
 --- !u!4 &7224392430589062624 stripped
@@ -5764,10 +6980,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 691152815715237437, guid: 62ed11cb42c81b84fb9f9e708c787cd3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3566661667827005764, guid: 62ed11cb42c81b84fb9f9e708c787cd3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 116
+      value: 103
       objectReference: {fileID: 0}
     - target: {fileID: 3566661667827005764, guid: 62ed11cb42c81b84fb9f9e708c787cd3,
         type: 3}
@@ -5834,10 +7055,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3631148857096428780, guid: 62ed11cb42c81b84fb9f9e708c787cd3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631148857200735056, guid: 62ed11cb42c81b84fb9f9e708c787cd3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770790673213677893, guid: 62ed11cb42c81b84fb9f9e708c787cd3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8239272143814715191, guid: 62ed11cb42c81b84fb9f9e708c787cd3,
         type: 3}
       propertyPath: m_Name
       value: theGate
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239272143814715191, guid: 62ed11cb42c81b84fb9f9e708c787cd3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62ed11cb42c81b84fb9f9e708c787cd3, type: 3}
@@ -5854,6 +7095,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 2174398410151077736, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174398410151077738, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174398410151077742, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4551801226149377521, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
         type: 3}
       propertyPath: m_RootOrder
@@ -5924,10 +7180,90 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 5.42
       objectReference: {fileID: 0}
+    - target: {fileID: 6783890616755656682, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783890616755656684, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783890616755656686, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8981485457417077555, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
         type: 3}
       propertyPath: m_Name
       value: TFF_MushroomSet01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981485457417077555, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387904, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387906, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387912, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387914, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387916, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387918, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337712, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337714, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337720, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337722, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337724, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337726, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ccc8550c3ee5b34f994a0428112d5c6, type: 3}
@@ -5949,10 +7285,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Rock_Large_06A (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 157542235833461988, guid: 3efef0c3914bf95429aeb0141ca3a994,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 157542235833823428, guid: 3efef0c3914bf95429aeb0141ca3a994,
         type: 3}
       propertyPath: m_RootOrder
-      value: 95
+      value: 83
       objectReference: {fileID: 0}
     - target: {fileID: 157542235833823428, guid: 3efef0c3914bf95429aeb0141ca3a994,
         type: 3}
@@ -6019,6 +7360,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4311713948878027554, guid: 3efef0c3914bf95429aeb0141ca3a994,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8774069555849775219, guid: 3efef0c3914bf95429aeb0141ca3a994,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3efef0c3914bf95429aeb0141ca3a994, type: 3}
 --- !u!4 &4338805630241765548 stripped
@@ -6037,7 +7388,7 @@ PrefabInstance:
     - target: {fileID: 3914349777882463618, guid: 56a6861ac12de9041a5634afafd574a3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 66
+      value: 58
       objectReference: {fileID: 0}
     - target: {fileID: 3914349777882463618, guid: 56a6861ac12de9041a5634afafd574a3,
         type: 3}
@@ -6114,6 +7465,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom_3 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4402621367994836792, guid: 56a6861ac12de9041a5634afafd574a3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56a6861ac12de9041a5634afafd574a3, type: 3}
 --- !u!4 &597759450106649625 stripped
@@ -6132,7 +7488,7 @@ PrefabInstance:
     - target: {fileID: 4016713439071714753, guid: 965174ab1a43d8e4c8e5295d42ec430d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 70
+      value: 62
       objectReference: {fileID: 0}
     - target: {fileID: 4016713439071714753, guid: 965174ab1a43d8e4c8e5295d42ec430d,
         type: 3}
@@ -6204,6 +7560,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom_2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4392675654480979835, guid: 965174ab1a43d8e4c8e5295d42ec430d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 965174ab1a43d8e4c8e5295d42ec430d, type: 3}
 --- !u!4 &695525735382440919 stripped
@@ -6222,7 +7583,7 @@ PrefabInstance:
     - target: {fileID: 4016713439071714753, guid: 965174ab1a43d8e4c8e5295d42ec430d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 59
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 4016713439071714753, guid: 965174ab1a43d8e4c8e5295d42ec430d,
         type: 3}
@@ -6299,6 +7660,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom_2
       objectReference: {fileID: 0}
+    - target: {fileID: 4392675654480979835, guid: 965174ab1a43d8e4c8e5295d42ec430d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 965174ab1a43d8e4c8e5295d42ec430d, type: 3}
 --- !u!4 &695525735417766492 stripped
@@ -6319,10 +7685,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Wood_Stack_01A
       objectReference: {fileID: 0}
+    - target: {fileID: 1036972651222626086, guid: fc0b5b8e31e5b78479157702ba2088c7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1036972651222725382, guid: fc0b5b8e31e5b78479157702ba2088c7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 52
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1036972651222725382, guid: fc0b5b8e31e5b78479157702ba2088c7,
         type: 3}
@@ -6404,10 +7775,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 4071491832732386763, guid: b7ce2ec5e9528c74d8319e333d4c71c1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6510808458649094228, guid: b7ce2ec5e9528c74d8319e333d4c71c1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 77
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 6510808458649094228, guid: b7ce2ec5e9528c74d8319e333d4c71c1,
         type: 3}
@@ -6479,6 +7855,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Bush_03D (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6510808458649195636, guid: b7ce2ec5e9528c74d8319e333d4c71c1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7ce2ec5e9528c74d8319e333d4c71c1, type: 3}
 --- !u!4 &7224392431781012596 stripped
@@ -6497,7 +7878,7 @@ PrefabInstance:
     - target: {fileID: 8665119093858395943, guid: d353c7710cd8417468b094a8eb491d22,
         type: 3}
       propertyPath: m_RootOrder
-      value: 40
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 8665119093858395943, guid: d353c7710cd8417468b094a8eb491d22,
         type: 3}
@@ -6569,6 +7950,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Tree_Trunk_03B
       objectReference: {fileID: 0}
+    - target: {fileID: 8665119093858630407, guid: d353c7710cd8417468b094a8eb491d22,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d353c7710cd8417468b094a8eb491d22, type: 3}
 --- !u!4 &5069246168233426836 stripped
@@ -6588,6 +7974,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TFF_Wood_Log_02A
+      objectReference: {fileID: 0}
+    - target: {fileID: 2225471985321404540, guid: 8675a68ceb6c1e048a68267417757d73,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2225471985321636956, guid: 8675a68ceb6c1e048a68267417757d73,
         type: 3}
@@ -6672,17 +8063,22 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4474673056209014253}
+    m_TransformParent: {fileID: 7782181033825053315}
     m_Modifications:
     - target: {fileID: 4409011527548446025, guid: 8a1c999f426d2ee4e997ff8423f582d5,
         type: 3}
       propertyPath: m_Name
       value: TFF_Aspen_Tree_03B (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4409011527548446025, guid: 8a1c999f426d2ee4e997ff8423f582d5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4409011527548877161, guid: 8a1c999f426d2ee4e997ff8423f582d5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 98
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4409011527548877161, guid: 8a1c999f426d2ee4e997ff8423f582d5,
         type: 3}
@@ -6749,6 +8145,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7183306733782251244, guid: 8a1c999f426d2ee4e997ff8423f582d5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a1c999f426d2ee4e997ff8423f582d5, type: 3}
 --- !u!4 &231601060840263741 stripped
@@ -6762,17 +8163,27 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4474673056209014253}
+    m_TransformParent: {fileID: 7782181033825053315}
     m_Modifications:
+    - target: {fileID: 2643348169943901317, guid: 718e63829b75f2b4097b88b96b8f40bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3322310207158755874, guid: 718e63829b75f2b4097b88b96b8f40bc,
         type: 3}
       propertyPath: m_Name
       value: TFF_Pine_Tree_05C (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3322310207158755874, guid: 718e63829b75f2b4097b88b96b8f40bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3322310207158992386, guid: 718e63829b75f2b4097b88b96b8f40bc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 90
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3322310207158992386, guid: 718e63829b75f2b4097b88b96b8f40bc,
         type: 3}
@@ -6852,17 +8263,27 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4474673056209014253}
+    m_TransformParent: {fileID: 7782181033825053315}
     m_Modifications:
+    - target: {fileID: 2643348169943901317, guid: 718e63829b75f2b4097b88b96b8f40bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3322310207158755874, guid: 718e63829b75f2b4097b88b96b8f40bc,
         type: 3}
       propertyPath: m_Name
       value: TFF_Pine_Tree_05C
       objectReference: {fileID: 0}
+    - target: {fileID: 3322310207158755874, guid: 718e63829b75f2b4097b88b96b8f40bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3322310207158992386, guid: 718e63829b75f2b4097b88b96b8f40bc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 39
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3322310207158992386, guid: 718e63829b75f2b4097b88b96b8f40bc,
         type: 3}
@@ -6942,12 +8363,22 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4474673056209014253}
+    m_TransformParent: {fileID: 7782181033825053315}
     m_Modifications:
+    - target: {fileID: 449190089098120043, guid: 49dd985efcdce3c4987ca826611a8c33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833828196652046141, guid: 49dd985efcdce3c4987ca826611a8c33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8804588655320615240, guid: 49dd985efcdce3c4987ca826611a8c33,
         type: 3}
       propertyPath: m_RootOrder
-      value: 45
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8804588655320615240, guid: 49dd985efcdce3c4987ca826611a8c33,
         type: 3}
@@ -7019,6 +8450,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Birch_Tree_Dry_02A
       objectReference: {fileID: 0}
+    - target: {fileID: 8804588655320913256, guid: 49dd985efcdce3c4987ca826611a8c33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49dd985efcdce3c4987ca826611a8c33, type: 3}
 --- !u!4 &4911480870888105519 stripped
@@ -7039,10 +8475,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Wooden_Bridge_02A (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7918802606847723835, guid: 415c75da8aeeb9946baf2a134820e071,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7918802606848152859, guid: 415c75da8aeeb9946baf2a134820e071,
         type: 3}
       propertyPath: m_RootOrder
-      value: 87
+      value: 79
       objectReference: {fileID: 0}
     - target: {fileID: 7918802606848152859, guid: 415c75da8aeeb9946baf2a134820e071,
         type: 3}
@@ -7122,17 +8563,22 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4474673056209014253}
+    m_TransformParent: {fileID: 7782181033825053315}
     m_Modifications:
     - target: {fileID: 4409011527548446025, guid: 8a1c999f426d2ee4e997ff8423f582d5,
         type: 3}
       propertyPath: m_Name
       value: TFF_Aspen_Tree_03B
       objectReference: {fileID: 0}
+    - target: {fileID: 4409011527548446025, guid: 8a1c999f426d2ee4e997ff8423f582d5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4409011527548877161, guid: 8a1c999f426d2ee4e997ff8423f582d5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 43
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4409011527548877161, guid: 8a1c999f426d2ee4e997ff8423f582d5,
         type: 3}
@@ -7197,6 +8643,11 @@ PrefabInstance:
     - target: {fileID: 4409011527548877161, guid: 8a1c999f426d2ee4e997ff8423f582d5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7183306733782251244, guid: 8a1c999f426d2ee4e997ff8423f582d5,
+        type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7289,6 +8740,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Rock_Medium_03A
       objectReference: {fileID: 0}
+    - target: {fileID: 8772648035309327700, guid: c8b1da0fbab714f47847c30e2149442d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8b1da0fbab714f47847c30e2149442d, type: 3}
 --- !u!4 &5163253309111699386 stripped
@@ -7304,10 +8760,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 2823426535918716360, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823426535918716362, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823426535918716364, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823426535918716366, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209548827235030169, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209548827235030171, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209548827235030173, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209548827235030175, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8094503933974428790, guid: a19866eeeba1b124f9fc203628b277ba,
         type: 3}
       propertyPath: m_RootOrder
-      value: 109
+      value: 96
       objectReference: {fileID: 0}
     - target: {fileID: 8094503933974428790, guid: a19866eeeba1b124f9fc203628b277ba,
         type: 3}
@@ -7379,10 +8875,35 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8130679107496413360, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8130679107496413362, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8130679107496413364, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8130679107496413366, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8235773253115911588, guid: a19866eeeba1b124f9fc203628b277ba,
         type: 3}
       propertyPath: m_Name
       value: TFF_MushroomSet04 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8235773253115911588, guid: a19866eeeba1b124f9fc203628b277ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a19866eeeba1b124f9fc203628b277ba, type: 3}
@@ -7403,6 +8924,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TFF_Rock_Large_06A
+      objectReference: {fileID: 0}
+    - target: {fileID: 157542235833461988, guid: 3efef0c3914bf95429aeb0141ca3a994,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 157542235833823428, guid: 3efef0c3914bf95429aeb0141ca3a994,
         type: 3}
@@ -7474,6 +9000,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 9.713
       objectReference: {fileID: 0}
+    - target: {fileID: 4311713948878027554, guid: 3efef0c3914bf95429aeb0141ca3a994,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8774069555849775219, guid: 3efef0c3914bf95429aeb0141ca3a994,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3efef0c3914bf95429aeb0141ca3a994, type: 3}
 --- !u!4 &4338805632018173128 stripped
@@ -7492,7 +9028,7 @@ PrefabInstance:
     - target: {fileID: 3914349777882463618, guid: 56a6861ac12de9041a5634afafd574a3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 67
+      value: 59
       objectReference: {fileID: 0}
     - target: {fileID: 3914349777882463618, guid: 56a6861ac12de9041a5634afafd574a3,
         type: 3}
@@ -7569,6 +9105,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom_3 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4402621367994836792, guid: 56a6861ac12de9041a5634afafd574a3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56a6861ac12de9041a5634afafd574a3, type: 3}
 --- !u!4 &597759450333316824 stripped
@@ -7587,7 +9128,7 @@ PrefabInstance:
     - target: {fileID: 8772648035309291892, guid: c8b1da0fbab714f47847c30e2149442d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 114
+      value: 101
       objectReference: {fileID: 0}
     - target: {fileID: 8772648035309291892, guid: c8b1da0fbab714f47847c30e2149442d,
         type: 3}
@@ -7659,6 +9200,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Rock_Medium_03A (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8772648035309327700, guid: c8b1da0fbab714f47847c30e2149442d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8b1da0fbab714f47847c30e2149442d, type: 3}
 --- !u!4 &5163253308948668926 stripped
@@ -7679,10 +9225,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Camp_Fire_01A
       objectReference: {fileID: 0}
+    - target: {fileID: 2230125787057552054, guid: c277cbe22bc6485408c60bfac1cde71a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2230125787057972886, guid: c277cbe22bc6485408c60bfac1cde71a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 55
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 2230125787057972886, guid: c277cbe22bc6485408c60bfac1cde71a,
         type: 3}
@@ -7767,7 +9318,7 @@ PrefabInstance:
     - target: {fileID: 4016713439071714753, guid: 965174ab1a43d8e4c8e5295d42ec430d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 83
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 4016713439071714753, guid: 965174ab1a43d8e4c8e5295d42ec430d,
         type: 3}
@@ -7839,6 +9390,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom_2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4392675654480979835, guid: 965174ab1a43d8e4c8e5295d42ec430d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 965174ab1a43d8e4c8e5295d42ec430d, type: 3}
 --- !u!4 &695525735817472229 stripped
@@ -7852,17 +9408,27 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4474673056209014253}
+    m_TransformParent: {fileID: 7782181033825053315}
     m_Modifications:
+    - target: {fileID: 2643348169943901317, guid: 718e63829b75f2b4097b88b96b8f40bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3322310207158755874, guid: 718e63829b75f2b4097b88b96b8f40bc,
         type: 3}
       propertyPath: m_Name
       value: TFF_Pine_Tree_05C (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3322310207158755874, guid: 718e63829b75f2b4097b88b96b8f40bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3322310207158992386, guid: 718e63829b75f2b4097b88b96b8f40bc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 38
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3322310207158992386, guid: 718e63829b75f2b4097b88b96b8f40bc,
         type: 3}
@@ -7949,6 +9515,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Stone_Slab_01A
       objectReference: {fileID: 0}
+    - target: {fileID: 2184874480338919190, guid: 7a1ba496be1afb54e929ae8dafda3ab6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2184874480339075894, guid: 7a1ba496be1afb54e929ae8dafda3ab6,
         type: 3}
       propertyPath: m_RootOrder
@@ -8034,6 +9605,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 2174398410151077736, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174398410151077738, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174398410151077742, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4551801226149377521, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
         type: 3}
       propertyPath: m_RootOrder
@@ -8104,10 +9690,90 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6783890616755656682, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783890616755656684, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783890616755656686, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8981485457417077555, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
         type: 3}
       propertyPath: m_Name
       value: TFF_MushroomSet01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981485457417077555, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387904, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387906, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387912, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387914, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387916, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387918, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337712, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337714, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337720, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337722, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337724, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337726, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ccc8550c3ee5b34f994a0428112d5c6, type: 3}
@@ -8127,7 +9793,7 @@ PrefabInstance:
     - target: {fileID: 3914349777882463618, guid: 56a6861ac12de9041a5634afafd574a3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 63
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 3914349777882463618, guid: 56a6861ac12de9041a5634afafd574a3,
         type: 3}
@@ -8204,6 +9870,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom_3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4402621367994836792, guid: 56a6861ac12de9041a5634afafd574a3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56a6861ac12de9041a5634afafd574a3, type: 3}
 --- !u!4 &597759450477100652 stripped
@@ -8219,6 +9890,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 6843888516064621698, guid: 337c7dcfafe12b5429933a5779c9b0e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843888516702675413, guid: 337c7dcfafe12b5429933a5779c9b0e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843888516820830372, guid: 337c7dcfafe12b5429933a5779c9b0e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7197632460246877158, guid: 337c7dcfafe12b5429933a5779c9b0e8,
         type: 3}
       propertyPath: m_RootOrder
@@ -8294,6 +9980,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_MushroomSet05 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7197632460246877159, guid: 337c7dcfafe12b5429933a5779c9b0e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 337c7dcfafe12b5429933a5779c9b0e8, type: 3}
 --- !u!4 &6771755747590311599 stripped
@@ -8314,10 +10005,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Wooden_Pavilion_01B
       objectReference: {fileID: 0}
+    - target: {fileID: 392985585651537674, guid: 17d3163800da13744be233052210ba25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 392985585651567402, guid: 17d3163800da13744be233052210ba25,
         type: 3}
       propertyPath: m_RootOrder
-      value: 51
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 392985585651567402, guid: 17d3163800da13744be233052210ba25,
         type: 3}
@@ -8404,10 +10100,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Wooden_Table_01B (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4279349774179332220, guid: 099b31845be60db4cb8ab315ebec9035,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4279349774179429468, guid: 099b31845be60db4cb8ab315ebec9035,
         type: 3}
       propertyPath: m_RootOrder
-      value: 82
+      value: 74
       objectReference: {fileID: 0}
     - target: {fileID: 4279349774179429468, guid: 099b31845be60db4cb8ab315ebec9035,
         type: 3}
@@ -8487,12 +10188,22 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4474673056209014253}
+    m_TransformParent: {fileID: 7782181033825053315}
     m_Modifications:
+    - target: {fileID: 449190089098120043, guid: 49dd985efcdce3c4987ca826611a8c33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833828196652046141, guid: 49dd985efcdce3c4987ca826611a8c33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8804588655320615240, guid: 49dd985efcdce3c4987ca826611a8c33,
         type: 3}
       propertyPath: m_RootOrder
-      value: 93
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8804588655320615240, guid: 49dd985efcdce3c4987ca826611a8c33,
         type: 3}
@@ -8564,6 +10275,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Birch_Tree_Dry_02A (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8804588655320913256, guid: 49dd985efcdce3c4987ca826611a8c33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49dd985efcdce3c4987ca826611a8c33, type: 3}
 --- !u!4 &4911480870434039956 stripped
@@ -8584,10 +10300,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Wood_Plank_02A (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6720491052572833137, guid: b2eb1f15660df4f4bbcb07389f6a2806,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6720491052572928337, guid: b2eb1f15660df4f4bbcb07389f6a2806,
         type: 3}
       propertyPath: m_RootOrder
-      value: 105
+      value: 92
       objectReference: {fileID: 0}
     - target: {fileID: 6720491052572928337, guid: b2eb1f15660df4f4bbcb07389f6a2806,
         type: 3}
@@ -8744,6 +10465,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Mushrooms_14A
       objectReference: {fileID: 0}
+    - target: {fileID: 5334682979347550561, guid: 088de09f0133e624abb66ac9f06cf2b2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5334682979347550563, guid: 088de09f0133e624abb66ac9f06cf2b2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5334682979347550565, guid: 088de09f0133e624abb66ac9f06cf2b2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5334682979347550567, guid: 088de09f0133e624abb66ac9f06cf2b2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 088de09f0133e624abb66ac9f06cf2b2, type: 3}
 --- !u!4 &8363644688598646652 stripped
@@ -8762,7 +10503,7 @@ PrefabInstance:
     - target: {fileID: 1677196605531397572, guid: 37472b06bc6cd0149a9d60eb1c474fad,
         type: 3}
       propertyPath: m_RootOrder
-      value: 101
+      value: 88
       objectReference: {fileID: 0}
     - target: {fileID: 1677196605531397572, guid: 37472b06bc6cd0149a9d60eb1c474fad,
         type: 3}
@@ -8834,6 +10575,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Bush_03B (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1677196605531816420, guid: 37472b06bc6cd0149a9d60eb1c474fad,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9208562913257105527, guid: 37472b06bc6cd0149a9d60eb1c474fad,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37472b06bc6cd0149a9d60eb1c474fad, type: 3}
 --- !u!4 &2981279611376497651 stripped
@@ -8852,7 +10603,7 @@ PrefabInstance:
     - target: {fileID: 4016713439071714753, guid: 965174ab1a43d8e4c8e5295d42ec430d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 107
+      value: 94
       objectReference: {fileID: 0}
     - target: {fileID: 4016713439071714753, guid: 965174ab1a43d8e4c8e5295d42ec430d,
         type: 3}
@@ -8929,6 +10680,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom_2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4392675654480979835, guid: 965174ab1a43d8e4c8e5295d42ec430d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 965174ab1a43d8e4c8e5295d42ec430d, type: 3}
 --- !u!4 &695525734806765714 stripped
@@ -8948,6 +10704,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TFF_Rock_Medium_04A
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537088891441082940, guid: e231d7402b790274eb6c0bfbca2323fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3537088891441180188, guid: e231d7402b790274eb6c0bfbca2323fa,
         type: 3}
@@ -9037,7 +10798,7 @@ PrefabInstance:
     - target: {fileID: 3623112587754909528, guid: 4c868e0a1500e0f4e9aa9c177a4ccbe3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 53
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 3623112587754909528, guid: 4c868e0a1500e0f4e9aa9c177a4ccbe3,
         type: 3}
@@ -9109,6 +10870,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Debris_03A
       objectReference: {fileID: 0}
+    - target: {fileID: 3623112587755336568, guid: 4c868e0a1500e0f4e9aa9c177a4ccbe3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c868e0a1500e0f4e9aa9c177a4ccbe3, type: 3}
 --- !u!4 &891390415709007107 stripped
@@ -9124,15 +10890,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 1178982975210684145, guid: d7b24248323dfd8449067ce0ef1ffb36,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1178982975210684147, guid: d7b24248323dfd8449067ce0ef1ffb36,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1178982975210684149, guid: d7b24248323dfd8449067ce0ef1ffb36,
         type: 3}
       propertyPath: m_Name
       value: TFF_Mushrooms_02A (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1178982975210684149, guid: d7b24248323dfd8449067ce0ef1ffb36,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1178982975210684151, guid: d7b24248323dfd8449067ce0ef1ffb36,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1178982975210906325, guid: d7b24248323dfd8449067ce0ef1ffb36,
         type: 3}
       propertyPath: m_RootOrder
-      value: 81
+      value: 73
       objectReference: {fileID: 0}
     - target: {fileID: 1178982975210906325, guid: d7b24248323dfd8449067ce0ef1ffb36,
         type: 3}
@@ -9214,10 +11000,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 2174398410151077736, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174398410151077738, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174398410151077742, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4551801226149377521, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 113
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4551801226149377521, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
         type: 3}
@@ -9284,10 +11085,90 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 72.785
       objectReference: {fileID: 0}
+    - target: {fileID: 6783890616755656682, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783890616755656684, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783890616755656686, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8981485457417077555, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
         type: 3}
       propertyPath: m_Name
       value: TFF_MushroomSet01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981485457417077555, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387904, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387906, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387912, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387914, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387916, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190167387918, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337712, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337714, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337720, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337722, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337724, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212610190428337726, guid: 5ccc8550c3ee5b34f994a0428112d5c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ccc8550c3ee5b34f994a0428112d5c6, type: 3}
@@ -9309,10 +11190,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: treee_trunk_LP (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7003689412344865657, guid: f9a3f26f6aec14640a08f9a9342634f8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7672386388889352643, guid: f9a3f26f6aec14640a08f9a9342634f8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 86
+      value: 78
       objectReference: {fileID: 0}
     - target: {fileID: 7672386388889352643, guid: f9a3f26f6aec14640a08f9a9342634f8,
         type: 3}
@@ -9404,10 +11290,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Wooden_Fence_02A (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 376409998566692142, guid: 06c3f544f78664041b45dcbd733a1260,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 376409998567049486, guid: 06c3f544f78664041b45dcbd733a1260,
         type: 3}
       propertyPath: m_RootOrder
-      value: 112
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 376409998567049486, guid: 06c3f544f78664041b45dcbd733a1260,
         type: 3}
@@ -9489,10 +11380,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 2935361225058495801, guid: e139e725fd5b9f0478072b9a433628a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2935361225058495803, guid: e139e725fd5b9f0478072b9a433628a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2935361225058495807, guid: e139e725fd5b9f0478072b9a433628a7,
         type: 3}
       propertyPath: m_Name
       value: TFF_Mushrooms_06A (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2935361225058495807, guid: e139e725fd5b9f0478072b9a433628a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2935361225058857247, guid: e139e725fd5b9f0478072b9a433628a7,
         type: 3}
@@ -9582,7 +11488,7 @@ PrefabInstance:
     - target: {fileID: 1677196605531397572, guid: 37472b06bc6cd0149a9d60eb1c474fad,
         type: 3}
       propertyPath: m_RootOrder
-      value: 99
+      value: 86
       objectReference: {fileID: 0}
     - target: {fileID: 1677196605531397572, guid: 37472b06bc6cd0149a9d60eb1c474fad,
         type: 3}
@@ -9654,6 +11560,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Bush_03B (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1677196605531816420, guid: 37472b06bc6cd0149a9d60eb1c474fad,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9208562913257105527, guid: 37472b06bc6cd0149a9d60eb1c474fad,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37472b06bc6cd0149a9d60eb1c474fad, type: 3}
 --- !u!4 &2981279611555477684 stripped
@@ -9669,10 +11585,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 4071491832732386763, guid: b7ce2ec5e9528c74d8319e333d4c71c1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6510808458649094228, guid: b7ce2ec5e9528c74d8319e333d4c71c1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 76
+      value: 68
       objectReference: {fileID: 0}
     - target: {fileID: 6510808458649094228, guid: b7ce2ec5e9528c74d8319e333d4c71c1,
         type: 3}
@@ -9744,6 +11665,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Bush_03D (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6510808458649195636, guid: b7ce2ec5e9528c74d8319e333d4c71c1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7ce2ec5e9528c74d8319e333d4c71c1, type: 3}
 --- !u!4 &7224392431399513826 stripped
@@ -9751,96 +11677,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6510808458649094228, guid: b7ce2ec5e9528c74d8319e333d4c71c1,
     type: 3}
   m_PrefabInstance: {fileID: 4474673056689022646}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &4474673056715639719
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 4474673056209014253}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 4d3de16d44b44344aae2420ac7e79ece,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 57
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4d3de16d44b44344aae2420ac7e79ece,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4d3de16d44b44344aae2420ac7e79ece,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4d3de16d44b44344aae2420ac7e79ece,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4d3de16d44b44344aae2420ac7e79ece,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 21.16
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4d3de16d44b44344aae2420ac7e79ece,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4d3de16d44b44344aae2420ac7e79ece,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 6.74
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4d3de16d44b44344aae2420ac7e79ece,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4d3de16d44b44344aae2420ac7e79ece,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4d3de16d44b44344aae2420ac7e79ece,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4d3de16d44b44344aae2420ac7e79ece,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4d3de16d44b44344aae2420ac7e79ece,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4d3de16d44b44344aae2420ac7e79ece,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4d3de16d44b44344aae2420ac7e79ece,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 4d3de16d44b44344aae2420ac7e79ece,
-        type: 3}
-      propertyPath: m_Name
-      value: rabbitRig
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4d3de16d44b44344aae2420ac7e79ece, type: 3}
---- !u!4 &4148802697995316300 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4d3de16d44b44344aae2420ac7e79ece,
-    type: 3}
-  m_PrefabInstance: {fileID: 4474673056715639719}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4474673056728948197
 PrefabInstance:
@@ -9852,7 +11688,7 @@ PrefabInstance:
     - target: {fileID: 8772648035309291892, guid: c8b1da0fbab714f47847c30e2149442d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 115
+      value: 102
       objectReference: {fileID: 0}
     - target: {fileID: 8772648035309291892, guid: c8b1da0fbab714f47847c30e2149442d,
         type: 3}
@@ -9924,6 +11760,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Rock_Medium_03A
       objectReference: {fileID: 0}
+    - target: {fileID: 8772648035309327700, guid: c8b1da0fbab714f47847c30e2149442d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8b1da0fbab714f47847c30e2149442d, type: 3}
 --- !u!4 &5163253309606499473 stripped
@@ -9942,7 +11783,7 @@ PrefabInstance:
     - target: {fileID: 6236000291581066176, guid: b8610f8963aff854cbb880464275e3fe,
         type: 3}
       propertyPath: m_RootOrder
-      value: 49
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 6236000291581066176, guid: b8610f8963aff854cbb880464275e3fe,
         type: 3}
@@ -10013,6 +11854,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TFF_Wooden_Bridge_01A
+      objectReference: {fileID: 0}
+    - target: {fileID: 6236000291581093856, guid: b8610f8963aff854cbb880464275e3fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8610f8963aff854cbb880464275e3fe, type: 3}
@@ -10104,6 +11950,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Bush_03B
       objectReference: {fileID: 0}
+    - target: {fileID: 1677196605531816420, guid: 37472b06bc6cd0149a9d60eb1c474fad,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9208562913257105527, guid: 37472b06bc6cd0149a9d60eb1c474fad,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37472b06bc6cd0149a9d60eb1c474fad, type: 3}
 --- !u!4 &2981279611208316352 stripped
@@ -10123,6 +11979,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TFF_Wood_Plank_02A
+      objectReference: {fileID: 0}
+    - target: {fileID: 6720491052572833137, guid: b2eb1f15660df4f4bbcb07389f6a2806,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6720491052572928337, guid: b2eb1f15660df4f4bbcb07389f6a2806,
         type: 3}
@@ -10209,6 +12070,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 6843888516064621698, guid: 337c7dcfafe12b5429933a5779c9b0e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843888516702675413, guid: 337c7dcfafe12b5429933a5779c9b0e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843888516820830372, guid: 337c7dcfafe12b5429933a5779c9b0e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7197632460246877158, guid: 337c7dcfafe12b5429933a5779c9b0e8,
         type: 3}
       propertyPath: m_RootOrder
@@ -10284,6 +12160,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_MushroomSet05 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7197632460246877159, guid: 337c7dcfafe12b5429933a5779c9b0e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 337c7dcfafe12b5429933a5779c9b0e8, type: 3}
 --- !u!4 &6771755747995865571 stripped
@@ -10299,10 +12180,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 449190089098120043, guid: 49dd985efcdce3c4987ca826611a8c33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833828196652046141, guid: 49dd985efcdce3c4987ca826611a8c33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8804588655320615240, guid: 49dd985efcdce3c4987ca826611a8c33,
         type: 3}
       propertyPath: m_RootOrder
-      value: 73
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 8804588655320615240, guid: 49dd985efcdce3c4987ca826611a8c33,
         type: 3}
@@ -10374,6 +12265,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TFF_Birch_Tree_Dry_02A (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8804588655320913256, guid: 49dd985efcdce3c4987ca826611a8c33,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49dd985efcdce3c4987ca826611a8c33, type: 3}
 --- !u!4 &4911480870037329092 stripped
@@ -10392,7 +12288,7 @@ PrefabInstance:
     - target: {fileID: 2513644361941448260, guid: d6b2985aeadfb7047ad664a8ca9a6d86,
         type: 3}
       propertyPath: m_RootOrder
-      value: 61
+      value: 53
       objectReference: {fileID: 0}
     - target: {fileID: 2513644361941448260, guid: d6b2985aeadfb7047ad664a8ca9a6d86,
         type: 3}
@@ -10464,6 +12360,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom_1_1
       objectReference: {fileID: 0}
+    - target: {fileID: 3002091800360824062, guid: d6b2985aeadfb7047ad664a8ca9a6d86,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6b2985aeadfb7047ad664a8ca9a6d86, type: 3}
 --- !u!4 &2088396259525728412 stripped
@@ -10483,6 +12384,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TFF_Wood_Plank_02A (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6720491052572833137, guid: b2eb1f15660df4f4bbcb07389f6a2806,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6720491052572928337, guid: b2eb1f15660df4f4bbcb07389f6a2806,
         type: 3}
@@ -10569,10 +12475,115 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 3492390491731078777, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390491731078779, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390491731078781, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390491731078783, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390492484338880, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390492484338882, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390492484338884, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390492484338886, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390492797517064, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390492797517066, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390492797517068, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390492797517070, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390493180106128, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390493180106130, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390493180106132, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492390493180106134, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4267754921029825412, guid: 164600533e67e9741951875dc037789a,
         type: 3}
       propertyPath: m_Name
       value: TFF_MushroomSet02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267754921029825412, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401450150429492705, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401450150429492707, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401450150429492709, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401450150429492711, guid: 164600533e67e9741951875dc037789a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5963332233134368798, guid: 164600533e67e9741951875dc037789a,
         type: 3}
@@ -10662,7 +12673,7 @@ PrefabInstance:
     - target: {fileID: 1577076965779519735, guid: cc885da5e94645e41aa1bb7dce7d979c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 89
+      value: 81
       objectReference: {fileID: 0}
     - target: {fileID: 1577076965779519735, guid: cc885da5e94645e41aa1bb7dce7d979c,
         type: 3}
@@ -10729,10 +12740,120 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3590085707930444784, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085707930444786, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085707930444790, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085707930444792, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085707930444794, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085707930444796, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085707930444798, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708578414402, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708578414404, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708578414406, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708578414408, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708578414410, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708578414412, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708578414414, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708964669217, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708964669221, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708964669223, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708964669225, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708964669227, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708964669229, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590085708964669231, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5553802942859770257, guid: cc885da5e94645e41aa1bb7dce7d979c,
         type: 3}
       propertyPath: m_Name
       value: TFF_MushroomSet03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553802942859770257, guid: cc885da5e94645e41aa1bb7dce7d979c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc885da5e94645e41aa1bb7dce7d979c, type: 3}
@@ -10749,10 +12870,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474673056209014253}
     m_Modifications:
+    - target: {fileID: 6843888516064621698, guid: 337c7dcfafe12b5429933a5779c9b0e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843888516702675413, guid: 337c7dcfafe12b5429933a5779c9b0e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843888516820830372, guid: 337c7dcfafe12b5429933a5779c9b0e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7197632460246877158, guid: 337c7dcfafe12b5429933a5779c9b0e8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 102
+      value: 89
       objectReference: {fileID: 0}
     - target: {fileID: 7197632460246877158, guid: 337c7dcfafe12b5429933a5779c9b0e8,
         type: 3}
@@ -10823,6 +12959,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TFF_MushroomSet05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197632460246877159, guid: 337c7dcfafe12b5429933a5779c9b0e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 337c7dcfafe12b5429933a5779c9b0e8, type: 3}
