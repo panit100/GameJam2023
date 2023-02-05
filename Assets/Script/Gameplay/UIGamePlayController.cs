@@ -20,6 +20,9 @@ public class UIGamePlayController : MonoBehaviour
     private Animator exitPanelAnimator;
 
     [SerializeField]
+    private Animator gamePlayPanelAnimator;
+
+    [SerializeField]
     private TMP_Text size_Text;
 
     [SerializeField]
@@ -53,6 +56,7 @@ public class UIGamePlayController : MonoBehaviour
         // timeContent.SetActive(isTimeShow);
 
         clockSystem.CheckClock();
+        gamePlayPanelAnimator.SetTrigger("trigger");
     }
 
     public void OnClickTutorialButton()
