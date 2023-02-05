@@ -9,38 +9,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Script/Ability/ResetScale.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleSetting.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleSetting.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleSetting.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleSetting.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleSetting.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleSetting.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleSetting.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleSetting.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleSetting.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Ability/ScaleSetting.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleSetting.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleSetting.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleSetting.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleSetting.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleSetting.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleSetting.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleSetting.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleSetting.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleSetting.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleSetting.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleSetting.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleSetting.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleSetting.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleUpPlayer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleUpPlayer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleUpPlayer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleUpPlayer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleUpPlayer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleUpPlayer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleUpPlayer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleUpPlayer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Ability/ScaleUpPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleUpPlayer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleUpPlayer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleUpPlayer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleUpPlayer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/GameJamSpd/Nice/Assets/Script/Ability/ScaleUpPlayer.cs" root0="SKIP_HIGHLIGHTING" />
@@ -113,6 +85,7 @@
       <workItem from="1675484254525" duration="7950000" />
       <workItem from="1675516579102" duration="10400000" />
       <workItem from="1675564004626" duration="879000" />
+      <workItem from="1675583648067" duration="1603000" />
     </task>
     <servers />
   </component>

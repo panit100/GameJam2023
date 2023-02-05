@@ -22,13 +22,15 @@ public class ScaleDownPlayer : MonoBehaviour
         
         var _scaleSet = FindObjectOfType<ScaleSetting>();
         
-        if (_scaleSet.currentScale < 3)
+        if (_scaleSet.currentScale > 0)
         {
             _scaleSet.currentScale--;
         }
-        
+
         var _multiply = _scaleSet.scaleValue[_scaleSet.currentScale];
         _col.gameObject.transform.localScale = new Vector3(_multiply,_multiply,_multiply);
+        
+        _scaleSet.UpdateScaleLabelUi();
 
         //if (soundManager != null)
         //    soundManager.PlayShrinkSFX();

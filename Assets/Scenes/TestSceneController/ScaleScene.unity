@@ -282,6 +282,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f390516ef102544bb2a65bcf2d645dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setActiveAgain: 0
+  waitSetActiveTime: 5
+  model: []
 --- !u!65 &14518010
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -527,6 +530,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f390516ef102544bb2a65bcf2d645dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setActiveAgain: 0
+  waitSetActiveTime: 5
+  model: []
 --- !u!65 &246213773
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -819,6 +825,20 @@ MonoBehaviour:
       Data3: -204052558
       Data4: -736369562
     Path: event:/SFX_Button
+  <CutScene1>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <CutScene2>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &314756423
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,6 +902,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f390516ef102544bb2a65bcf2d645dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setActiveAgain: 0
+  waitSetActiveTime: 5
+  model: []
 --- !u!65 &354424066
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1192,6 +1215,57 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1736075906}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &508868751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 508868753}
+  - component: {fileID: 508868752}
+  m_Layer: 0
+  m_Name: GameplayController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &508868752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508868751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8a2758ea018181488d3a0d16f3be145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stage: 0
+  isTriggerDialogue: 0
+  MaxTimerSec: 600
+  timeRemaining: 0
+  collectCard_Stage1: 0
+  collectCard_Stage2: 0
+  collectCard_Stage3: 0
+--- !u!4 &508868753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508868751}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.8535132, y: 3.1007757, z: -4.269588}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &746505515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1726,7 +1800,6 @@ GameObject:
   m_Component:
   - component: {fileID: 923082114}
   - component: {fileID: 923082113}
-  - component: {fileID: 923082115}
   m_Layer: 0
   m_Name: GameSetting
   m_TagString: Untagged
@@ -1750,6 +1823,10 @@ MonoBehaviour:
   - 0.3
   - 1
   - 2
+  jumpForceValue:
+  - 150
+  - 250
+  - 500
   currentScale: 1
 --- !u!4 &923082114
 Transform:
@@ -1766,19 +1843,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &923082115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 923082112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0d58f3cee3fa70499f864167cd26200, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textField: {fileID: 0}
 --- !u!1 &932794136
 GameObject:
   m_ObjectHideFlags: 0
@@ -4009,6 +4073,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f390516ef102544bb2a65bcf2d645dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setActiveAgain: 0
+  waitSetActiveTime: 5
+  model: []
 --- !u!65 &1831495333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4133,6 +4200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583c3116f9c880345bcbe1e5bffc958b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fModEvent: {fileID: 0}
 --- !u!1 &1989124998
 GameObject:
   m_ObjectHideFlags: 0
