@@ -19,5 +19,15 @@ public class ObjectInteract : MonoBehaviour
                 this.gameObject.SetActive(false);
             }
         }
+
+        if (other.CompareTag("Player"))
+        {
+            if(other.gameObject.transform.localScale.x > 1)
+            {
+                SharedObject.Instance.Get<GameplayController>().PressButton();
+                GetComponent<Animator>().SetBool("Press",true);
+            }
+        }
+
     }
 }
