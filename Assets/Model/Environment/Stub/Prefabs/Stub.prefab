@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6148022186190803482}
   - component: {fileID: 7133123533362732479}
   - component: {fileID: 4979016662901614965}
+  - component: {fileID: 4208874043596446358}
   m_Layer: 0
   m_Name: Stub
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4208874043596446358
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6780724725744126112}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.45120132, y: 0.3348471, z: 0.3943116}
+  m_Center: {x: -0.018852184, y: -8.771293e-25, z: 0.06492044}
