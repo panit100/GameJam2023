@@ -48,6 +48,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
+        DontDestroyOnLoad(this);
         LoadDialogueData();
         LoadCutSceneSprites();
     }

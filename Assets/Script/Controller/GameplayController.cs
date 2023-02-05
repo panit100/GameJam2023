@@ -226,22 +226,28 @@ public class GameplayController : MonoBehaviour
     public void OnLoadSceneMap2()
     {
         sceneController.OnLoadSceneMap2();
-        dialogueManager.triggerDialogue("Ch2_A01_01");
-        isTriggerDialogue = true;
+        StartCoroutine(waitDialogue("Ch2_A01_01"));
+        
         stage = Stage.Stage2;
     }
 
     public void OnLoadSceneMap3()
     {
         sceneController.OnLoadSceneMap3();
-        dialogueManager.triggerDialogue("Ch3_A01_01");
-        isTriggerDialogue = true;
+        StartCoroutine(waitDialogue("Ch3_A01_01"));
         stage = Stage.Stage3;
     }
 
+    IEnumerator waitDialogue( string id)
+    {
+        yield return new WaitForSeconds(5f);
+        dialogueManager.triggerDialogue(id);
+        isTriggerDialogue = true;
+    }
     private void Discard()
     {
         SharedObject.Instance.Remove(this);
+        dialogueManager.DestroyDialogueManager();
 
         Destroy(this.gameObject);
     }
@@ -249,5 +255,9 @@ public class GameplayController : MonoBehaviour
     public void TriggerVineAnimation()
     {
         print("TriggerVineAnimation");
+    }
+    public void SetIsPause(bool newIsPause)
+    {
+        isPaused = newIsPause;
     }
 }
