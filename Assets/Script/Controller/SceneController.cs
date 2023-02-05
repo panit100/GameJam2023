@@ -8,6 +8,7 @@ using GameJam.Utilities;
 public class SceneController : MonoBehaviour
 {
     public string SCENE_MAINMENU;
+    public string SCENE_INTRO;
     public string SCENE_MAP1;
     public string SCENE_MAP2;
     public string SCENE_MAP3;
@@ -35,6 +36,11 @@ public class SceneController : MonoBehaviour
     public void OnLoadSceneMainmenu()
     {
         OnLoadSceneAsync(SCENE_MAINMENU);
+    }
+
+    public void OnLoadSceneIntro()
+    {
+        OnLoadSceneAsync(SCENE_INTRO);
     }
 
     public void OnLoadSceneMap1()

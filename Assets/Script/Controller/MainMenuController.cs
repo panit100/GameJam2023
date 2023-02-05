@@ -52,7 +52,7 @@ public class MainMenuController : MonoBehaviour
 
     public void OnLoadSceneGameplay()
     {
-        sceneController.OnLoadSceneMap1();
+        sceneController.OnLoadSceneIntro();
     }
 
     public void OnClickAchievementButton()
