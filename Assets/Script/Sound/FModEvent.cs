@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
-using GameJam.Utilities;
 
 public class FModEvent : MonoBehaviour
 {
@@ -20,20 +19,4 @@ public class FModEvent : MonoBehaviour
     [field : Header("UI")]
     [field : SerializeField] public EventReference ButtonSFX {get; private set;}
 
-    
-
-
-    bool isInitlize;
-
-    void Awake()
-    {
-        Initilize();
-    }
-
-    void Initilize()
-    {
-        SharedObject.Instance.Add(this);
-
-        isInitlize = true;
-    }
 }
