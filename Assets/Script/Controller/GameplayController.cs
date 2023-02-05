@@ -16,7 +16,7 @@ public class GameplayController : MonoBehaviour
     SceneController sceneController;
 
     DialogueManager dialogueManager;
-    bool isTriggerDialogue;
+    public bool isTriggerDialogue;
 
     bool isInitlize;
 
