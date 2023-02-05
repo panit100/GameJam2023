@@ -28,7 +28,7 @@ public class ClockSystem : MonoBehaviour
         inputSystemManager = SharedObject.Instance.Get<InputSystemManager>();
         playerAnimationController = GetComponent<PlayerAnimationController>();
         playerMovementController = GetComponent<PlayerMovementController>();
-        inputSystemManager.onCheckClock += CheckClock;
+        // inputSystemManager.onCheckClock += CheckClock;
 
         gameplayController = FindObjectOfType<GameplayController>();
     }
@@ -46,7 +46,7 @@ public class ClockSystem : MonoBehaviour
         StartTimer();
     }
 
-    private void CheckClock()
+    public void CheckClock()
     {
         isToggle = !isToggle;
 
@@ -85,6 +85,6 @@ public class ClockSystem : MonoBehaviour
     
     private void OnDestroy()
     {
-        inputSystemManager.onCheckClock -= CheckClock;
+        // inputSystemManager.onCheckClock -= CheckClock;
     }
 }

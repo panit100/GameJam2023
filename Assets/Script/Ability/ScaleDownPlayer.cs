@@ -27,6 +27,8 @@ public class ScaleDownPlayer : MonoBehaviour
         var _multiply = _scaleSet.scaleValue[_scaleSet.currentScale];
         _col.gameObject.transform.localScale = new Vector3(_multiply,_multiply,_multiply);
         
+        _scaleSet.UpdateScaleLabelUi();
+
         if(soundManager != null)
             soundManager.PlayShrinkSFX();
 
