@@ -90,7 +90,7 @@ public class DialogueManager : MonoBehaviour
     }
     void CrateNewDialoguePanel()
     {
-        var _dialoguePanel = Instantiate(UIDialoguePanel);
+        var _dialoguePanel = Instantiate(UIDialoguePanel,this.transform);
         dialoguePanel = _dialoguePanel.GetComponent<UIDialoguePanel>();
         dialogueCanvas = dialoguePanel.GetComponent<Canvas>();
     }

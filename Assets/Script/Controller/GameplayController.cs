@@ -131,6 +131,7 @@ public class GameplayController : MonoBehaviour
                 isTriggerDialogue = true;
             }
         }
+        
     }
 
     private void CheckCollectCard()
@@ -142,6 +143,9 @@ public class GameplayController : MonoBehaviour
                 var vine = GameObject.Find("Vine1_2");
                 vine.GetComponent<Animator>().SetTrigger("VineDown");
                 vine.GetComponent<BoxCollider>().enabled = false;
+
+                dialogueManager.triggerDialogue("Ch1_A04_01");
+                isTriggerDialogue = true;
             }
         }
 
@@ -152,6 +156,9 @@ public class GameplayController : MonoBehaviour
                 var vine = GameObject.Find("Vine2_1");
                 vine.GetComponent<Animator>().SetTrigger("VineDown");
                 vine.GetComponent<BoxCollider>().enabled = false;
+
+                dialogueManager.triggerDialogue("Ch2_A03_01");
+                isTriggerDialogue = true;
             }
         }
 
@@ -164,7 +171,10 @@ public class GameplayController : MonoBehaviour
                 vine.GetComponent<BoxCollider>().enabled = false;
 
                 var rockGroup = GameObject.Find("RockGroup3_1");
-                vine.GetComponent<Animator>().SetBool("RockUp",true);
+                rockGroup.GetComponent<Animator>().SetBool("RockUp",true);
+
+                dialogueManager.triggerDialogue("Ch3_A03_01");
+                isTriggerDialogue = true;
             }
         }
     }
@@ -183,6 +193,7 @@ public class GameplayController : MonoBehaviour
             var vine = GameObject.Find("Vine3_1");
             vine.GetComponent<Animator>().SetTrigger("VineDown");
             vine.GetComponent<BoxCollider>().enabled = false;
+
         }
     }
 
@@ -215,12 +226,16 @@ public class GameplayController : MonoBehaviour
     public void OnLoadSceneMap2()
     {
         sceneController.OnLoadSceneMap2();
+        dialogueManager.triggerDialogue("Ch2_A01_01");
+        isTriggerDialogue = true;
         stage = Stage.Stage2;
     }
 
     public void OnLoadSceneMap3()
     {
         sceneController.OnLoadSceneMap3();
+        dialogueManager.triggerDialogue("Ch3_A01_01");
+        isTriggerDialogue = true;
         stage = Stage.Stage3;
     }
 

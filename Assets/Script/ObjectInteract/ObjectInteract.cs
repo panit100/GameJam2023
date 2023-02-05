@@ -20,7 +20,7 @@ public class ObjectInteract : MonoBehaviour
             }
         }
 
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && card == false)
         {
             if(other.gameObject.transform.localScale.x > 1)
             {
