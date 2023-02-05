@@ -436,7 +436,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 444722028}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &401573305
+--- !u!114 &401573306
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -450,18 +450,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Root: {fileID: 0}
   m_Roots:
-  - {fileID: 586271585}
-  - {fileID: 658753923}
-  m_UpdateRate: 45
+  - {fileID: 389211276}
+  - {fileID: 141459124}
+  m_UpdateRate: 90
   m_UpdateMode: 3
-  m_Damping: 0.2
+  m_Damping: 1
   m_DampingDistrib:
     serializedVersion: 2
     m_Curve: []
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_Elasticity: 0.1
+  m_Elasticity: 0.05
   m_ElasticityDistrib:
     serializedVersion: 2
     m_Curve: []
@@ -471,14 +471,50 @@ MonoBehaviour:
   m_Stiffness: 0.2
   m_StiffnessDistrib:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_Inert: 0.05
+  m_Inert: 0.5
   m_InertDistrib:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -508,7 +544,7 @@ MonoBehaviour:
   m_ReferenceObject: {fileID: 0}
   m_DistanceToObject: 20
   m_Multithread: 1
---- !u!114 &401573306
+--- !u!114 &401573308
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -522,35 +558,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Root: {fileID: 0}
   m_Roots:
-  - {fileID: 389211276}
-  - {fileID: 141459124}
-  m_UpdateRate: 30
+  - {fileID: 586271585}
+  - {fileID: 658753923}
+  m_UpdateRate: 90
   m_UpdateMode: 3
-  m_Damping: 0.2
+  m_Damping: 1
   m_DampingDistrib:
     serializedVersion: 2
     m_Curve: []
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_Elasticity: 0.1
+  m_Elasticity: 0.05
   m_ElasticityDistrib:
     serializedVersion: 2
     m_Curve: []
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_Stiffness: 0.1
+  m_Stiffness: 0.2
   m_StiffnessDistrib:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_Inert: 0.1
+  m_Inert: 0.5
   m_InertDistrib:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -1756,11 +1828,11 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1606098304}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 9099f1028b0f12042ab183968f2c7f6e, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 4d3de16d44b44344aae2420ac7e79ece, type: 3}
   m_Controller: {fileID: 9100000, guid: 01d654ad27e4f6540b82a499e9fa91bc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 

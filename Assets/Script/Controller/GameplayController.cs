@@ -144,6 +144,26 @@ public class GameplayController : MonoBehaviour
                 vine.GetComponent<BoxCollider>().enabled = false;
             }
         }
+
+        if (stage == Stage.Stage2)
+        {
+            if (collectCard_Stage2 == 3)
+            {
+                var vine = GameObject.Find("Vine2_1");
+                vine.GetComponent<Animator>().SetTrigger("VineDown");
+                vine.GetComponent<BoxCollider>().enabled = false;
+            }
+        }
+
+        if (stage == Stage.Stage2)
+        {
+            if (collectCard_Stage2 == 3)
+            {
+                var vine = GameObject.Find("Vine3_2");
+                vine.GetComponent<Animator>().SetTrigger("VineDown");
+                vine.GetComponent<BoxCollider>().enabled = false;
+            }
+        }
     }
 
     public void PressButton()
@@ -151,6 +171,13 @@ public class GameplayController : MonoBehaviour
         if (stage == Stage.Stage1)
         {
             var vine = GameObject.Find("Vine1_1");
+            vine.GetComponent<Animator>().SetTrigger("VineDown");
+            vine.GetComponent<BoxCollider>().enabled = false;
+        }
+
+        if (stage == Stage.Stage3)
+        {
+            var vine = GameObject.Find("Vine3_1");
             vine.GetComponent<Animator>().SetTrigger("VineDown");
             vine.GetComponent<BoxCollider>().enabled = false;
         }
@@ -185,11 +212,13 @@ public class GameplayController : MonoBehaviour
     public void OnLoadSceneMap2()
     {
         sceneController.OnLoadSceneMap2();
+        stage = Stage.Stage2;
     }
 
     public void OnLoadSceneMap3()
     {
         sceneController.OnLoadSceneMap3();
+        stage = Stage.Stage3;
     }
 
     private void Discard()
