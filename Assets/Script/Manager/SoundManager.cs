@@ -80,11 +80,17 @@ public class SoundManager : MonoBehaviour
 
     public void PlayExtendSFX()
     {
+        if(fModEvent.ExtendSFX.IsNull)
+            return;
+
         PlayOneShot(fModEvent.ExtendSFX,transform.position);
     }
 
     public void PlayShrinkSFX()
     {
+        if(fModEvent.ShrinkSFX.IsNull)
+            return;
+
         PlayOneShot(fModEvent.ShrinkSFX,transform.position);
     }
 
