@@ -185,11 +185,13 @@ public class GameplayController : MonoBehaviour
     public void OnLoadSceneMap2()
     {
         sceneController.OnLoadSceneMap2();
+        stage = Stage.Stage2;
     }
 
     public void OnLoadSceneMap3()
     {
         sceneController.OnLoadSceneMap3();
+        stage = Stage.Stage3;
     }
 
     private void Discard()
