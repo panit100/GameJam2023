@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7672386388889352643}
   - component: {fileID: 6761610926094661222}
   - component: {fileID: 8805353220358881964}
+  - component: {fileID: 5966561663550722640}
   m_Layer: 0
   m_Name: treee_trunk_LP (2)
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5966561663550722640
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7003689412344865657}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3582805594628865998, guid: 535c9e8e8c6834b4b94563a191a8a774, type: 3}
