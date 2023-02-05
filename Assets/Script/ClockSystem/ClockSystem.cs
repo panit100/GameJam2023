@@ -21,6 +21,7 @@ public class ClockSystem : MonoBehaviour
     private GameplayController gameplayController;
     private PlayerAnimationController playerAnimationController;
     private PlayerMovementController playerMovementController;
+    private UIGamePlayController uiGameplayCtr;
     private bool isToggle;
 
     private void Start()
@@ -28,7 +29,8 @@ public class ClockSystem : MonoBehaviour
         inputSystemManager = SharedObject.Instance.Get<InputSystemManager>();
         playerAnimationController = GetComponent<PlayerAnimationController>();
         playerMovementController = GetComponent<PlayerMovementController>();
-        // inputSystemManager.onCheckClock += CheckClock;
+        uiGameplayCtr = FindObjectOfType<UIGamePlayController>();
+        inputSystemManager.onCheckClock += ShortcutToCheckClock;
 
         gameplayController = FindObjectOfType<GameplayController>();
     }
@@ -60,9 +62,13 @@ public class ClockSystem : MonoBehaviour
             playerAnimationController.UnUseClockAnimation();
             EnablePlayer();
         }
-
-        clockCam.SetActive(isToggle);
         
+        clockCam.SetActive(isToggle);
+    }
+
+    private void ShortcutToCheckClock()
+    {
+        uiGameplayCtr.OnClickTimeButton();
     }
 
     private void DisablePlayer()
@@ -85,6 +91,6 @@ public class ClockSystem : MonoBehaviour
     
     private void OnDestroy()
     {
-        // inputSystemManager.onCheckClock -= CheckClock;
+        inputSystemManager.onCheckClock -= ShortcutToCheckClock;
     }
 }
