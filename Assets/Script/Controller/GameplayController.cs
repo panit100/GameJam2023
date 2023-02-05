@@ -3,9 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using GameJam.Utilities;
+using UnityEngine.Events;
 
 public class GameplayController : MonoBehaviour
 {
+    public enum Stage
+    {
+        Stage1,Stage2,Stage3
+    }
+    public Stage stage;
+
     SceneController sceneController;
 
     DialogueManager dialogueManager;
@@ -23,6 +30,11 @@ public class GameplayController : MonoBehaviour
     [SerializeField]
     private float timeRemaining;
     public float TimeRemaining => timeRemaining;
+
+    int collectCard;
+
+    public List<UnityEvent> unityEvents = new List<UnityEvent>(); 
+    public UnityEvent unityEvent;
 
     void Awake() 
     {
@@ -94,17 +106,47 @@ public class GameplayController : MonoBehaviour
     
     private void CheckSpecificEvent()
     {
+        TimeRemainingDialogue();
+        CheckCollectCard();
+        unityEvent.Invoke();
+    }
 
-        if(timeRemaining <= 480 && timeRemaining >= 475 && isTriggerDialogue == false)
+    private void TimeRemainingDialogue()
+    {
+        if(stage == Stage.Stage1)
         {
-            dialogueManager.triggerDialogue("Ch1_A02_01");
-            isTriggerDialogue = true;
+            if (timeRemaining <= 600 && timeRemaining >= 595 && isTriggerDialogue == false)
+            {
+                dialogueManager.triggerDialogue("Ch1_A01_01");
+                isTriggerDialogue = true;
+            }
+            if (timeRemaining <= 480 && timeRemaining >= 475 && isTriggerDialogue == false)
+            {
+                dialogueManager.triggerDialogue("Ch1_A02_01");
+                isTriggerDialogue = true;
+            }
+            else if (timeRemaining <= 360 && timeRemaining >= 355 && isTriggerDialogue == false)
+            {
+                dialogueManager.triggerDialogue("Ch1_A03_01");
+                isTriggerDialogue = true;
+            }
         }
-        else if (timeRemaining <= 360 && timeRemaining >= 355 && isTriggerDialogue == false)
+    }
+
+    private void CheckCollectCard()
+    {
+        if (stage == Stage.Stage1)
         {
-            dialogueManager.triggerDialogue("Ch1_A03_01");
-            isTriggerDialogue = true;
+            if (collectCard == 2)
+            {
+                // trigger vine
+            }
         }
+    }
+
+    public void CollectCard()
+    {
+        collectCard += 1;
     }
 
     public void OnLoadSceneMainMenu()
@@ -114,10 +156,25 @@ public class GameplayController : MonoBehaviour
         Discard();
     }
 
+    public void OnLoadSceneMap2()
+    {
+        sceneController.OnLoadSceneMap2();
+    }
+
+    public void OnLoadSceneMap3()
+    {
+        sceneController.OnLoadSceneMap3();
+    }
+
     private void Discard()
     {
         SharedObject.Instance.Remove(this);
 
         Destroy(this.gameObject);
+    }
+
+    public void TriggerVineAnimation()
+    {
+        print("TriggerVineAnimation");
     }
 }

@@ -7,12 +7,12 @@ using FMOD.Studio;
 
 public class SoundManager : MonoBehaviour
 {
-    FModEvent fModEvent;
-    
     List<EventInstance> eventInstances;
     List<StudioEventEmitter> eventEmitters;
 
     EventInstance musicEventInstances;
+
+    public FModEvent fModEvent;
 
     bool isInitlize;
 
@@ -24,8 +24,6 @@ public class SoundManager : MonoBehaviour
     void Initilize()
     {
         SharedObject.Instance.Add(this);
-
-        fModEvent = SharedObject.Instance.Get<FModEvent>(); 
 
         eventInstances = new List<EventInstance>();
         eventEmitters = new List<StudioEventEmitter>();
@@ -85,6 +83,8 @@ public class SoundManager : MonoBehaviour
 
     public void PlayShrinkSFX()
     {
+        print(fModEvent.ShrinkSFX.Path);
+
         PlayOneShot(fModEvent.ShrinkSFX,transform.position);
     }
 

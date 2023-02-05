@@ -33,8 +33,7 @@ public class MainMenuController : MonoBehaviour
 
     void Start()
     {
-        Handhold = Handpaper.GetComponent<Animator>();
-        tempMainGroup = MainMenuPanel.GetComponent<CanvasGroup>();
+       
         sceneController = SharedObject.Instance.Get<SceneController>();
        
     }
@@ -52,68 +51,91 @@ public class MainMenuController : MonoBehaviour
 
     public void OnLoadSceneGameplay()
     {
-        sceneController.OnLoadSceneMap1();
+        sceneController.OnLoadSceneIntro();
     }
 
     public void OnClickAchievementButton()
     {
         Debug.Log("==========  Populate Achievement ==========");
-       
-      
-        StartCoroutine(HandTransitionout());
+        StartCoroutine(HandTransitionoutToAchievement());
         
     }
 
     public void OnClickCreditButton()
     {
         Debug.Log("==========  Populate  Credit  ==========");
-
-        creditPanel.Show();
+        StartCoroutine(HandTransitionoutToCredit());
     }
 
     public void OnClickExitButton()
     {
         Debug.Log("==========  Exit Game  ==========");
+        Application.Quit();
     }
 
-    public void MainMenuActive()
+    public void MainMenuActiveTomain()
     {
-        StartCoroutine(HandTransitionIn());
+        StartCoroutine(HandTransitionInAchievementTomain());
     }
+  
 
-   
-    IEnumerator HandTransitionout()
+    IEnumerator HandTransitionoutToCredit()
     {
-        while(tempMainGroup.alpha>0f)
+        Handpaper.SetActive(true);
+        Handhold = Handpaper.GetComponent<Animator>();
+        tempMainGroup = MainMenuPanel.GetComponent<CanvasGroup>();
+        float t = 1;
+        while(t>0f)
         {
-            tempMainGroup.alpha -= Time.fixedDeltaTime;
-            yield return null;
+            tempMainGroup.alpha = t;
+            t -= Time.fixedDeltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        Handhold.enabled = true;
+        Handhold.SetTrigger("Normal");
+        yield return new WaitForSeconds(0.35f);
+        MainMenuPanel.SetActive(false);
+        yield return null;
+        creditPanel.Show();
+    }
+    
+    IEnumerator HandTransitionoutToAchievement()
+    {
+        Handpaper.SetActive(true);
+        Handhold = Handpaper.GetComponent<Animator>();
+        tempMainGroup = MainMenuPanel.GetComponent<CanvasGroup>();
+        float t = 1;
+        while(t>0f)
+        {
+            tempMainGroup.alpha = t;
+            t -= Time.fixedDeltaTime;
+            yield return new WaitForEndOfFrame();
         }
         Handpaper.SetActive(true);
         Handhold.enabled = true;
         Handhold.SetTrigger("Normal");
-        Debug.Log("oooof");
         yield return new WaitForSeconds(0.35f);
         MainMenuPanel.SetActive(false);
-       
         achievementPanel.Show();
         yield break;
     }
-
-    IEnumerator HandTransitionIn()
+    IEnumerator HandTransitionInAchievementTomain()
     {
+        MainMenuPanel.SetActive(true);
+        Handhold = Handpaper.GetComponent<Animator>();
+        tempMainGroup = MainMenuPanel.GetComponent<CanvasGroup>();
         Handhold.SetTrigger("Exit");
         yield return new WaitForSeconds(1f);
-        Handpaper.SetActive(false);
-        MainMenuPanel.SetActive(true);
         tempMainGroup.alpha = 0;
-        float temp = tempMainGroup.alpha;
-        while (temp<=1f)
+        float t = 0;
+        while(t<=1f)
         {
-            tempMainGroup.alpha += Time.fixedDeltaTime;
-            yield return null;
-            temp = tempMainGroup.alpha;
+            tempMainGroup.alpha = t;
+            t += Time.fixedDeltaTime;
+            yield return new WaitForEndOfFrame();
         }
+        Handpaper.SetActive(false);
+       
         yield break;
     }
 }

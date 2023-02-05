@@ -61,7 +61,7 @@ public class UIAchievementPanel : MonoBehaviour
     private void OnClickCloseButton()
     {
         Debug.Log("Close Achievement Panel");
-        mainmenuController.MainMenuActive();
+        mainmenuController.MainMenuActiveTomain();
         //TODO : Hide panel with animation
 
         Hide();
