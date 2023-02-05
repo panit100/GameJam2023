@@ -1686,11 +1686,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Map2_prefab
       objectReference: {fileID: 0}
-    - target: {fileID: 4474673056209014252, guid: ce7495b7f8efcaf48aab4f4980924ffe,
-        type: 3}
-      propertyPath: m_TagString
-      value: Ground
-      objectReference: {fileID: 0}
     - target: {fileID: 4474673056209014253, guid: ce7495b7f8efcaf48aab4f4980924ffe,
         type: 3}
       propertyPath: m_RootOrder
@@ -2359,7 +2354,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878970808}
-  m_LocalRotation: {x: 0.13646093, y: 0.000000017045426, z: -0.0000000023479991, w: 0.99064547}
+  m_LocalRotation: {x: 0.13646093, y: -0.000000017045423, z: 0.0000000023479985, w: 0.99064547}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
