@@ -80,7 +80,6 @@ public class PlayerMovementController : MonoBehaviour
         rb = this.GetComponent<Rigidbody>();
 
         currentMovementState = movementState.idle;
-        mainCam = Camera.main.transform;
 
         Vcam.Follow = this.gameObject.transform;
         Vcam.LookAt = this.gameObject.transform;
