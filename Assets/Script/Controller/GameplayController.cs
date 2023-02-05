@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using GameJam.Utilities;
 using UnityEngine.Events;
+using GameJam.GameData;
 
 public class GameplayController : MonoBehaviour
 {
@@ -35,6 +36,8 @@ public class GameplayController : MonoBehaviour
     [SerializeField] int collectCard_Stage2;
     [SerializeField] int collectCard_Stage3;
 
+    ScaleSetting scaleSetting;
+
     void Awake() 
     {
         Initilize();
@@ -45,6 +48,8 @@ public class GameplayController : MonoBehaviour
         sceneController = SharedObject.Instance.Get<SceneController>();
 
         dialogueManager = SharedObject.Instance.Get<DialogueManager>();
+
+        scaleSetting = SharedObject.Instance.Get<ScaleSetting>();
 
         timeRemaining = MaxTimerSec;
         collectCard_Stage1 = 0;
@@ -226,6 +231,7 @@ public class GameplayController : MonoBehaviour
     public void OnLoadSceneMap2()
     {
         sceneController.OnLoadSceneMap2();
+        scaleSetting.currentScale = 1;
         StartCoroutine(waitDialogue("Ch2_A01_01"));
         
         stage = Stage.Stage2;
@@ -234,6 +240,7 @@ public class GameplayController : MonoBehaviour
     public void OnLoadSceneMap3()
     {
         sceneController.OnLoadSceneMap3();
+        scaleSetting.currentScale = 1;
         StartCoroutine(waitDialogue("Ch3_A01_01"));
         stage = Stage.Stage3;
     }
@@ -248,6 +255,7 @@ public class GameplayController : MonoBehaviour
     {
         SharedObject.Instance.Remove(this);
         dialogueManager.DestroyDialogueManager();
+        scaleSetting.DestroyScale();
 
         Destroy(this.gameObject);
     }

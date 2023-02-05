@@ -57,5 +57,12 @@ namespace GameJam.GameData
                     break;
             }
         }
+
+        public void DestroyScale()
+        {
+            SharedObject.Instance.Remove(this);
+
+            Destroy(this.gameObject);
+        }
     }
 }
