@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6148022186190803482}
   - component: {fileID: 7133123533362732479}
   - component: {fileID: 4979016662901614965}
+  - component: {fileID: 2289915545784308170}
   m_Layer: 0
   m_Name: Stub
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2289915545784308170
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6780724725744126112}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8292244109290254246, guid: 16bbc3313cfcb64418179d5b9c10ead5, type: 3}
