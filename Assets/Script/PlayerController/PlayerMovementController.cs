@@ -59,7 +59,6 @@ public class PlayerMovementController : MonoBehaviour
 
     InputSystemManager inputSystemManager;
     SoundManager soundManager;
-    FModEvent fModEvent;
 
     EventInstance playerWalkSFX;
     EventInstance playerRunSFX;
@@ -80,19 +79,17 @@ public class PlayerMovementController : MonoBehaviour
         rb = this.GetComponent<Rigidbody>();
 
         currentMovementState = movementState.idle;
-        mainCam = Camera.main.transform;
 
         Vcam.Follow = this.gameObject.transform;
         Vcam.LookAt = this.gameObject.transform;
 
         inputSystemManager = SharedObject.Instance.Get<InputSystemManager>();
         soundManager = SharedObject.Instance.Get<SoundManager>();
-        fModEvent = SharedObject.Instance.Get<FModEvent>();
         
         AddInputListiner();
 
-        playerWalkSFX = soundManager.CreateInstance(fModEvent.PlayerWalkSFX);
-        playerRunSFX = soundManager.CreateInstance(fModEvent.PlayerRunSFX);
+        playerWalkSFX = soundManager.CreateInstance(soundManager.fModEvent.PlayerWalkSFX);
+        playerRunSFX = soundManager.CreateInstance(soundManager.fModEvent.PlayerRunSFX);
     }
 
     void AddInputListiner()
@@ -306,12 +303,12 @@ public class PlayerMovementController : MonoBehaviour
 
     void JumpSFX()
     {
-        soundManager.PlayOneShot(fModEvent.PlayerJumpSFX,this.gameObject);
+        soundManager.PlayOneShot(soundManager.fModEvent.PlayerJumpSFX,this.gameObject);
     }
 
     void HitGroundSFX()
     {
-        soundManager.PlayOneShot(fModEvent.PlayerHitGroundSFX,this.gameObject);
+        soundManager.PlayOneShot(soundManager.fModEvent.PlayerHitGroundSFX,this.gameObject);
     }
 
     void OnDestroy() 
