@@ -13,11 +13,31 @@ public class UIAchievementPanel : MonoBehaviour
 
     private MainMenuController mainmenuController;
 
+    [SerializeField] private Toggle FirstEnding;
+    [SerializeField] private Toggle SecondEnding;
+
     public void Initialize(MainMenuController mainmenuController)
     {
         this.mainmenuController = mainmenuController;
 
         closeButton.onClick.AddListener(OnClickCloseButton);
+        if (PlayerPrefs.GetString("FirstEnding") == "True")
+        {
+            FirstEnding.isOn = true;
+        }
+        else
+        {
+            FirstEnding.isOn = false;
+        }
+        if (PlayerPrefs.GetString("SecondEnding") == "True")
+        {
+            SecondEnding.isOn = true;
+        }
+        else
+        {
+            SecondEnding.isOn = false;
+        }
+        
 
         context.SetActive(false);
     }
@@ -41,7 +61,7 @@ public class UIAchievementPanel : MonoBehaviour
     private void OnClickCloseButton()
     {
         Debug.Log("Close Achievement Panel");
-
+        mainmenuController.MainMenuActive();
         //TODO : Hide panel with animation
 
         Hide();
