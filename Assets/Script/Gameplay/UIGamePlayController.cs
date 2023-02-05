@@ -31,21 +31,33 @@ public class UIGamePlayController : MonoBehaviour
     [SerializeField]
     private GameObject timeContent;
 
-    bool isTimeShow = true;
+    bool isPause = true;
 
-    bool isPaperShow = false;
 
     private SceneController sceneController;
+    private GameplayController gameplayController;
     private ClockSystem clockSystem;
 
     void Awake()
     {
         sceneController = SharedObject.Instance.Get<SceneController>();
+        gameplayController = SharedObject.Instance.Get<GameplayController>();
     }
 
     private void Start()
     {
         clockSystem = FindObjectOfType<ClockSystem>();
+    }
+
+    void Update()
+    {
+        if (!Input.GetKeyDown(KeyCode.Escape)) { return; }
+
+        OnClickExitButton();
+
+        isPause = !isPause;
+
+        gameplayController.SetIsPause(isPause);
     }
 
     public void OnClickTimeButton()
