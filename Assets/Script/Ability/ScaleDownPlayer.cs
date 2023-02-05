@@ -19,7 +19,7 @@ public class ScaleDownPlayer : MonoBehaviour
         
         var _scaleSet = FindObjectOfType<ScaleSetting>();
         
-        if (_scaleSet.currentScale < 2)
+        if (_scaleSet.currentScale < 3)
         {
             _scaleSet.currentScale--;
         }
@@ -27,7 +27,7 @@ public class ScaleDownPlayer : MonoBehaviour
         var _multiply = _scaleSet.scaleValue[_scaleSet.currentScale];
         _col.gameObject.transform.localScale = new Vector3(_multiply,_multiply,_multiply);
 
-        soundManager.PlayShrinkSFX();
+        // soundManager.PlayShrinkSFX();
 
         Destroy(this.gameObject);
     }
