@@ -7,7 +7,6 @@ public enum SCENE
 {
     SCENE2,
     SCENE3,
-    Ending
 }
 
 public class Door : MonoBehaviour
@@ -31,9 +30,6 @@ public class Door : MonoBehaviour
                     break;
                 case SCENE.SCENE3:
                     gameplayController.OnLoadSceneMap3();
-                    break;
-                case SCENE.Ending:
-                    gameplayController.OnLoadSceneGoodEnd();
                     break;
             }
             

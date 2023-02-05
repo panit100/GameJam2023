@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameJam.Utilities;
 
 public class GetAchievement : MonoBehaviour
 {
@@ -14,12 +15,13 @@ public class GetAchievement : MonoBehaviour
     
     public Achievement ach;
 
-    // private void OnTriggerEnter(Collider _col)
-    // {
-    //     if(!_col.CompareTag("Player")) return;
-    //
-    //     GetEnding();
-    // }
+    public SCENE loadScene;
+    GameplayController gameplayController;
+
+    void Start()
+    {
+        gameplayController = SharedObject.Instance.Get<GameplayController>();        
+    }
 
     public void GetEnding()
     {
@@ -28,12 +30,12 @@ public class GetAchievement : MonoBehaviour
             case Achievement.FirstEnding : 
                 Debug.Log($"First Ending");
                 PlayerPrefs.SetString("FirstEnding", "True");
-                
+                gameplayController.OnLoadSceneGoodEnd();
                 break;
             case Achievement.SecondEnding : 
                 Debug.Log($"Second Ending");
                 PlayerPrefs.SetString("SecondEnding", "True");
-                
+                gameplayController.OnLoadSceneBadEnd();
                 break;
             case Achievement.ClearAll : 
                 Debug.Log($"Clear all Achievement");
