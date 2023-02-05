@@ -38,8 +38,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Item
+  - Player
   m_SortingLayers:
   - name: Default
     uniqueID: 0
