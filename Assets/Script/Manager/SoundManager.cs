@@ -83,8 +83,6 @@ public class SoundManager : MonoBehaviour
 
     public void PlayShrinkSFX()
     {
-        print(fModEvent.ShrinkSFX.Path);
-
         PlayOneShot(fModEvent.ShrinkSFX,transform.position);
     }
 
