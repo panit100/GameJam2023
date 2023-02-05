@@ -19,7 +19,12 @@ public class MainMenuController : MonoBehaviour
 
     [SerializeField] private GameObject Handpaper;
 
+    [SerializeField] private GameObject MainMenuPanel;
+
     bool isInitlize;
+    
+    private Animator Handhold;
+    private CanvasGroup tempMainGroup;
 
     void Awake() 
     {
@@ -28,7 +33,10 @@ public class MainMenuController : MonoBehaviour
 
     void Start()
     {
+        Handhold = Handpaper.GetComponent<Animator>();
+        tempMainGroup = MainMenuPanel.GetComponent<CanvasGroup>();
         sceneController = SharedObject.Instance.Get<SceneController>();
+       
     }
 
     void Initilize()
@@ -50,8 +58,10 @@ public class MainMenuController : MonoBehaviour
     public void OnClickAchievementButton()
     {
         Debug.Log("==========  Populate Achievement ==========");
-
-        StartCoroutine(HandTransition());
+       
+      
+        StartCoroutine(HandTransitionout());
+        
     }
 
     public void OnClickCreditButton()
@@ -66,12 +76,45 @@ public class MainMenuController : MonoBehaviour
         Debug.Log("==========  Exit Game  ==========");
     }
 
-    IEnumerator HandTransition()
+    public void MainMenuActive()
     {
-        yield return new WaitForSeconds(1f);
-        Handpaper.GetComponent<Animator>().enabled = true;
-        achievementPanel.Show();
+        StartCoroutine(HandTransitionIn());
+    }
 
-    } 
+   
+    IEnumerator HandTransitionout()
+    {
+        while(tempMainGroup.alpha>0f)
+        {
+            tempMainGroup.alpha -= Time.fixedDeltaTime;
+            yield return null;
+        }
+        Handpaper.SetActive(true);
+        Handhold.enabled = true;
+        Handhold.SetTrigger("Normal");
+        Debug.Log("oooof");
+        yield return new WaitForSeconds(0.35f);
+        MainMenuPanel.SetActive(false);
+       
+        achievementPanel.Show();
+        yield break;
+    }
+
+    IEnumerator HandTransitionIn()
+    {
+        Handhold.SetTrigger("Exit");
+        yield return new WaitForSeconds(1f);
+        Handpaper.SetActive(false);
+        MainMenuPanel.SetActive(true);
+        tempMainGroup.alpha = 0;
+        float temp = tempMainGroup.alpha;
+        while (temp<=1f)
+        {
+            tempMainGroup.alpha += Time.fixedDeltaTime;
+            yield return null;
+            temp = tempMainGroup.alpha;
+        }
+        yield break;
+    }
 }
 
